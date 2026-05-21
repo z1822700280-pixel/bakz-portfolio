@@ -9,7 +9,7 @@ export default function LanguageToggle() {
   return (
     <motion.button
       onClick={toggleLanguage}
-      className="text-sm text-gray-500 hover:text-gray-300 transition-colors"
+      className="text-xs text-white/30 hover:text-white/60 transition-colors tracking-widest"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >

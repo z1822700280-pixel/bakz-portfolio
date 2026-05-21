@@ -35,7 +35,7 @@ export default function Gallery() {
     <section id="gallery" ref={sectionRef} className="relative py-20 px-6 overflow-hidden">
       {/* Gradient overlay that fades in */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-b from-transparent via-accent/5 to-transparent pointer-events-none"
+        className="absolute inset-0 bg-gradient-to-b from-transparent via-white/[0.01] to-transparent pointer-events-none"
         initial={{ opacity: 0 }}
         animate={isVisible ? { opacity: 1 } : {}}
         transition={{ duration: 1.2, ease: 'easeOut' }}
@@ -45,12 +45,12 @@ export default function Gallery() {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white/90">
             {lang === 'zh' ? '视觉画廊' : 'Visual Gallery'}
           </h2>
-          <p className="text-gray-400 mb-8">
+          <p className="text-white/40 mb-8 tracking-wide">
             {lang === 'zh'
               ? '海报 · 摄影 · AIGC 视觉'
               : 'Poster · Photography · AIGC Visual'}
@@ -62,10 +62,10 @@ export default function Gallery() {
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={`px-4 py-2 rounded-full text-sm transition-colors ${
+                className={`px-4 py-2 rounded-full text-sm transition-all duration-300 ${
                   filter === cat
-                    ? 'bg-iki text-white'
-                    : 'bg-dark-card text-gray-400 hover:text-white'
+                    ? 'bg-white/10 text-white border border-white/20'
+                    : 'bg-white/[0.03] text-white/40 hover:text-white/70 border border-white/[0.06]'
                 }`}
               >
                 {cat === 'all'

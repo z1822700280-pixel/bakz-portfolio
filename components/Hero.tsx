@@ -24,10 +24,10 @@ export default function Hero() {
             style={{ y: y1 }}
             className="relative -ml-[10vw]"
           >
-            <h1 className="text-[22vw] font-bold tracking-tighter leading-none text-transparent hero-stroke">
+            <h1 className="text-[22vw] font-bold tracking-tighter leading-none text-transparent hero-stroke" style={{ textShadow: '0 0 120px rgba(0, 92, 175, 0.1)' }}>
               EXPLORING
             </h1>
-            <span className="absolute top-1/2 left-[5vw] text-sm text-gray-500 -translate-y-1/2 tracking-widest">
+            <span className="absolute top-1/2 left-[5vw] text-sm text-white/30 -translate-y-1/2 tracking-[0.3em]">
               保持热爱
             </span>
           </motion.div>
@@ -37,10 +37,10 @@ export default function Hero() {
             style={{ y: y2 }}
             className="relative ml-[20vw] -mt-[5vw]"
           >
-            <h1 className="text-[20vw] font-bold tracking-tighter leading-none text-white">
+            <h1 className="text-[20vw] font-bold tracking-tighter leading-none text-white/90" style={{ textShadow: '0 0 80px rgba(255, 255, 255, 0.05)' }}>
               WANDERING
             </h1>
-            <span className="absolute bottom-0 right-[10vw] text-sm text-gray-500 tracking-widest">
+            <span className="absolute bottom-0 right-[10vw] text-sm text-white/30 tracking-[0.3em]">
               不断探索
             </span>
           </motion.div>
@@ -53,7 +53,7 @@ export default function Hero() {
             <h1 className="text-[16vw] font-bold tracking-tighter leading-none text-transparent hero-stroke-subtle">
               BECOMING
             </h1>
-            <span className="absolute top-1/2 left-[50%] text-sm text-gray-500 tracking-widest">
+            <span className="absolute top-1/2 left-[50%] text-sm text-white/30 tracking-[0.3em]">
               无限进步
             </span>
           </motion.div>

@@ -24,26 +24,30 @@ export default function ParticleField() {
     const canvas = canvasRef.current
     if (!canvas) return
 
-    const ctx = canvas.getContext('2d')
+    const ctx = canvas.getContext('2d', { alpha: true })
     if (!ctx) return
 
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
+      const dpr = window.devicePixelRatio || 1
+      canvas.width = window.innerWidth * dpr
+      canvas.height = window.innerHeight * dpr
+      canvas.style.width = `${window.innerWidth}px`
+      canvas.style.height = `${window.innerHeight}px`
+      ctx.scale(dpr, dpr)
     }
     resizeCanvas()
     window.addEventListener('resize', resizeCanvas)
 
-    const particleCount = 400
+    const particleCount = 300
     particlesRef.current = Array.from({ length: particleCount }, () => ({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * window.innerHeight,
       originX: 0,
       originY: 0,
-      vx: (Math.random() - 0.5) * 0.15,
-      vy: (Math.random() - 0.5) * 0.15,
+      vx: (Math.random() - 0.5) * 0.12,
+      vy: (Math.random() - 0.5) * 0.12,
       size: Math.random() * 1.5 + 0.3,
-      opacity: Math.random() * 0.4 + 0.1,
+      opacity: Math.random() * 0.3 + 0.05,
       depth: Math.random(),
     }))
 
@@ -63,22 +67,32 @@ export default function ParticleField() {
     window.addEventListener('mousemove', handleMouseMove)
     document.addEventListener('mouseleave', handleMouseLeave)
 
-    const animate = () => {
+    let lastTime = 0
+    const targetFPS = 30
+    const frameInterval = 1000 / targetFPS
+
+    const animate = (currentTime: number) => {
       if (!ctx || !canvas) return
 
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
+      animationRef.current = requestAnimationFrame(animate)
 
-      // Draw connections first
+      const delta = currentTime - lastTime
+      if (delta < frameInterval) return
+      lastTime = currentTime - (delta % frameInterval)
+
+      ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
+
+      // Draw connections (limit for performance)
       for (let i = 0; i < particlesRef.current.length; i++) {
-        for (let j = i + 1; j < particlesRef.current.length; j++) {
+        for (let j = i + 1; j < Math.min(i + 20, particlesRef.current.length); j++) {
           const p1 = particlesRef.current[i]
           const p2 = particlesRef.current[j]
           const dx = p1.x - p2.x
           const dy = p1.y - p2.y
           const distance = Math.sqrt(dx * dx + dy * dy)
 
-          if (distance < 150) {
-            const opacity = (1 - distance / 150) * 0.05
+          if (distance < 120) {
+            const opacity = (1 - distance / 120) * 0.04
             ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`
             ctx.lineWidth = 0.5
             ctx.beginPath()
@@ -97,10 +111,10 @@ export default function ParticleField() {
           const dy = particle.y - mouseRef.current.y
           const distance = Math.sqrt(dx * dx + dy * dy)
           
-          if (distance < 200) {
-            const force = (200 - distance) / 200
-            particle.vx += (dx / distance) * force * 0.3
-            particle.vy += (dy / distance) * force * 0.3
+          if (distance < 180) {
+            const force = (180 - distance) / 180
+            particle.vx += (dx / distance) * force * 0.2
+            particle.vy += (dy / distance) * force * 0.2
           }
         }
 
@@ -117,21 +131,15 @@ export default function ParticleField() {
         particle.x += particle.vx
         particle.y += particle.vy
 
-        // Draw particle with glow
-        ctx.save()
-        ctx.shadowColor = `rgba(255, 255, 255, ${particle.opacity * 0.3})`
-        ctx.shadowBlur = particle.size * 2
+        // Draw particle
         ctx.beginPath()
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)
         ctx.fillStyle = `rgba(255, 255, 255, ${particle.opacity})`
         ctx.fill()
-        ctx.restore()
       })
-
-      animationRef.current = requestAnimationFrame(animate)
     }
 
-    animate()
+    animationRef.current = requestAnimationFrame(animate)
 
     return () => {
       window.removeEventListener('resize', resizeCanvas)

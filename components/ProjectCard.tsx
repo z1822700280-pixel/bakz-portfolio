@@ -20,14 +20,14 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
+      transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
       viewport={{ once: true }}
     >
       <Link href={`/project/${project.id}`}>
         <motion.div
           ref={tiltRef}
           {...handlers}
-          className="relative group cursor-pointer overflow-hidden rounded-lg"
+          className="relative group cursor-pointer overflow-hidden rounded-lg bg-white/[0.02] border border-white/[0.04] hover:border-white/[0.08] transition-colors duration-500"
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.3 }}
           style={{
@@ -40,23 +40,23 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
               src={project.thumbnail}
               alt={project.title[lang]}
               fill
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-8">
-              <span className="text-white text-sm font-medium">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-8">
+              <span className="text-white text-sm font-medium tracking-wider">
                 {project.title[lang]}
               </span>
             </div>
-            {/* Primary color accent line */}
-            <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+            {/* Subtle accent line */}
+            <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-white/20 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
           </div>
           <div className="p-4">
-            <h3 className="text-lg font-semibold">{project.title[lang]}</h3>
+            <h3 className="text-lg font-semibold text-white/80 group-hover:text-white transition-colors">{project.title[lang]}</h3>
             <div className="flex gap-2 mt-2">
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs px-2 py-1 bg-primary/20 text-primary rounded"
+                  className="text-xs px-2 py-1 text-white/30 border border-white/[0.06] rounded"
                 >
                   {tag}
                 </span>

@@ -1,18 +1,20 @@
 'use client'
 
 import { useEffect, useState, useMemo } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, useScroll } from 'framer-motion'
 
 const paths = {
   initial: "M 100 200 C 100 100 200 100 300 100 C 400 100 500 100 500 200 C 500 300 400 400 300 400 C 200 400 100 300 100 200",
   scrolled: "M 150 150 C 200 50 350 50 400 150 C 450 250 400 350 300 350 C 200 350 100 300 150 200",
 }
 
+type Interpolator = (t: number) => string
+
 export default function ScrollMorph() {
   const { scrollY } = useScroll()
   const [progress, setProgress] = useState(0)
   const [flubberLoaded, setFlubberLoaded] = useState(false)
-  const [interpolator, setInterpolator] = useState<any>(null)
+  const [interpolator, setInterpolator] = useState<Interpolator | null>(null)
 
   useEffect(() => {
     import('flubber').then(({ interpolate }) => {

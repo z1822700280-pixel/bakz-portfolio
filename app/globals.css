@@ -20,6 +20,35 @@
   --font-display: "Syne", "Inter", sans-serif;
 }
 
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(0, 92, 175, 0.3);
+  color: inherit;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
 :root {
   --color-primary: #005CAF;
   --color-wabi: #8B7355;
@@ -51,22 +80,46 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
+/* Film grain animation */
+@keyframes grain {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-5%, -10%); }
+  20% { transform: translate(-15%, 5%); }
+  30% { transform: translate(7%, -25%); }
+  40% { transform: translate(-5%, 25%); }
+  50% { transform: translate(-15%, 10%); }
+  60% { transform: translate(15%, 0%); }
+  70% { transform: translate(0%, 15%); }
+  80% { transform: translate(3%, 35%); }
+  90% { transform: translate(-10%, 10%); }
+}
+
 .grain-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.03;
+  opacity: 0.025;
+  animation: grain 8s steps(10) infinite;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* Section divider */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+  margin: 0 auto;
+  max-width: 80%;
 }
 
 /* Hero stroke text effects */
 .hero-stroke {
   -webkit-text-stroke: 2px currentColor;
   color: transparent;
+  text-shadow: 0 0 80px rgba(0, 92, 175, 0.15);
 }
 
 .hero-stroke-subtle {
@@ -91,4 +144,20 @@ body {
 
 .dark .hero-stroke-subtle {
   -webkit-text-stroke-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Typography refinements */
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+
+/* Cinematic vignette effect */
+.vignette {
+  box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.3);
+}
+
+/* Subtle link hover animation */
+@keyframes subtle-glow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
 }

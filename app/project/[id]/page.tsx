@@ -15,7 +15,7 @@ export default function ProjectDetail() {
   if (!project) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <p>Project not found</p>
+        <p className="text-white/40">Project not found</p>
       </div>
     )
   }
@@ -27,7 +27,7 @@ export default function ProjectDetail() {
         className="relative h-[60vh] w-full"
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
-        transition={{ duration: 1.2 }}
+        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
       >
         <Image
           src={project.thumbnail}
@@ -35,7 +35,7 @@ export default function ProjectDetail() {
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-dark-bg to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#080808] to-transparent" />
       </motion.div>
 
       {/* Content */}
@@ -43,19 +43,19 @@ export default function ProjectDetail() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white/90">
             {project.title[lang]}
           </h1>
 
           <div className="flex items-center gap-4 mb-8">
-            <span className="text-gray-400">{project.year}</span>
+            <span className="text-white/40">{project.year}</span>
             <div className="flex gap-2">
               {project.tools.map((tool) => (
                 <span
                   key={tool}
-                  className="text-xs px-3 py-1 bg-primary/20 text-primary rounded-full"
+                  className="text-xs px-3 py-1 text-white/40 border border-white/[0.08] rounded-full"
                 >
                   {tool}
                 </span>
@@ -63,7 +63,7 @@ export default function ProjectDetail() {
             </div>
           </div>
 
-          <p className="text-gray-300 text-lg leading-relaxed mb-12">
+          <p className="text-white/60 text-lg leading-relaxed mb-12">
             {project.description[lang]}
           </p>
 
@@ -72,10 +72,10 @@ export default function ProjectDetail() {
             {project.images.map((image, index) => (
               <motion.div
                 key={index}
-                className="relative aspect-video rounded-lg overflow-hidden"
+                className="relative aspect-video rounded-lg overflow-hidden border border-white/[0.04]"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
                 viewport={{ once: true }}
               >
                 <Image
@@ -89,10 +89,10 @@ export default function ProjectDetail() {
           </div>
 
           {/* Navigation */}
-          <div className="flex justify-between items-center mt-16 pt-8 border-t border-white/10">
+          <div className="flex justify-between items-center mt-16 pt-8 border-t border-white/[0.06]">
             <Link
               href="/"
-              className="text-primary hover:text-primary/80 transition-colors"
+              className="text-white/40 hover:text-white/80 transition-colors text-sm tracking-wider"
             >
               ← {lang === 'zh' ? '返回首页' : 'Back to Home'}
             </Link>
