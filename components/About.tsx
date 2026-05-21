@@ -37,7 +37,7 @@ export default function About() {
 
           {/* Content */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
               {lang === 'zh' ? '关于我' : 'About Me'}
             </h2>
             <p className="text-gray-400 text-lg mb-8 leading-relaxed">
@@ -61,11 +61,11 @@ export default function About() {
               </div>
             </div>
 
-            <div className="flex gap-3 mt-8">
+            <div className="flex flex-wrap gap-3 mt-8">
               {['AIGC', '视频制作', 'UI设计', '游戏开发'].map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs px-3 py-1 bg-primary/20 text-primary rounded-full"
+                  className="text-xs px-4 py-1.5 bg-primary/15 text-primary border border-primary/30 rounded-full hover:bg-primary/25 transition-colors"
                 >
                   {tag}
                 </span>

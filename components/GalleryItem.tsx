@@ -34,18 +34,20 @@ export default function GalleryItem({ item, index, onClick }: GalleryItemProps) 
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-110"
           />
-          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4">
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-end justify-end p-4">
             <h3 className="text-white text-lg font-semibold text-center">
               {item.title[lang]}
             </h3>
             <div className="flex gap-2 mt-2">
               {item.tags.map((tag) => (
-                <span key={tag} className="text-xs text-white/80">
+                <span key={tag} className="text-xs text-white/90 bg-white/20 px-2 py-0.5 rounded">
                   {tag}
                 </span>
               ))}
             </div>
           </div>
+          {/* Primary accent border on hover */}
+          <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/60 rounded-lg transition-all duration-300" />
         </div>
       </motion.div>
     </motion.div>

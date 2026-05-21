@@ -33,7 +33,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <motion.button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="text-xl font-bold tracking-wider"
+          className="text-xl font-bold tracking-wider text-primary"
           whileHover={{ scale: 1.05 }}
         >
           BAKZ
@@ -42,15 +42,17 @@ export default function Navbar() {
         <div className="flex items-center gap-8">
           <button
             onClick={() => scrollToSection('works')}
-            className="text-sm hover:text-primary transition-colors"
+            className="text-sm hover:text-primary transition-colors relative group"
           >
             {lang === 'zh' ? '作品' : 'Works'}
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
           </button>
           <button
             onClick={() => scrollToSection('about')}
-            className="text-sm hover:text-primary transition-colors"
+            className="text-sm hover:text-primary transition-colors relative group"
           >
             {lang === 'zh' ? '关于' : 'About'}
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
           </button>
           <ThemeToggle />
         </div>

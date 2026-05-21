@@ -33,11 +33,13 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span className="text-white text-sm">
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-8">
+              <span className="text-white text-sm font-medium">
                 {project.title[lang]}
               </span>
             </div>
+            {/* Primary color accent line */}
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
           </div>
           <div className="p-4">
             <h3 className="text-lg font-semibold">{project.title[lang]}</h3>

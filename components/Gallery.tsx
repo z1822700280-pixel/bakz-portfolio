@@ -38,7 +38,7 @@ export default function Gallery() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
             {lang === 'zh' ? '视觉画廊' : 'Visual Gallery'}
           </h2>
           <p className="text-gray-400 mb-8">

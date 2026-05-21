@@ -21,7 +21,7 @@ export default function Works() {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
             {lang === 'zh' ? '交互与游戏创作' : 'Interactive & Game Creation'}
           </h2>
           <p className="text-gray-400 mb-8">
@@ -43,7 +43,7 @@ export default function Works() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
             {lang === 'zh' ? 'AIGC 视频与视觉创作' : 'AIGC Video & Visual Creation'}
           </h2>
           <p className="text-gray-400 mb-8">
