@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { GalleryItem } from '@/data/gallery'
 import Image from 'next/image'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 interface LightboxProps {
   item: GalleryItem | null
@@ -12,6 +13,7 @@ interface LightboxProps {
 }
 
 export default function Lightbox({ item, onClose, onNext, onPrev }: LightboxProps) {
+  const { lang } = useLanguage()
   if (!item) return null
 
   return (
@@ -39,14 +41,14 @@ export default function Lightbox({ item, onClose, onNext, onPrev }: LightboxProp
           <div className="relative aspect-square">
             <Image
               src={item.image}
-              alt={item.title.zh}
+              alt={item.title[lang]}
               fill
               className="object-contain"
             />
           </div>
           <div className="mt-4 text-center">
-            <h3 className="text-xl font-semibold">{item.title.zh}</h3>
-            <p className="text-gray-400 mt-2">{item.description.zh}</p>
+            <h3 className="text-xl font-semibold">{item.title[lang]}</h3>
+            <p className="text-gray-400 mt-2">{item.description[lang]}</p>
           </div>
           <button
             className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-2xl"
