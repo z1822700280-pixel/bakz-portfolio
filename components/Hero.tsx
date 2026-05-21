@@ -32,12 +32,13 @@ export default function Hero() {
         style={{ opacity }}
       >
         <motion.h1
-          className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight"
+          className="text-5xl md:text-7xl lg:text-8xl font-light leading-tight tracking-wider"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
+          style={{ textShadow: '0 0 80px rgba(0, 92, 175, 0.15)' }}
         >
-          {lang === 'zh' ? '保持热爱，不断探索，无限进步。' : 'Stay passionate, keep exploring, infinite progress.'}
+          {lang === 'zh' ? '保持热爱 不断探索 无限进步' : 'Stay Passionful Keep Exploring Infinite Progress'}
         </motion.h1>
       </motion.div>
 
