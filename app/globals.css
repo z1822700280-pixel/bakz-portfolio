@@ -3,19 +3,14 @@
 @variant dark (&:where(.dark, .dark *));
 
 @theme inline {
-  --color-primary: #005CAF;
-  --color-wabi: #8B7355;
-  --color-sabi: #A0937D;
-  --color-shibui: #6B7B8D;
-  --color-iki: #2E4057;
-  --color-miyabi: #9B8AA0;
-  --color-yugen: #3D4F5F;
+  --color-primary: #0D5661;
+  --color-secondary: #DDA52D;
   --color-dark-bg: #080808;
   --color-dark-card: #111111;
   --color-dark-text: #e0e0e0;
-  --color-light-bg: #f5f0eb;
-  --color-light-card: #f0ebe5;
-  --color-light-text: #2a2a2a;
+  --color-light-bg: #f8f6f3;
+  --color-light-card: #f5f2ee;
+  --color-light-text: #1a1a1a;
   --font-sans: "Inter", "Noto Sans SC", sans-serif;
   --font-display: "Syne", "Inter", sans-serif;
 }
@@ -27,7 +22,7 @@ html {
 
 /* Selection color */
 ::selection {
-  background-color: rgba(0, 92, 175, 0.3);
+  background-color: rgba(13, 86, 97, 0.3);
   color: inherit;
 }
 
@@ -50,17 +45,12 @@ html {
 }
 
 :root {
-  --color-primary: #005CAF;
-  --color-wabi: #8B7355;
-  --color-sabi: #A0937D;
-  --color-shibui: #6B7B8D;
-  --color-iki: #2E4057;
-  --color-miyabi: #9B8AA0;
-  --color-yugen: #3D4F5F;
-  --bg-primary: #f5f0eb;
-  --bg-secondary: #ebe5de;
-  --bg-card: #f0ebe5;
-  --text-primary: #2a2a2a;
+  --color-primary: #0D5661;
+  --color-secondary: #DDA52D;
+  --bg-primary: #f8f6f3;
+  --bg-secondary: #f0ede8;
+  --bg-card: #f5f2ee;
+  --text-primary: #1a1a1a;
   --text-secondary: #666666;
   --text-muted: #999999;
 }
@@ -69,7 +59,7 @@ html {
   --bg-primary: #080808;
   --bg-secondary: #0c0c0c;
   --bg-card: #111111;
-  --text-primary: #e0e0e0;
+  --text-primary: #ffffff;
   --text-secondary: #999999;
   --text-muted: #666666;
 }
@@ -119,7 +109,7 @@ body {
 .hero-stroke {
   -webkit-text-stroke: 2px currentColor;
   color: transparent;
-  text-shadow: 0 0 80px rgba(0, 92, 175, 0.15);
+  text-shadow: 0 0 80px rgba(13, 86, 97, 0.15);
 }
 
 .hero-stroke-subtle {

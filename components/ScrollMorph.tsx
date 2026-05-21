@@ -49,9 +49,9 @@ export default function ScrollMorph() {
       >
         <defs>
           <linearGradient id="morphGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#005CAF" stopOpacity="0.3" />
-            <stop offset="50%" stopColor="#8B7355" stopOpacity="0.2" />
-            <stop offset="100%" stopColor="#6B7B8D" stopOpacity="0.1" />
+            <stop offset="0%" stopColor="#0D5661" stopOpacity="0.3" />
+            <stop offset="50%" stopColor="#DDA52D" stopOpacity="0.2" />
+            <stop offset="100%" stopColor="#0D5661" stopOpacity="0.1" />
           </linearGradient>
         </defs>
         
