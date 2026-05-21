@@ -11,7 +11,7 @@ export default function Watermark() {
       transition={{ duration: 2, delay: 1 }}
     >
       <span 
-        className="text-[10px] tracking-[0.5em] text-white/[0.08] font-light"
+        className="text-[10px] tracking-[0.5em] text-primary/[0.08] font-light"
         style={{ 
           writingMode: 'vertical-rl',
           textOrientation: 'mixed',
