@@ -1,10 +1,13 @@
 'use client'
 
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 
 export default function Hero() {
   const ref = useRef(null)
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
+  const [isHovering, setIsHovering] = useState(false)
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['start start', 'end start'],
@@ -15,19 +18,51 @@ export default function Hero() {
   const y3 = useTransform(scrollYProgress, [0, 1], [0, -120])
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
 
+  const handleMouseMove = (e: React.MouseEvent) => {
+    setMousePos({ x: e.clientX, y: e.clientY })
+    setIsHovering(true)
+  }
+
+  const handleMouseLeave = () => {
+    setIsHovering(false)
+  }
+
   return (
-    <section ref={ref} className="relative h-[150vh] overflow-hidden">
+    <section 
+      ref={ref} 
+      className="relative h-[150vh] overflow-hidden"
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
       <div className="absolute inset-0 gradient-depth" />
 
       <div className="sticky top-0 h-screen flex flex-col justify-center">
         <motion.div style={{ opacity }}>
+          {isHovering && (
+            <div 
+              className="absolute pointer-events-none z-10"
+              style={{
+                left: mousePos.x - 150,
+                top: mousePos.y - 150,
+                width: 300,
+                height: 300,
+                background: 'radial-gradient(circle, rgba(0, 92, 175, 0.15) 0%, transparent 70%)',
+                borderRadius: '50%',
+              }}
+            />
+          )}
+          
           <motion.div
             style={{ y: y1 }}
             className="relative -ml-[10vw]"
           >
             <h1
-              className="text-[22vw] font-bold tracking-tighter leading-none hero-stroke"
-              style={{ WebkitTextStroke: '2px var(--color-primary)', color: 'transparent' }}
+              className="text-[22vw] font-bold tracking-tighter leading-none hero-stroke transition-opacity duration-300"
+              style={{ 
+                WebkitTextStroke: '2px var(--color-primary)', 
+                color: 'transparent',
+                opacity: isHovering ? 1 : 0.9,
+              }}
             >
               EXPLORING
             </h1>
@@ -40,7 +75,8 @@ export default function Hero() {
             style={{ y: y2 }}
             className="relative ml-[20vw] -mt-[5vw]"
           >
-            <h1 className="text-[20vw] font-bold tracking-tighter leading-none text-primary">
+            <h1 className="text-[20vw] font-bold tracking-tighter leading-none text-primary transition-opacity duration-300"
+                style={{ opacity: isHovering ? 1 : 0.9 }}>
               WANDERING
             </h1>
             <span className="absolute bottom-0 right-[10vw] text-sm text-secondary tracking-[0.3em]">
@@ -53,8 +89,12 @@ export default function Hero() {
             className="relative ml-[5vw] -mt-[3vw]"
           >
             <h1
-              className="text-[16vw] font-bold tracking-tighter leading-none opacity-40"
-              style={{ WebkitTextStroke: '1px var(--color-primary)', color: 'transparent' }}
+              className="text-[16vw] font-bold tracking-tighter leading-none transition-opacity duration-300"
+              style={{ 
+                WebkitTextStroke: '1px var(--color-primary)', 
+                color: 'transparent',
+                opacity: isHovering ? 0.6 : 0.4,
+              }}
             >
               BECOMING
             </h1>
