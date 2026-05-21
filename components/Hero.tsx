@@ -16,7 +16,7 @@ export default function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
 
   return (
-    <section ref={ref} className="relative h-[200vh] overflow-hidden">
+    <section ref={ref} className="relative h-[150vh] overflow-hidden">
       <div className="absolute inset-0 gradient-depth" />
 
       <div className="sticky top-0 h-screen flex flex-col justify-center">
