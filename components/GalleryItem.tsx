@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { GalleryItem as GalleryItemType } from '@/data/gallery'
 import Image from 'next/image'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 interface GalleryItemProps {
   item: GalleryItemType
@@ -11,6 +12,7 @@ interface GalleryItemProps {
 }
 
 export default function GalleryItem({ item, index, onClick }: GalleryItemProps) {
+  const { lang } = useLanguage()
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
@@ -28,13 +30,13 @@ export default function GalleryItem({ item, index, onClick }: GalleryItemProps) 
         <div className="aspect-square relative">
           <Image
             src={item.image}
-            alt={item.title.zh}
+            alt={item.title[lang]}
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-110"
           />
           <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4">
             <h3 className="text-white text-lg font-semibold text-center">
-              {item.title.zh}
+              {item.title[lang]}
             </h3>
             <div className="flex gap-2 mt-2">
               {item.tags.map((tag) => (
