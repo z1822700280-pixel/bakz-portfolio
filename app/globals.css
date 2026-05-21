@@ -65,47 +65,30 @@ body {
 
 /* Hero stroke text effects */
 .hero-stroke {
-  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.85);
-  color: transparent;
-}
-
-.hero-stroke-thin {
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+  -webkit-text-stroke: 2px currentColor;
   color: transparent;
 }
 
 .hero-stroke-subtle {
-  -webkit-text-stroke: 0.8px rgba(255, 255, 255, 0.3);
+  -webkit-text-stroke: 1px currentColor;
   color: transparent;
+  opacity: 0.4;
 }
 
-/* Light mode stroke variants */
+/* Light mode stroke colors */
 :root .hero-stroke {
-  -webkit-text-stroke: 1.5px rgba(0, 0, 0, 0.85);
-  color: transparent;
-}
-
-:root .hero-stroke-thin {
-  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
-  color: transparent;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.85);
 }
 
 :root .hero-stroke-subtle {
-  -webkit-text-stroke: 0.8px rgba(0, 0, 0, 0.3);
-  color: transparent;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.3);
 }
 
+/* Dark mode stroke colors */
 .dark .hero-stroke {
-  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.85);
-  color: transparent;
-}
-
-.dark .hero-stroke-thin {
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
-  color: transparent;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.85);
 }
 
 .dark .hero-stroke-subtle {
-  -webkit-text-stroke: 0.8px rgba(255, 255, 255, 0.3);
-  color: transparent;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.3);
 }
