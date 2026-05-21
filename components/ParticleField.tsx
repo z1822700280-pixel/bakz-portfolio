@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import { useTheme } from '@/contexts/ThemeContext'
 
 interface Particle {
   x: number
@@ -19,6 +20,7 @@ export default function ParticleField() {
   const mouseRef = useRef({ x: 0, y: 0, active: false })
   const particlesRef = useRef<Particle[]>([])
   const animationRef = useRef<number>(0)
+  const { isDark } = useTheme()
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -82,6 +84,9 @@ export default function ParticleField() {
 
       ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
 
+      const particleColor = isDark ? '255, 255, 255' : '0, 0, 0'
+      const lineColor = isDark ? '255, 255, 255' : '0, 0, 0'
+
       // Draw connections (limit for performance)
       for (let i = 0; i < particlesRef.current.length; i++) {
         for (let j = i + 1; j < Math.min(i + 20, particlesRef.current.length); j++) {
@@ -93,7 +98,7 @@ export default function ParticleField() {
 
           if (distance < 120) {
             const opacity = (1 - distance / 120) * 0.04
-            ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`
+            ctx.strokeStyle = `rgba(${lineColor}, ${opacity})`
             ctx.lineWidth = 0.5
             ctx.beginPath()
             ctx.moveTo(p1.x, p1.y)
@@ -134,7 +139,7 @@ export default function ParticleField() {
         // Draw particle
         ctx.beginPath()
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(255, 255, 255, ${particle.opacity})`
+        ctx.fillStyle = `rgba(${particleColor}, ${particle.opacity})`
         ctx.fill()
       })
     }
@@ -147,7 +152,7 @@ export default function ParticleField() {
       document.removeEventListener('mouseleave', handleMouseLeave)
       cancelAnimationFrame(animationRef.current)
     }
-  }, [])
+  }, [isDark])
 
   return (
     <canvas
