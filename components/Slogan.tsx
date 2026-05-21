@@ -9,20 +9,28 @@ export default function Slogan() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: 'easeOut' }}
+          transition={{ duration: 1.5, ease: 'easeOut' }}
           viewport={{ once: true }}
         >
-          <h2 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter mb-8">
+          <h2
+            className="text-8xl md:text-9xl lg:text-[12rem] font-light italic tracking-wide text-white/90"
+            style={{
+              fontFamily: '"Cormorant Garamond", "Playfair Display", Georgia, serif',
+              fontStyle: 'italic',
+              fontWeight: 300,
+              letterSpacing: '0.1em',
+            }}
+          >
             BAKZ
           </h2>
-          <p className="text-xl md:text-2xl text-gray-400 tracking-widest">
+
+          <p className="mt-8 text-sm tracking-[0.3em] text-gray-500 uppercase">
             Keep loving. Keep exploring. Keep evolving.
           </p>
         </motion.div>
       </div>
-      
-      {/* Decorative gradient */}
-      <div className="absolute inset-0 bg-gradient-to-t from-transparent via-primary/5 to-transparent pointer-events-none" />
+
+      <div className="absolute inset-0 bg-gradient-to-t from-transparent via-white/[0.02] to-transparent pointer-events-none" />
     </section>
   )
 }
