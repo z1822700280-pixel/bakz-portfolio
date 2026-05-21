@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { GalleryItem as GalleryItemType } from '@/data/gallery'
 import Image from 'next/image'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { useTilt } from '@/hooks/useTilt'
 
 interface GalleryItemProps {
   item: GalleryItemType
@@ -13,6 +14,8 @@ interface GalleryItemProps {
 
 export default function GalleryItem({ item, index, onClick }: GalleryItemProps) {
   const { lang } = useLanguage()
+  const { ref: tiltRef, tilt, handlers } = useTilt(8)
+
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
@@ -23,9 +26,15 @@ export default function GalleryItem({ item, index, onClick }: GalleryItemProps) 
       onClick={onClick}
     >
       <motion.div
+        ref={tiltRef}
+        {...handlers}
         className="relative overflow-hidden rounded-lg"
         whileHover={{ scale: 1.03 }}
         transition={{ duration: 0.3 }}
+        style={{
+          transform: `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
+          transition: 'transform 0.2s ease-out',
+        }}
       >
         <div className="aspect-square relative">
           <Image

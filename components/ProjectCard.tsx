@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Project } from '@/data/projects'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { useTilt } from '@/hooks/useTilt'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -13,6 +14,8 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project, index }: ProjectCardProps) {
   const { lang } = useLanguage()
+  const { ref: tiltRef, tilt, handlers } = useTilt(8)
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -22,9 +25,15 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
     >
       <Link href={`/project/${project.id}`}>
         <motion.div
+          ref={tiltRef}
+          {...handlers}
           className="relative group cursor-pointer overflow-hidden rounded-lg"
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.3 }}
+          style={{
+            transform: `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
+            transition: 'transform 0.2s ease-out',
+          }}
         >
           <div className="aspect-video relative">
             <Image

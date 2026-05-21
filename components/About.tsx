@@ -2,9 +2,11 @@
 
 import { motion } from 'framer-motion'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { useTilt } from '@/hooks/useTilt'
 
 export default function About() {
   const { lang } = useLanguage()
+  const { ref: tiltRef, tilt, handlers } = useTilt(6)
 
   return (
     <section id="about" className="py-20 px-6">
@@ -17,7 +19,15 @@ export default function About() {
           viewport={{ once: true }}
         >
           {/* Portrait placeholder */}
-          <div className="aspect-square relative rounded-lg overflow-hidden bg-dark-card">
+          <motion.div
+            ref={tiltRef}
+            {...handlers}
+            className="aspect-square relative rounded-lg overflow-hidden bg-dark-card"
+            style={{
+              transform: `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
+              transition: 'transform 0.2s ease-out',
+            }}
+          >
             <div className="absolute inset-0 flex items-center justify-center text-gray-600">
               <svg
                 className="w-24 h-24"
@@ -33,7 +43,7 @@ export default function About() {
                 />
               </svg>
             </div>
-          </div>
+          </motion.div>
 
           {/* Content */}
           <div>
