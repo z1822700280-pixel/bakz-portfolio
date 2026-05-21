@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { LanguageProvider } from "@/contexts/LanguageContext";
+import Navbar from "@/components/Navbar";
+import GrainOverlay from "@/components/GrainOverlay";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -18,7 +20,11 @@ export default function RootLayout({
     <html lang="zh" suppressHydrationWarning>
       <body>
         <ThemeProvider>
-          <LanguageProvider>{children}</LanguageProvider>
+          <LanguageProvider>
+            <Navbar />
+            <GrainOverlay />
+            {children}
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>
