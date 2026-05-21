@@ -22,7 +22,7 @@ export default function Hero() {
     >
       {/* Background */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-dark-bg via-dark-bg to-primary/20"
+        className="absolute inset-0 bg-gradient-to-br from-light-bg via-light-bg to-primary/10 dark:from-dark-bg dark:via-dark-bg dark:to-primary/20"
         style={{ scale }}
       />
 
@@ -41,7 +41,7 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-          className="text-xl md:text-2xl text-gray-400 mb-4"
+          className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -50,7 +50,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.p
-          className="text-lg text-gray-500"
+          className="text-lg text-gray-500 dark:text-gray-500"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -65,8 +65,8 @@ export default function Hero() {
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 2 }}
       >
-        <div className="w-6 h-10 border-2 border-gray-500 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-gray-500 rounded-full mt-2" />
+        <div className="w-6 h-10 border-2 border-gray-400 dark:border-gray-500 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-gray-400 dark:bg-gray-500 rounded-full mt-2" />
         </div>
       </motion.div>
     </section>
