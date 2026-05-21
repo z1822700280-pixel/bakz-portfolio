@@ -1,0 +1,57 @@
+'use client'
+
+import { motion } from 'framer-motion'
+import { Project } from '@/data/projects'
+import Link from 'next/link'
+import Image from 'next/image'
+
+interface ProjectCardProps {
+  project: Project
+  index: number
+}
+
+export default function ProjectCard({ project, index }: ProjectCardProps) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      viewport={{ once: true }}
+    >
+      <Link href={`/project/${project.id}`}>
+        <motion.div
+          className="relative group cursor-pointer overflow-hidden rounded-lg"
+          whileHover={{ scale: 1.02 }}
+          transition={{ duration: 0.3 }}
+        >
+          <div className="aspect-video relative">
+            <Image
+              src={project.thumbnail}
+              alt={project.title.zh}
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <span className="text-white text-sm">
+                {project.title.zh}
+              </span>
+            </div>
+          </div>
+          <div className="p-4">
+            <h3 className="text-lg font-semibold">{project.title.zh}</h3>
+            <div className="flex gap-2 mt-2">
+              {project.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-xs px-2 py-1 bg-primary/20 text-primary rounded"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      </Link>
+    </motion.div>
+  )
+}
