@@ -11,6 +11,7 @@ interface Particle {
   vy: number
   size: number
   opacity: number
+  hue: number
 }
 
 export default function ParticleField() {
@@ -33,16 +34,17 @@ export default function ParticleField() {
     resizeCanvas()
     window.addEventListener('resize', resizeCanvas)
 
-    const particleCount = 150
+    const particleCount = 300
     particlesRef.current = Array.from({ length: particleCount }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
       originX: 0,
       originY: 0,
-      vx: (Math.random() - 0.5) * 0.3,
-      vy: (Math.random() - 0.5) * 0.3,
-      size: Math.random() * 1.5 + 0.5,
-      opacity: Math.random() * 0.4 + 0.1,
+      vx: (Math.random() - 0.5) * 0.2,
+      vy: (Math.random() - 0.5) * 0.2,
+      size: Math.random() * 2 + 0.5,
+      opacity: Math.random() * 0.6 + 0.2,
+      hue: Math.random() * 20 - 10,
     }))
 
     particlesRef.current.forEach(p => {
@@ -90,10 +92,14 @@ export default function ParticleField() {
         particle.x += particle.vx
         particle.y += particle.vy
 
+        ctx.save()
+        ctx.shadowColor = `rgba(0, 92, 175, ${particle.opacity * 0.5})`
+        ctx.shadowBlur = particle.size * 3
         ctx.beginPath()
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)
         ctx.fillStyle = `rgba(0, 92, 175, ${particle.opacity})`
         ctx.fill()
+        ctx.restore()
       })
 
       animationRef.current = requestAnimationFrame(animate)
