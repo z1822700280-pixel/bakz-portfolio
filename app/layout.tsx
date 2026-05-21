@@ -4,6 +4,7 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import Navbar from "@/components/Navbar";
 import GrainOverlay from "@/components/GrainOverlay";
 import GlowCursor from "@/components/GlowCursor";
+import ParticleField from "@/components/ParticleField";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body>
         <ThemeProvider>
           <LanguageProvider>
+            <ParticleField />
             <Navbar />
             <GrainOverlay />
             <GlowCursor />
