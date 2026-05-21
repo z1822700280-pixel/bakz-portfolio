@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import Navbar from "@/components/Navbar";
-import GrainOverlay from "@/components/GrainOverlay";
 import GlowCursor from "@/components/GlowCursor";
 import ParticleField from "@/components/ParticleField";
 import Watermark from "@/components/Watermark";
@@ -35,7 +34,6 @@ export default function RootLayout({
             <ParticleField />
             <Watermark />
             <Navbar />
-            <GrainOverlay />
             <GlowCursor />
             {children}
           </LanguageProvider>
