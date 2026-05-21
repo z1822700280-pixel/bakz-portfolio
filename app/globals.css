@@ -4,7 +4,7 @@
 
 @theme inline {
   --color-primary: #0D5661;
-  --color-secondary: #DDA52D;
+  --color-secondary: #465D4C;
   --color-dark-bg: #080808;
   --color-dark-card: #111111;
   --color-dark-text: #e0e0e0;
@@ -46,7 +46,7 @@ html {
 
 :root {
   --color-primary: #0D5661;
-  --color-secondary: #DDA52D;
+  --color-secondary: #465D4C;
   --bg-primary: #f8f6f3;
   --bg-secondary: #f0ede8;
   --bg-card: #f5f2ee;
@@ -80,7 +80,7 @@ body {
 }
 
 .gradient-glow {
-  background: radial-gradient(circle at 50% 50%, rgba(221, 165, 45, 0.03) 0%, transparent 50%);
+  background: radial-gradient(circle at 50% 50%, rgba(70, 93, 76, 0.03) 0%, transparent 50%);
 }
 
 /* Section divider */
