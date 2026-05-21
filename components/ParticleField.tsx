@@ -1,0 +1,119 @@
+'use client'
+
+import { useEffect, useRef } from 'react'
+
+interface Particle {
+  x: number
+  y: number
+  originX: number
+  originY: number
+  vx: number
+  vy: number
+  size: number
+  opacity: number
+}
+
+export default function ParticleField() {
+  const canvasRef = useRef<HTMLCanvasElement>(null)
+  const mouseRef = useRef({ x: 0, y: 0, active: false })
+  const particlesRef = useRef<Particle[]>([])
+  const animationRef = useRef<number>(0)
+
+  useEffect(() => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+
+    const ctx = canvas.getContext('2d')
+    if (!ctx) return
+
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth
+      canvas.height = window.innerHeight
+    }
+    resizeCanvas()
+    window.addEventListener('resize', resizeCanvas)
+
+    const particleCount = 50
+    particlesRef.current = Array.from({ length: particleCount }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      originX: 0,
+      originY: 0,
+      vx: (Math.random() - 0.5) * 0.5,
+      vy: (Math.random() - 0.5) * 0.5,
+      size: Math.random() * 2 + 1,
+      opacity: Math.random() * 0.5 + 0.2,
+    }))
+
+    particlesRef.current.forEach(p => {
+      p.originX = p.x
+      p.originY = p.y
+    })
+
+    const handleMouseMove = (e: MouseEvent) => {
+      mouseRef.current = { x: e.clientX, y: e.clientY, active: true }
+    }
+
+    const handleMouseLeave = () => {
+      mouseRef.current.active = false
+    }
+
+    window.addEventListener('mousemove', handleMouseMove)
+    canvas.addEventListener('mouseleave', handleMouseLeave)
+
+    const animate = () => {
+      if (!ctx || !canvas) return
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+      particlesRef.current.forEach(particle => {
+        if (mouseRef.current.active) {
+          const dx = particle.x - mouseRef.current.x
+          const dy = particle.y - mouseRef.current.y
+          const distance = Math.sqrt(dx * dx + dy * dy)
+
+          if (distance < 150) {
+            const force = (150 - distance) / 150
+            particle.vx += (dx / distance) * force * 0.5
+            particle.vy += (dy / distance) * force * 0.5
+          }
+        }
+
+        particle.vx *= 0.98
+        particle.vy *= 0.98
+
+        const dx = particle.originX - particle.x
+        const dy = particle.originY - particle.y
+        particle.vx += dx * 0.001
+        particle.vy += dy * 0.001
+
+        particle.x += particle.vx
+        particle.y += particle.vy
+
+        ctx.beginPath()
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)
+        ctx.fillStyle = `rgba(0, 92, 175, ${particle.opacity})`
+        ctx.fill()
+      })
+
+      animationRef.current = requestAnimationFrame(animate)
+    }
+
+    animate()
+
+    return () => {
+      window.removeEventListener('resize', resizeCanvas)
+      window.removeEventListener('mousemove', handleMouseMove)
+      canvas.removeEventListener('mouseleave', handleMouseLeave)
+      cancelAnimationFrame(animationRef.current)
+    }
+  }, [])
+
+  return (
+    <canvas
+      ref={canvasRef}
+      className="absolute inset-0 pointer-events-none"
+      style={{ zIndex: 1 }}
+    />
+  )
+}
