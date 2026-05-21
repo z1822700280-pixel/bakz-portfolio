@@ -33,6 +33,7 @@ export default function Works() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
             {lang === 'zh' ? '交互与游戏创作' : 'Interactive & Game Creation'}
           </h2>
+          <div className="w-16 h-px bg-shibui/40 mb-4" />
           <p className="text-gray-400 mb-8">
             {lang === 'zh'
               ? '沉浸式空间体验与独立游戏创作'
@@ -54,6 +55,7 @@ export default function Works() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
             {lang === 'zh' ? 'AIGC 视频与视觉创作' : 'AIGC Video & Visual Creation'}
           </h2>
+          <div className="w-16 h-px bg-shibui/40 mb-4" />
           <p className="text-gray-400 mb-8">
             {lang === 'zh'
               ? 'AI 驱动的视频制作与视觉设计'

@@ -84,7 +84,7 @@ export default function About() {
               {['AIGC', '视频制作', 'UI设计', '游戏开发'].map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs px-4 py-1.5 bg-primary/15 text-primary border border-primary/30 rounded-full hover:bg-primary/25 transition-colors"
+                  className="text-xs px-4 py-1.5 bg-miyabi/15 text-miyabi border border-miyabi/30 rounded-full hover:bg-miyabi/25 transition-colors"
                 >
                   {tag}
                 </span>

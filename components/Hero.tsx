@@ -27,14 +27,14 @@ export default function Hero() {
         style={{
           scale,
           background: `
-            radial-gradient(ellipse 80% 60% at 20% 50%, rgba(0, 92, 175, 0.15) 0%, transparent 60%),
+            radial-gradient(ellipse 80% 60% at 20% 50%, rgba(139, 115, 85, 0.12) 0%, transparent 60%),
             radial-gradient(ellipse 60% 40% at 80% 30%, rgba(0, 92, 175, 0.08) 0%, transparent 50%),
             linear-gradient(to bottom right, var(--bg-primary), var(--bg-primary))
           `,
         }}
       />
-      {/* Primary color accent orb */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+      {/* Wabi-sabi accent orb */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-wabi/10 rounded-full blur-3xl" />
       <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-primary/5 rounded-full blur-2xl" />
 
       {/* Particle effect */}
