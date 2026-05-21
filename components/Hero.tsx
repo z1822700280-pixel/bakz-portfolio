@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import ParticleField from './ParticleField'
+import ScrollMorph from './ScrollMorph'
 
 export default function Hero() {
   const ref = useRef(null)
@@ -36,6 +37,9 @@ export default function Hero() {
       {/* Wabi-sabi accent orb */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-wabi/10 rounded-full blur-3xl" />
       <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-primary/5 rounded-full blur-2xl" />
+
+      {/* SVG Morph effect */}
+      <ScrollMorph />
 
       {/* Particle effect */}
       <ParticleField />
