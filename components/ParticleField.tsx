@@ -33,16 +33,16 @@ export default function ParticleField() {
     resizeCanvas()
     window.addEventListener('resize', resizeCanvas)
 
-    const particleCount = 50
+    const particleCount = 150
     particlesRef.current = Array.from({ length: particleCount }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
       originX: 0,
       originY: 0,
-      vx: (Math.random() - 0.5) * 0.5,
-      vy: (Math.random() - 0.5) * 0.5,
-      size: Math.random() * 2 + 1,
-      opacity: Math.random() * 0.5 + 0.2,
+      vx: (Math.random() - 0.5) * 0.3,
+      vy: (Math.random() - 0.5) * 0.3,
+      size: Math.random() * 1.5 + 0.5,
+      opacity: Math.random() * 0.4 + 0.1,
     }))
 
     particlesRef.current.forEach(p => {
@@ -72,8 +72,8 @@ export default function ParticleField() {
           const dy = particle.y - mouseRef.current.y
           const distance = Math.sqrt(dx * dx + dy * dy)
 
-          if (distance < 150) {
-            const force = (150 - distance) / 150
+          if (distance < 100) {
+            const force = (100 - distance) / 100
             particle.vx += (dx / distance) * force * 0.5
             particle.vy += (dy / distance) * force * 0.5
           }
