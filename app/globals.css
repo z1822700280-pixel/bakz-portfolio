@@ -10,8 +10,8 @@
   --color-iki: #2E4057;
   --color-miyabi: #9B8AA0;
   --color-yugen: #3D4F5F;
-  --color-dark-bg: #0a0a0a;
-  --color-dark-card: #141414;
+  --color-dark-bg: #080808;
+  --color-dark-card: #111111;
   --color-dark-text: #e0e0e0;
   --color-light-bg: #f5f0eb;
   --color-light-card: #f0ebe5;
@@ -36,9 +36,9 @@
 }
 
 .dark {
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #121212;
-  --bg-card: #1a1a1a;
+  --bg-primary: #080808;
+  --bg-secondary: #0c0c0c;
+  --bg-card: #111111;
   --text-primary: #e0e0e0;
   --text-secondary: #999999;
   --text-muted: #666666;
