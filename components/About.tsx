@@ -3,20 +3,29 @@
 import { motion } from 'framer-motion'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { useTilt } from '@/hooks/useTilt'
+import { useScrollReveal } from '@/hooks/useScrollReveal'
 
 export default function About() {
   const { lang } = useLanguage()
   const { ref: tiltRef, tilt, handlers } = useTilt(6)
+  const { ref: sectionRef, isVisible } = useScrollReveal(0.1)
 
   return (
-    <section id="about" className="py-20 px-6">
-      <div className="max-w-7xl mx-auto">
+    <section id="about" ref={sectionRef} className="relative py-20 px-6 overflow-hidden">
+      {/* Gradient overlay that fades in */}
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-b from-transparent via-secondary/5 to-transparent pointer-events-none"
+        initial={{ opacity: 0 }}
+        animate={isVisible ? { opacity: 1 } : {}}
+        transition={{ duration: 1.2, ease: 'easeOut' }}
+      />
+
+      <div className="relative max-w-7xl mx-auto">
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
         >
           {/* Portrait placeholder */}
           <motion.div

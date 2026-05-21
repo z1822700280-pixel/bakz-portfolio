@@ -6,11 +6,13 @@ import { galleryItems } from '@/data/gallery'
 import GalleryItem from './GalleryItem'
 import Lightbox from './Lightbox'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { useScrollReveal } from '@/hooks/useScrollReveal'
 
 export default function Gallery() {
   const [selectedItem, setSelectedItem] = useState<number | null>(null)
   const [filter, setFilter] = useState<string>('all')
   const { lang } = useLanguage()
+  const { ref: sectionRef, isVisible } = useScrollReveal(0.1)
 
   const filteredItems =
     filter === 'all'
@@ -30,13 +32,20 @@ export default function Gallery() {
   }
 
   return (
-    <section id="gallery" className="py-20 px-6">
-      <div className="max-w-7xl mx-auto">
+    <section id="gallery" ref={sectionRef} className="relative py-20 px-6 overflow-hidden">
+      {/* Gradient overlay that fades in */}
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-b from-transparent via-accent/5 to-transparent pointer-events-none"
+        initial={{ opacity: 0 }}
+        animate={isVisible ? { opacity: 1 } : {}}
+        transition={{ duration: 1.2, ease: 'easeOut' }}
+      />
+
+      <div className="relative max-w-7xl mx-auto">
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
             {lang === 'zh' ? '视觉画廊' : 'Visual Gallery'}

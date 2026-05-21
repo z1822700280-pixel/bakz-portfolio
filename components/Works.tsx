@@ -4,21 +4,30 @@ import { motion } from 'framer-motion'
 import { projects } from '@/data/projects'
 import ProjectCard from './ProjectCard'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { useScrollReveal } from '@/hooks/useScrollReveal'
 
 export default function Works() {
   const { lang } = useLanguage()
   const gameProjects = projects.filter((p) => p.category === 'game')
   const videoProjects = projects.filter((p) => p.category === 'video')
+  const { ref: sectionRef, isVisible } = useScrollReveal(0.1)
 
   return (
-    <section id="works" className="py-20 px-6">
-      <div className="max-w-7xl mx-auto">
+    <section id="works" ref={sectionRef} className="relative py-20 px-6 overflow-hidden">
+      {/* Gradient overlay that fades in */}
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none"
+        initial={{ opacity: 0 }}
+        animate={isVisible ? { opacity: 1 } : {}}
+        transition={{ duration: 1.2, ease: 'easeOut' }}
+      />
+
+      <div className="relative max-w-7xl mx-auto">
         {/* Game Section */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
           className="mb-20"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
@@ -38,10 +47,9 @@ export default function Works() {
 
         {/* Video Section */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
             {lang === 'zh' ? 'AIGC 视频与视觉创作' : 'AIGC Video & Visual Creation'}
