@@ -1,99 +1,165 @@
 'use client'
 
-import { motion, useScroll, useTransform } from 'framer-motion'
-import { useRef } from 'react'
-import { useLanguage } from '@/contexts/LanguageContext'
-import ParticleField from './ParticleField'
-import ScrollMorph from './ScrollMorph'
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useMotionValue,
+  useSpring,
+} from 'framer-motion'
+import { useRef, useEffect } from 'react'
 
 export default function Hero() {
-  const ref = useRef(null)
+  const sectionRef = useRef<HTMLElement>(null)
+  const mouseX = useMotionValue(0)
+  const mouseY = useMotionValue(0)
+
+  const springX = useSpring(mouseX, { stiffness: 40, damping: 25, mass: 0.8 })
+  const springY = useSpring(mouseY, { stiffness: 40, damping: 25, mass: 0.8 })
+
   const { scrollYProgress } = useScroll({
-    target: ref,
+    target: sectionRef,
     offset: ['start start', 'end start'],
   })
 
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0])
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.1])
-  const { lang } = useLanguage()
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, -180])
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, -280])
+  const y3 = useTransform(scrollYProgress, [0, 1], [0, -120])
+  const y4 = useTransform(scrollYProgress, [0, 1], [0, -200])
+  const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0])
+  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.95])
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const centerX = window.innerWidth / 2
+      const centerY = window.innerHeight / 2
+      mouseX.set((e.clientX - centerX) / centerX)
+      mouseY.set((e.clientY - centerY) / centerY)
+    }
+    window.addEventListener('mousemove', handleMouseMove)
+    return () => window.removeEventListener('mousemove', handleMouseMove)
+  }, [mouseX, mouseY])
+
+  const floatX1 = useTransform(springX, (v) => v * 15)
+  const floatY1 = useTransform(springY, (v) => v * 10)
+  const floatX2 = useTransform(springX, (v) => v * -20)
+  const floatY2 = useTransform(springY, (v) => v * -12)
+  const floatX3 = useTransform(springX, (v) => v * 8)
+  const floatY3 = useTransform(springY, (v) => v * -6)
 
   return (
     <section
-      ref={ref}
-      className="relative h-screen flex items-center justify-center overflow-hidden"
+      ref={sectionRef}
+      className="relative h-[250vh]"
     >
-      {/* Background */}
-      <motion.div
-        className="absolute inset-0"
-        style={{
-          scale,
-          background: `
-            radial-gradient(ellipse 80% 60% at 20% 50%, rgba(139, 115, 85, 0.12) 0%, transparent 60%),
-            radial-gradient(ellipse 60% 40% at 80% 30%, rgba(0, 92, 175, 0.08) 0%, transparent 50%),
-            linear-gradient(to bottom right, var(--bg-primary), var(--bg-primary))
-          `,
-        }}
-      />
-      {/* Wabi-sabi accent orb */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-wabi/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-primary/5 rounded-full blur-2xl" />
-
-      {/* SVG Morph effect */}
-      <ScrollMorph />
-
-      {/* Particle effect */}
-      <ParticleField />
-
-      {/* Manifesto - Center Left */}
-      <motion.div
-        className="absolute top-1/2 left-0 -translate-y-1/2 z-10 text-left pl-12 md:pl-24 lg:pl-40 pr-6 max-w-3xl"
-        style={{ opacity }}
-      >
-        <motion.h1
-          className="text-5xl md:text-7xl lg:text-8xl font-light leading-tight tracking-wider bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          style={{ textShadow: '0 0 120px rgba(0, 92, 175, 0.3)' }}
+      <div className="sticky top-0 h-screen overflow-hidden">
+        <motion.div
+          className="relative h-full"
+          style={{ opacity, scale }}
         >
-          {lang === 'zh' ? '保持热爱 不断探索 无限进步' : 'Stay Passionful Keep Exploring Infinite Progress'}
-        </motion.h1>
-      </motion.div>
+          {/* EXPLORING — outline, top-left, cropped by left edge */}
+          <motion.div
+            className="absolute top-[12vh] -left-[4vw]"
+            style={{
+              y: y1,
+              x: floatX1,
+              translateY: floatY1,
+            }}
+          >
+            <h1
+              className="hero-stroke font-display text-[22vw] font-extrabold tracking-[-0.06em] leading-[0.85] select-none whitespace-nowrap"
+              aria-hidden="true"
+            >
+              EXPLORING
+            </h1>
+            <motion.span
+              className="absolute top-[55%] left-[38%] text-[11px] md:text-[13px] tracking-[0.2em] text-gray-500 dark:text-gray-500 font-sans uppercase"
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.6 }}
+            >
+              保持热爱
+            </motion.span>
+          </motion.div>
 
-      {/* Name & Positioning - Bottom Right */}
-      <motion.div
-        className="absolute bottom-20 right-0 z-10 text-right pr-12 md:pr-24 lg:pr-40"
-        style={{ opacity }}
-      >
-        <motion.p
-          className="text-xl md:text-2xl text-primary mb-2"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
-          张洎彬
-        </motion.p>
+          {/* WANDERING — solid, bottom-right, cropped by right edge */}
+          <motion.div
+            className="absolute top-[38vh] -right-[6vw] text-right"
+            style={{
+              y: y2,
+              x: floatX2,
+              translateY: floatY2,
+            }}
+          >
+            <h1
+              className="font-display text-[20vw] font-extrabold tracking-[-0.05em] leading-[0.85] select-none whitespace-nowrap text-gray-900 dark:text-white"
+              aria-hidden="true"
+            >
+              WANDERING
+            </h1>
+            <motion.span
+              className="absolute bottom-[8%] right-[12%] text-[11px] md:text-[13px] tracking-[0.2em] text-gray-500 dark:text-gray-500 font-sans uppercase"
+              initial={{ opacity: 0, x: 10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.9 }}
+            >
+              不断探索
+            </motion.span>
+          </motion.div>
 
-        <motion.p
-          className="text-lg text-gray-500 dark:text-gray-500"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-        >
-          {lang === 'zh' ? 'AIGC 视频创作者 / 数字媒体设计' : 'AIGC Video Creator / Digital Media Designer'}
-        </motion.p>
-      </motion.div>
+          {/* BECOMING — thin outline, center-left, smaller */}
+          <motion.div
+            className="absolute top-[68vh] left-[8vw]"
+            style={{
+              y: y3,
+              x: floatX3,
+              translateY: floatY3,
+            }}
+          >
+            <h1
+              className="hero-stroke-thin font-display text-[16vw] font-bold tracking-[-0.04em] leading-[0.85] select-none whitespace-nowrap"
+              aria-hidden="true"
+            >
+              BECOMING
+            </h1>
+            <motion.span
+              className="absolute top-[30%] left-[52%] text-[11px] md:text-[13px] tracking-[0.2em] text-gray-500 dark:text-gray-500 font-sans uppercase"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 1.2 }}
+            >
+              无限进步
+            </motion.span>
+          </motion.div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ repeat: Infinity, duration: 2 }}
-      >
-        <div className="w-6 h-10 border-2 border-primary/60 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse" />
-        </div>
-      </motion.div>
+          {/* Decorative thin line */}
+          <motion.div
+            className="absolute top-[50%] left-[5%] right-[5%] h-px bg-gray-300 dark:bg-gray-800"
+            style={{ y: y4, scaleX: scale }}
+          />
+
+          {/* Subtle glow orb */}
+          <div className="absolute top-[30%] left-[20%] w-[40vw] h-[40vw] bg-primary/[0.03] rounded-full blur-[120px] pointer-events-none" />
+          <div className="absolute bottom-[20%] right-[15%] w-[30vw] h-[30vw] bg-primary/[0.02] rounded-full blur-[100px] pointer-events-none" />
+
+          {/* Scroll indicator */}
+          <motion.div
+            className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1.8 }}
+          >
+            <span className="text-[10px] tracking-[0.3em] text-gray-500 dark:text-gray-600 font-sans uppercase">
+              Scroll
+            </span>
+            <motion.div
+              className="w-px h-8 bg-gray-400 dark:bg-gray-600 origin-top"
+              animate={{ scaleY: [1, 0.3, 1] }}
+              transition={{ repeat: Infinity, duration: 2.5, ease: 'easeInOut' }}
+            />
+          </motion.div>
+        </motion.div>
+      </div>
     </section>
   )
 }
