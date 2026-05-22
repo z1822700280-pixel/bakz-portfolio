@@ -4,6 +4,7 @@
 
 @theme inline {
   --color-primary: #113285;
+  --color-primary-light: #DDA52D;
   --color-secondary: #0D5661;
   --color-cold-gray: #6b7280;
   --color-mist-white: #f5f2ee;
@@ -48,7 +49,7 @@ html {
 }
 
 :root {
-  --color-primary: #113285;
+  --color-primary: #DDA52D;
   --color-secondary: #0D5661;
   --color-cold-gray: #6b7280;
   --color-mist-white: #f5f2ee;
@@ -62,6 +63,7 @@ html {
 }
 
 .dark {
+  --color-primary: #113285;
   --bg-primary: #080808;
   --bg-secondary: #0c0c0c;
   --bg-card: #111111;
@@ -104,10 +106,23 @@ body {
   text-shadow: 0 0 120px rgba(17, 50, 133, 0.15);
 }
 
+.dark .hero-stroke {
+  text-shadow: 0 0 120px rgba(17, 50, 133, 0.25);
+}
+
 .hero-stroke-subtle {
   -webkit-text-stroke: 1px var(--color-primary);
   color: transparent;
   opacity: 0.4;
+}
+
+/* Hover brightening effect */
+.hero-hover-glow {
+  transition: opacity 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.hero-hover-glow:hover {
+  opacity: 1 !important;
 }
 
 /* Typography refinements */

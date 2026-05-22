@@ -13,9 +13,8 @@ export default function Hero() {
     offset: ['start start', 'end start'],
   })
 
-  const y1 = useTransform(scrollYProgress, [0, 1], [0, -180])
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, -280])
-  const y3 = useTransform(scrollYProgress, [0, 1], [0, -120])
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, -150])
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, -220])
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
 
   const handleMouseMove = (e: React.MouseEvent) => {
@@ -28,8 +27,8 @@ export default function Hero() {
   }
 
   return (
-    <section 
-      ref={ref} 
+    <section
+      ref={ref}
       className="relative h-[120vh] overflow-hidden"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
@@ -38,28 +37,31 @@ export default function Hero() {
 
       <div className="sticky top-0 h-screen flex flex-col justify-center">
         <motion.div style={{ opacity }}>
+          {/* Highlight effect overlay */}
           {isHovering && (
-            <div 
+            <div
               className="absolute pointer-events-none z-10"
               style={{
                 left: mousePos.x - 150,
                 top: mousePos.y - 150,
                 width: 300,
                 height: 300,
-                background: 'radial-gradient(circle, rgba(0, 92, 175, 0.15) 0%, transparent 70%)',
+                background: 'radial-gradient(circle, rgba(17, 50, 133, 0.12) 0%, transparent 70%)',
                 borderRadius: '50%',
+                transform: 'translate(-50%, -50%)',
               }}
             />
           )}
-          
+
+          {/* EXPLORING - outline text, positioned left */}
           <motion.div
             style={{ y: y1 }}
             className="relative -ml-[10vw]"
           >
             <h1
-              className="text-[22vw] font-bold tracking-tighter leading-none hero-stroke transition-opacity duration-300"
-              style={{ 
-                WebkitTextStroke: '2px var(--color-primary)', 
+              className="text-[22vw] font-bold tracking-tighter leading-none hero-stroke hero-hover-glow"
+              style={{
+                WebkitTextStroke: '2px var(--color-primary)',
                 color: 'transparent',
                 opacity: isHovering ? 1 : 0.9,
               }}
@@ -71,12 +73,15 @@ export default function Hero() {
             </span>
           </motion.div>
 
+          {/* WANDERING - solid text, positioned right */}
           <motion.div
             style={{ y: y2 }}
             className="relative ml-[20vw] -mt-[5vw]"
           >
-            <h1 className="text-[20vw] font-bold tracking-tighter leading-none text-primary transition-opacity duration-300"
-                style={{ opacity: isHovering ? 1 : 0.9 }}>
+            <h1
+              className="text-[20vw] font-bold tracking-tighter leading-none text-primary hero-hover-glow"
+              style={{ opacity: isHovering ? 1 : 0.9 }}
+            >
               WANDERING
             </h1>
             <span className="absolute bottom-0 right-[10vw] text-sm text-secondary tracking-[0.3em]">
@@ -84,33 +89,24 @@ export default function Hero() {
             </span>
           </motion.div>
 
+          {/* Chinese caption */}
           <motion.div
-            style={{ y: y3 }}
-            className="relative ml-[5vw] -mt-[3vw]"
+            className="relative ml-[5vw] -mt-[2vw]"
           >
-            <h1
-              className="text-[16vw] font-bold tracking-tighter leading-none transition-opacity duration-300"
-              style={{ 
-                WebkitTextStroke: '1px var(--color-primary)', 
-                color: 'transparent',
-                opacity: isHovering ? 0.6 : 0.4,
-              }}
-            >
-              BECOMING
-            </h1>
-            <span className="absolute top-1/2 left-[50%] text-sm text-secondary tracking-[0.3em]">
+            <span className="text-lg text-secondary/60 tracking-[0.5em]">
               无限进步
             </span>
           </motion.div>
         </motion.div>
 
+        {/* Scroll indicator */}
         <motion.div
           className="absolute bottom-10 left-1/2 -translate-x-1/2"
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
         >
-          <div className="w-6 h-10 border border-gray-600 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-gray-600 rounded-full mt-2" />
+          <div className="w-6 h-10 border border-cold-gray rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-cold-gray rounded-full mt-2" />
           </div>
         </motion.div>
       </div>
