@@ -1,7 +1,7 @@
 'use client'
 
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from 'framer-motion'
-import { useRef, useState, useEffect, useCallback } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { useTheme } from '@/contexts/ThemeContext'
 
 // SVG text path for line drawing animation
@@ -104,8 +104,6 @@ function SignatureText({ text, delay = 0 }: { text: string; delay?: number }) {
 
 export default function Hero() {
   const ref = useRef(null)
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
-  const [isHovering, setIsHovering] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
   const [showContent, setShowContent] = useState(false)
   const { isDark } = useTheme()
@@ -152,24 +150,10 @@ export default function Hero() {
     return () => cancelAnimationFrame(frame)
   }, [isLoaded, driftX])
 
-  const handleMouseMove = useCallback((e: React.MouseEvent) => {
-    setMousePos({ x: e.clientX, y: e.clientY })
-    setIsHovering(true)
-  }, [])
-
-  const handleMouseLeave = useCallback(() => {
-    setIsHovering(false)
-  }, [])
-
-  // Glow radius for hover effect
-  const glowSize = 350
-
   return (
     <section
       ref={ref}
-      className="relative h-[130vh] overflow-hidden cursor-none"
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
+      className="relative h-[130vh] overflow-hidden"
     >
       {/* Background layers */}
       <div className="absolute inset-0">
@@ -183,28 +167,6 @@ export default function Hero() {
           style={{ opacity, x: springDrift }}
           className="relative w-full px-4 sm:px-8 lg:px-16"
         >
-          {/* Mouse follow glow */}
-          {isHovering && (
-            <motion.div
-              className="fixed pointer-events-none z-20"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              style={{
-                left: mousePos.x - glowSize / 2,
-                top: mousePos.y - glowSize / 2,
-                width: glowSize,
-                height: glowSize,
-                background: isDark
-                  ? `radial-gradient(circle, rgba(17, 50, 133, 0.18) 0%, rgba(17, 50, 133, 0.08) 25%, rgba(255, 255, 255, 0.03) 45%, transparent 70%)`
-                  : `radial-gradient(circle, rgba(221, 165, 45, 0.12) 0%, rgba(221, 165, 45, 0.05) 25%, rgba(0, 0, 0, 0.02) 45%, transparent 70%)`,
-                borderRadius: '50%',
-                mixBlendMode: 'screen',
-                transition: 'left 0.15s ease-out, top 0.15s ease-out',
-              }}
-            />
-          )}
-
           {/* EXPLORING - SVG line drawing */}
           <motion.div
             style={{ y: y1 }}
