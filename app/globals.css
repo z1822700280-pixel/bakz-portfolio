@@ -3,13 +3,16 @@
 @variant dark (&:where(.dark, .dark *));
 
 @theme inline {
-  --color-primary: #0D5661;
-  --color-secondary: #465D4C;
+  --color-primary: #113285;
+  --color-secondary: #0D5661;
+  --color-cold-gray: #6b7280;
+  --color-mist-white: #f5f2ee;
+  --color-dark-blue-gray: #1e293b;
   --color-dark-bg: #080808;
   --color-dark-card: #111111;
   --color-dark-text: #e0e0e0;
-  --color-light-bg: #f8f6f3;
-  --color-light-card: #f5f2ee;
+  --color-light-bg: #f5f2ee;
+  --color-light-card: #f0ede8;
   --color-light-text: #1a1a1a;
   --font-sans: "Inter", "Noto Sans SC", sans-serif;
   --font-display: "Syne", "Inter", sans-serif;
@@ -22,7 +25,7 @@ html {
 
 /* Selection color */
 ::selection {
-  background-color: rgba(13, 86, 97, 0.3);
+  background-color: rgba(17, 50, 133, 0.3);
   color: inherit;
 }
 
@@ -45,11 +48,14 @@ html {
 }
 
 :root {
-  --color-primary: #0D5661;
-  --color-secondary: #465D4C;
-  --bg-primary: #f8f6f3;
-  --bg-secondary: #f0ede8;
-  --bg-card: #f5f2ee;
+  --color-primary: #113285;
+  --color-secondary: #0D5661;
+  --color-cold-gray: #6b7280;
+  --color-mist-white: #f5f2ee;
+  --color-dark-blue-gray: #1e293b;
+  --bg-primary: #f5f2ee;
+  --bg-secondary: #ebe8e3;
+  --bg-card: #f0ede8;
   --text-primary: #1a1a1a;
   --text-secondary: #666666;
   --text-muted: #999999;
@@ -59,7 +65,7 @@ html {
   --bg-primary: #080808;
   --bg-secondary: #0c0c0c;
   --bg-card: #111111;
-  --text-primary: #ffffff;
+  --text-primary: #e0e0e0;
   --text-secondary: #999999;
   --text-muted: #666666;
 }
@@ -72,7 +78,7 @@ body {
 
 /* Smooth gradient utilities */
 .gradient-depth {
-  background: radial-gradient(ellipse at 50% 50%, rgba(13, 86, 97, 0.08) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 50% 50%, rgba(17, 50, 133, 0.08) 0%, transparent 60%);
 }
 
 .gradient-atmosphere {
@@ -80,7 +86,7 @@ body {
 }
 
 .gradient-glow {
-  background: radial-gradient(circle at 50% 50%, rgba(70, 93, 76, 0.03) 0%, transparent 50%);
+  background: radial-gradient(circle at 50% 50%, rgba(13, 86, 97, 0.03) 0%, transparent 50%);
 }
 
 /* Section divider */
@@ -95,7 +101,7 @@ body {
 .hero-stroke {
   -webkit-text-stroke: 2px var(--color-primary);
   color: transparent;
-  text-shadow: 0 0 120px rgba(13, 86, 97, 0.15);
+  text-shadow: 0 0 120px rgba(17, 50, 133, 0.15);
 }
 
 .hero-stroke-subtle {
