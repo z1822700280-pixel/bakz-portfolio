@@ -2,10 +2,12 @@
 
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import { useTheme } from '@/contexts/ThemeContext'
 
 export default function GlowCursor() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isVisible, setIsVisible] = useState(false)
+  const { isDark } = useTheme()
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -26,6 +28,8 @@ export default function GlowCursor() {
     }
   }, [])
 
+  const glowColor = isDark ? 'rgba(17, 50, 133, 0.15)' : 'rgba(221, 165, 45, 0.12)'
+
   return (
     <motion.div
       className="fixed pointer-events-none z-[9998]"
@@ -34,7 +38,7 @@ export default function GlowCursor() {
         top: mousePosition.y - 75,
         width: 150,
         height: 150,
-        background: 'radial-gradient(circle, rgba(0, 92, 175, 0.15) 0%, transparent 70%)',
+        background: `radial-gradient(circle, ${glowColor} 0%, transparent 70%)`,
         borderRadius: '50%',
         opacity: isVisible ? 1 : 0,
       }}

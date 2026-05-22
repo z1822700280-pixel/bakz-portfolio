@@ -34,7 +34,7 @@ export default function Lightbox({ item, onClose, onNext, onPrev }: LightboxProp
           onClick={(e) => e.stopPropagation()}
         >
           <button
-            className="absolute -top-12 right-0 text-white/40 hover:text-white/80 text-xl transition-colors"
+            className="absolute -top-12 right-0 text-white/40 hover:text-primary text-xl transition-colors"
             onClick={onClose}
           >
             ✕

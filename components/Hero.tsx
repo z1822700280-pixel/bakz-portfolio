@@ -2,11 +2,13 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef, useState } from 'react'
+import { useTheme } from '@/contexts/ThemeContext'
 
 export default function Hero() {
   const ref = useRef(null)
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
   const [isHovering, setIsHovering] = useState(false)
+  const { isDark } = useTheme()
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -46,7 +48,9 @@ export default function Hero() {
                 top: mousePos.y - 150,
                 width: 300,
                 height: 300,
-                background: 'radial-gradient(circle, rgba(17, 50, 133, 0.12) 0%, transparent 70%)',
+                background: isDark
+                  ? 'radial-gradient(circle, rgba(17, 50, 133, 0.12) 0%, transparent 70%)'
+                  : 'radial-gradient(circle, rgba(221, 165, 45, 0.10) 0%, transparent 70%)',
                 borderRadius: '50%',
                 transform: 'translate(-50%, -50%)',
               }}

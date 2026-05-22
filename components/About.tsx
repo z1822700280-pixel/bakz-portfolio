@@ -14,7 +14,7 @@ export default function About() {
     <section id="about" ref={sectionRef} className="relative py-20 px-6 overflow-hidden">
       {/* Gradient overlay that fades in */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-b from-transparent via-white/[0.01] to-transparent pointer-events-none"
+        className="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--text-primary)]/[0.01] to-transparent pointer-events-none"
         initial={{ opacity: 0 }}
         animate={isVisible ? { opacity: 1 } : {}}
         transition={{ duration: 1.2, ease: 'easeOut' }}
@@ -31,7 +31,7 @@ export default function About() {
           <motion.div
             ref={tiltRef}
             {...handlers}
-            className="aspect-square relative rounded-lg overflow-hidden bg-white/[0.03] border border-white/[0.04]"
+            className="aspect-square relative rounded-lg overflow-hidden bg-[var(--bg-card)] border border-[var(--border-subtle)]"
             style={{
               transform: `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
               transition: 'transform 0.2s ease-out',
@@ -56,10 +56,10 @@ export default function About() {
 
           {/* Content */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white/90">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary dark:text-primary">
               {lang === 'zh' ? '关于我' : 'About Me'}
             </h2>
-            <p className="text-white/50 text-lg mb-8 leading-relaxed">
+            <p className="text-[var(--text-secondary)] text-lg mb-8 leading-relaxed">
               {lang === 'zh'
                 ? '我热爱视觉表达，擅长从创意中提炼品牌感，与时俱进，擅长接收新鲜技术，熟练与AI的沟通与创作，具备新媒体内容创作与设计执行的双重能力。'
                 : 'Creative and detail-driven designer with a passion for storytelling.'}
@@ -67,16 +67,16 @@ export default function About() {
 
             <div className="space-y-4">
               <div>
-                <h3 className="text-xs text-white/30 mb-1 tracking-widest uppercase">
+                <h3 className="text-xs text-secondary mb-1 tracking-widest uppercase">
                   {lang === 'zh' ? '邮箱' : 'Email'}
                 </h3>
-                <p className="text-white/70">1822700280@qq.com</p>
+                <p className="text-[var(--text-primary)]">1822700280@qq.com</p>
               </div>
               <div>
-                <h3 className="text-xs text-white/30 mb-1 tracking-widest uppercase">
+                <h3 className="text-xs text-secondary mb-1 tracking-widest uppercase">
                   {lang === 'zh' ? '电话' : 'Phone'}
                 </h3>
-                <p className="text-white/70">13547598026</p>
+                <p className="text-[var(--text-primary)]">13547598026</p>
               </div>
             </div>
 
@@ -84,7 +84,7 @@ export default function About() {
               {['AIGC', '视频制作', 'UI设计', '游戏开发'].map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs px-4 py-1.5 text-white/40 border border-white/[0.08] rounded-full hover:text-white/60 hover:border-white/15 transition-colors"
+                  className="text-xs px-4 py-1.5 bg-secondary/20 text-secondary border border-secondary/20 rounded-full hover:bg-secondary/30 transition-colors"
                 >
                   {tag}
                 </span>

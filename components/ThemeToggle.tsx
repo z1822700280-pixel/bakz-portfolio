@@ -9,7 +9,7 @@ export default function ThemeToggle() {
   return (
     <motion.button
       onClick={toggleTheme}
-      className="relative w-8 h-8 rounded-full flex items-center justify-center text-white/40 hover:text-white/70 transition-colors"
+      className="relative w-8 h-8 rounded-full flex items-center justify-center text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors"
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
     >

@@ -28,7 +28,7 @@ export default function GalleryItem({ item, index, onClick }: GalleryItemProps) 
       <motion.div
         ref={tiltRef}
         {...handlers}
-        className="relative overflow-hidden rounded-lg bg-white/[0.02] border border-white/[0.04] hover:border-white/[0.08] transition-colors duration-500"
+        className="relative overflow-hidden rounded-lg bg-[var(--bg-card)] border border-[var(--border-subtle)] hover:border-[var(--border-hover)] transition-colors duration-500"
         whileHover={{ scale: 1.03 }}
         transition={{ duration: 0.3 }}
         style={{
@@ -49,7 +49,7 @@ export default function GalleryItem({ item, index, onClick }: GalleryItemProps) 
             </h3>
             <div className="flex gap-2 mt-2">
               {item.tags.map((tag) => (
-                <span key={tag} className="text-xs text-white/70 bg-white/10 px-2 py-0.5 rounded">
+                <span key={tag} className="text-xs text-white/70 bg-white/20 px-2 py-0.5 rounded">
                   {tag}
                 </span>
               ))}

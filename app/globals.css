@@ -26,8 +26,12 @@ html {
 
 /* Selection color */
 ::selection {
-  background-color: rgba(17, 50, 133, 0.3);
+  background-color: rgba(221, 165, 45, 0.3);
   color: inherit;
+}
+
+.dark ::selection {
+  background-color: rgba(17, 50, 133, 0.3);
 }
 
 /* Scrollbar styling */
@@ -40,11 +44,19 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.2);
 }
 
@@ -57,9 +69,15 @@ html {
   --bg-primary: #f5f2ee;
   --bg-secondary: #ebe8e3;
   --bg-card: #f0ede8;
+  --bg-card-hover: #e8e5e0;
+  --border-subtle: rgba(0, 0, 0, 0.06);
+  --border-hover: rgba(0, 0, 0, 0.12);
   --text-primary: #1a1a1a;
   --text-secondary: #666666;
   --text-muted: #999999;
+  --text-on-card: #1a1a1a;
+  --text-on-card-secondary: #555555;
+  --text-on-card-muted: #888888;
 }
 
 .dark {
@@ -67,9 +85,15 @@ html {
   --bg-primary: #080808;
   --bg-secondary: #0c0c0c;
   --bg-card: #111111;
+  --bg-card-hover: #181818;
+  --border-subtle: rgba(255, 255, 255, 0.04);
+  --border-hover: rgba(255, 255, 255, 0.10);
   --text-primary: #e0e0e0;
   --text-secondary: #999999;
   --text-muted: #666666;
+  --text-on-card: rgba(255, 255, 255, 0.85);
+  --text-on-card-secondary: rgba(255, 255, 255, 0.50);
+  --text-on-card-muted: rgba(255, 255, 255, 0.30);
 }
 
 body {
@@ -83,8 +107,16 @@ body {
   background: radial-gradient(ellipse at 50% 50%, rgba(17, 50, 133, 0.08) 0%, transparent 60%);
 }
 
+:root .gradient-depth {
+  background: radial-gradient(ellipse at 50% 50%, rgba(221, 165, 45, 0.06) 0%, transparent 60%);
+}
+
 .gradient-atmosphere {
   background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+:root .gradient-atmosphere {
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.05) 100%);
 }
 
 .gradient-glow {
@@ -99,11 +131,15 @@ body {
   max-width: 80%;
 }
 
+:root .section-divider {
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.08), transparent);
+}
+
 /* Hero stroke text effects */
 .hero-stroke {
   -webkit-text-stroke: 2px var(--color-primary);
   color: transparent;
-  text-shadow: 0 0 120px rgba(17, 50, 133, 0.15);
+  text-shadow: 0 0 120px rgba(221, 165, 45, 0.15);
 }
 
 .dark .hero-stroke {

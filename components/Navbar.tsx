@@ -23,7 +23,7 @@ export default function Navbar() {
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-[#080808]/90 border-b border-white/[0.03]'
+          ? 'bg-[var(--bg-primary)]/90 backdrop-blur-md border-b border-[var(--border-subtle)]'
           : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
@@ -33,7 +33,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <motion.button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="text-xl font-bold tracking-[0.3em] text-white/80 hover:text-white transition-colors"
+          className="text-xl font-bold tracking-[0.3em] text-primary hover:text-secondary transition-colors"
           whileHover={{ scale: 1.05 }}
         >
           BAKZ
@@ -42,17 +42,17 @@ export default function Navbar() {
         <div className="flex items-center gap-8">
           <button
             onClick={() => scrollToSection('works')}
-            className="text-sm text-white/50 hover:text-white/90 transition-colors relative group tracking-widest"
+            className="text-sm text-[var(--text-muted)] hover:text-secondary transition-colors relative group tracking-widest"
           >
             {lang === 'zh' ? '作品' : 'Works'}
-            <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-white/30 group-hover:w-full transition-all duration-500" />
+            <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-secondary/30 group-hover:w-full transition-all duration-500" />
           </button>
           <button
             onClick={() => scrollToSection('about')}
-            className="text-sm text-white/50 hover:text-white/90 transition-colors relative group tracking-widest"
+            className="text-sm text-[var(--text-muted)] hover:text-secondary transition-colors relative group tracking-widest"
           >
             {lang === 'zh' ? '关于' : 'About'}
-            <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-white/30 group-hover:w-full transition-all duration-500" />
+            <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-secondary/30 group-hover:w-full transition-all duration-500" />
           </button>
           <ThemeToggle />
         </div>

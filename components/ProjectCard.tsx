@@ -27,7 +27,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         <motion.div
           ref={tiltRef}
           {...handlers}
-          className="relative group cursor-pointer overflow-hidden rounded-lg bg-white/[0.02] border border-white/[0.04] hover:border-white/[0.08] transition-colors duration-500"
+          className="relative group cursor-pointer overflow-hidden rounded-lg bg-[var(--bg-card)] border border-[var(--border-subtle)] hover:border-[var(--border-hover)] transition-colors duration-500"
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.3 }}
           style={{
@@ -51,12 +51,12 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-white/20 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
           </div>
           <div className="p-4">
-            <h3 className="text-lg font-semibold text-white/80 group-hover:text-white transition-colors">{project.title[lang]}</h3>
+            <h3 className="text-lg font-semibold text-[var(--text-on-card)] group-hover:text-[var(--text-primary)] transition-colors">{project.title[lang]}</h3>
             <div className="flex gap-2 mt-2">
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs px-2 py-1 text-white/30 border border-white/[0.06] rounded"
+                  className="text-xs px-2 py-1 text-[var(--text-on-card-muted)] border border-[var(--border-subtle)] rounded"
                 >
                   {tag}
                 </span>
