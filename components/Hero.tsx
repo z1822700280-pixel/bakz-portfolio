@@ -30,7 +30,7 @@ export default function Hero() {
   return (
     <section 
       ref={ref} 
-      className="relative h-[150vh] overflow-hidden"
+      className="relative h-[120vh] overflow-hidden"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
