@@ -1,0 +1,17 @@
+{
+  "id": "unity-game-2",
+  "title": {
+    "zh": "回声迷宫",
+    "en": "Echo Labyrinth"
+  },
+  "description": {
+    "zh": "基于声音定位的解谜游戏。在黑暗迷宫中，玩家依靠回声判断方向与障碍，探索听觉交互的设计边界。",
+    "en": "Sound-based puzzle game. In dark mazes, players rely on echoes to navigate obstacles, pushing the boundaries of auditory interaction design."
+  },
+  "category": "game",
+  "tags": ["Unity", "独立游戏", "声音设计"],
+  "year": 2025,
+  "thumbnail": "/images/placeholder.svg",
+  "images": ["/images/placeholder.svg", "/images/placeholder.svg"],
+  "tools": ["Unity", "FMOD"]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "photo-7",
+  "title": {
+    "zh": "雪山倒影",
+    "en": "Snow Mountain Reflection"
+  },
+  "description": {
+    "zh": "川西高原湖泊中的雪山倒影，天地一线间云层翻涌的壮阔瞬间",
+    "en": "Snow mountain reflected in Western Sichuan lakes, the magnificent moment of clouds rolling between sky and earth"
+  },
+  "category": "photography",
+  "tags": ["摄影", "风光", "川西"],
+  "year": 2025,
+  "image": "/images/placeholder.svg"
+}

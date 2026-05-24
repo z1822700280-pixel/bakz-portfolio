@@ -1,0 +1,17 @@
+{
+  "id": "ui-design-1",
+  "title": {
+    "zh": "EGORGO 动态界面",
+    "en": "EGORGO Dynamic Interface"
+  },
+  "description": {
+    "zh": "概念化动态 UI 系统设计，探索界面元素的运动语言与情感表达，打造具有生命力的交互体验。",
+    "en": "Conceptual dynamic UI system design, exploring motion language and emotional expression of interface elements to create living interactions."
+  },
+  "category": "video",
+  "tags": ["UI设计", "动态设计", "Figma"],
+  "year": 2024,
+  "thumbnail": "/images/placeholder.svg",
+  "images": ["/images/placeholder.svg"],
+  "tools": ["Figma", "After Effects"]
+}

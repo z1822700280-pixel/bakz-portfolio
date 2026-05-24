@@ -1,0 +1,17 @@
+{
+  "id": "ue-scene-2",
+  "title": {
+    "zh": "霓虹雨巷",
+    "en": "Neon Rain Alley"
+  },
+  "description": {
+    "zh": "赛博朋克风格的城市雨巷场景，实时反射与体积雾效打造未来都市的潮湿质感。",
+    "en": "Cyberpunk-style rainy city alley, real-time reflections and volumetric fog create a damp futuristic urban texture."
+  },
+  "category": "game",
+  "tags": ["UE5", "赛博朋克", "天气系统"],
+  "year": 2024,
+  "thumbnail": "/images/placeholder.svg",
+  "images": ["/images/placeholder.svg", "/images/placeholder.svg"],
+  "tools": ["Unreal Engine 5", "Houdini"]
+}

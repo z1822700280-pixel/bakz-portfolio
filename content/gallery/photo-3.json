@@ -1,0 +1,15 @@
+{
+  "id": "photo-3",
+  "title": {
+    "zh": "无名肖像",
+    "en": "Untitled Portraits"
+  },
+  "description": {
+    "zh": "街头陌生人的一瞬表情，黑白影调剥离色彩干扰，直视人的本质",
+    "en": "Fleeting expressions of strangers on the street, black and white stripping color to face human essence"
+  },
+  "category": "photography",
+  "tags": ["摄影", "人像", "黑白"],
+  "year": 2023,
+  "image": "/images/placeholder.svg"
+}

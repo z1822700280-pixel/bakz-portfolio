@@ -1,0 +1,15 @@
+{
+  "id": "poster-4",
+  "title": {
+    "zh": "深夜食堂活动海报",
+    "en": "Midnight Diner Event Poster"
+  },
+  "description": {
+    "zh": "校园美食节活动海报，温暖色调与插画风格营造深夜治愈感",
+    "en": "Campus food festival poster, warm tones and illustration style creating a late-night comfort feel"
+  },
+  "category": "poster",
+  "tags": ["海报", "插画", "活动"],
+  "year": 2024,
+  "image": "/images/placeholder.svg"
+}

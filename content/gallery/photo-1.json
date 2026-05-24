@@ -1,0 +1,15 @@
+{
+  "id": "photo-1",
+  "title": {
+    "zh": "城市缝隙",
+    "en": "Urban Cracks"
+  },
+  "description": {
+    "zh": "捕捉高楼之间被遗忘的角落，建筑夹缝中生长的野草与光影",
+    "en": "Capturing forgotten corners between skyscrapers, wild grass and light growing in architectural gaps"
+  },
+  "category": "photography",
+  "tags": ["摄影", "城市", "光影"],
+  "year": 2024,
+  "image": "/images/placeholder.svg"
+}

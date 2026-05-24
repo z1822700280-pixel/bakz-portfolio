@@ -1,0 +1,17 @@
+{
+  "id": "ue-scene-3",
+  "title": {
+    "zh": "浮空神殿",
+    "en": "Floating Temple"
+  },
+  "description": {
+    "zh": "东方幻想风格的浮空建筑群，云海翻涌间若隐若现的古代神殿，探索空间叙事的可能性。",
+    "en": "Eastern fantasy-style floating architecture, ancient temples emerging through rolling clouds, exploring spatial narrative possibilities."
+  },
+  "category": "game",
+  "tags": ["UE5", "东方美学", "关卡设计"],
+  "year": 2025,
+  "thumbnail": "/images/placeholder.svg",
+  "images": ["/images/placeholder.svg", "/images/placeholder.svg"],
+  "tools": ["Unreal Engine 5", "World Creator"]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "aigc-2",
+  "title": {
+    "zh": "机械花卉",
+    "en": "Mechanical Flora"
+  },
+  "description": {
+    "zh": "AI 想象的机械与有机体融合的花卉，齿轮与花瓣共生的超现实静物",
+    "en": "AI-imagined fusion of mechanical and organic flora, surreal still life of gears and petals coexisting"
+  },
+  "category": "aigc",
+  "tags": ["AIGC", "超现实", "植物"],
+  "year": 2024,
+  "image": "/images/placeholder.svg"
+}

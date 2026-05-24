@@ -1,0 +1,43 @@
+fragment ProjectParts on Project {
+  __typename
+  title {
+    __typename
+    zh
+    en
+  }
+  description {
+    __typename
+    zh
+    en
+  }
+  category
+  tags
+  year
+  tools
+  thumbnail
+  images
+  links {
+    __typename
+    behance
+    figma
+    youtube
+  }
+}
+
+fragment GalleryParts on Gallery {
+  __typename
+  title {
+    __typename
+    zh
+    en
+  }
+  description {
+    __typename
+    zh
+    en
+  }
+  category
+  tags
+  year
+  image
+}

@@ -11,11 +11,20 @@ export interface GalleryItem {
 export const galleryItems: GalleryItem[] = [
   // Poster Designs (7)
   {
-    id: 'poster-1',
-    title: { zh: '校园电影节海报', en: 'Campus Film Festival Poster' },
-    description: { zh: '第四届校园独立电影节主视觉设计，胶片质感与手写字体的碰撞', en: 'Main visual for the 4th campus indie film festival, combining film texture with hand-lettering' },
+    id: 'yingjing-heisha-poster-1',
+    title: { zh: '荥经黑砂系列海报1', en: 'Yingjing Black Sand Series Poster 1' },
+    description: { zh: '非遗文化传承系列海报，参加全国职业技能大赛作品（银奖）', en: 'Intangible cultural heritage series poster, National Vocational Skills Competition entry (Silver Award)' },
     category: 'poster',
-    tags: ['海报', '电影节', '排版'],
+    tags: ['海报设计', '非遗文化', '全国大赛', '银奖'],
+    year: 2024,
+    image: '/images/gallery/yingjing-heisha-poster-1.jpg',
+  },
+  {
+    id: 'poster-2',
+    title: { zh: '声音实验展海报', en: 'Sound Experiment Exhibition Poster' },
+    description: { zh: '新媒体艺术展视觉设计，声波图形化与极简构图', en: 'Visual design for new media art exhibition, sound wave graphics with minimal composition' },
+    category: 'poster',
+    tags: ['海报', '展览', '极简'],
     year: 2024,
     image: '/images/placeholder.svg',
   },

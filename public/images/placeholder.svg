@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#1a1a1a"/>
+  <rect x="50" y="50" width="700" height="500" rx="8" fill="#222222" stroke="#333333" stroke-width="2"/>
+  <text x="400" y="280" text-anchor="middle" fill="#666666" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="500">BAKZ</text>
+  <text x="400" y="320" text-anchor="middle" fill="#555555" font-family="system-ui, -apple-system, sans-serif" font-size="16">Placeholder Image</text>
+  <circle cx="400" cy="200" r="30" fill="none" stroke="#444444" stroke-width="2"/>
+  <path d="M390 200 L410 200 M400 190 L400 210" stroke="#444444" stroke-width="2" stroke-linecap="round"/>
+</svg>

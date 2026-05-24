@@ -1,13 +1,14 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { projects } from '@/data/projects'
 import ProjectCard from './ProjectCard'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { useScrollReveal } from '@/hooks/useScrollReveal'
+import { useTinaData } from '@/hooks/useTinaData'
 
 export default function Works() {
   const { lang } = useLanguage()
+  const { projects, isLoading } = useTinaData()
   const gameProjects = projects.filter((p) => p.category === 'game')
   const videoProjects = projects.filter((p) => p.category === 'video')
   const { ref: sectionRef, isVisible } = useScrollReveal(0.1)

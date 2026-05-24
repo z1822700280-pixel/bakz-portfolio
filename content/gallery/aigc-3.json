@@ -1,0 +1,15 @@
+{
+  "id": "aigc-3",
+  "title": {
+    "zh": "未来面孔",
+    "en": "Future Faces"
+  },
+  "description": {
+    "zh": "AI 生成的未来人类肖像系列，探索后人类时代的身份认同与审美边界",
+    "en": "AI-generated future human portrait series, exploring identity and aesthetic boundaries in the post-human era"
+  },
+  "category": "aigc",
+  "tags": ["AIGC", "人像", "未来主义"],
+  "year": 2024,
+  "image": "/images/placeholder.svg"
+}

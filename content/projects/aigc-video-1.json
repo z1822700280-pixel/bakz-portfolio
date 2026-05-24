@@ -1,0 +1,17 @@
+{
+  "id": "aigc-video-1",
+  "title": {
+    "zh": "梦境漫游",
+    "en": "Dreamscape Drift"
+  },
+  "description": {
+    "zh": "利用 AI 生成技术构建的超现实梦境短片，融合真实影像与 AI 想象，探索意识流叙事的视觉可能。",
+    "en": "Surreal dream short film built with AI generation, blending real footage with AI imagination to explore stream-of-consciousness visual narrative."
+  },
+  "category": "video",
+  "tags": ["AIGC", "短片", "超现实"],
+  "year": 2024,
+  "thumbnail": "/images/placeholder.svg",
+  "images": ["/images/placeholder.svg"],
+  "tools": ["Stable Diffusion", "After Effects", "DaVinci Resolve"]
+}

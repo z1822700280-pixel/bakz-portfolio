@@ -1,0 +1,15 @@
+{
+  "id": "aigc-1",
+  "title": {
+    "zh": "赛博山水",
+    "en": "Cyber Shanshui"
+  },
+  "description": {
+    "zh": "AI 生成的赛博朋克水墨山水，传统笔触与数字粒子的融合实验",
+    "en": "AI-generated cyberpunk ink landscape, experimental fusion of traditional brushstrokes and digital particles"
+  },
+  "category": "aigc",
+  "tags": ["AIGC", "中国风", "赛博朋克"],
+  "year": 2024,
+  "image": "/images/placeholder.svg"
+}

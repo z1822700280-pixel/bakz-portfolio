@@ -1,0 +1,15 @@
+{
+  "id": "aigc-5",
+  "title": {
+    "zh": "深海奇境",
+    "en": "Abyssal Wonderland"
+  },
+  "description": {
+    "zh": "AI 构想的深海世界，发光水母群与未知生物在黑暗中编织光的诗篇",
+    "en": "AI-conceived deep sea world, bioluminescent jellyfish and unknown creatures weaving poetry of light in darkness"
+  },
+  "category": "aigc",
+  "tags": ["AIGC", "海洋", "生物设计"],
+  "year": 2024,
+  "image": "/images/placeholder.svg"
+}

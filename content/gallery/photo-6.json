@@ -1,0 +1,15 @@
+{
+  "id": "photo-6",
+  "title": {
+    "zh": "菜市场清晨",
+    "en": "Morning Market"
+  },
+  "description": {
+    "zh": "清晨菜市场的烟火气，蒸汽升腾中摊贩的日常，记录城市最真实的温度",
+    "en": "Morning market's warmth, vendors' daily routines in rising steam, recording the city's truest spirit"
+  },
+  "category": "photography",
+  "tags": ["摄影", "人文", "纪实"],
+  "year": 2024,
+  "image": "/images/placeholder.svg"
+}

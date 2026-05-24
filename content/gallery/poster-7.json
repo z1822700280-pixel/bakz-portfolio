@@ -1,0 +1,15 @@
+{
+  "id": "poster-7",
+  "title": {
+    "zh": "读书周海报",
+    "en": "Reading Week Poster"
+  },
+  "description": {
+    "zh": "世界读书日主题海报，书页翻飞的动态感与水墨晕染的东方韵味",
+    "en": "World Book Day themed poster, dynamic page-turning motion with ink wash Eastern aesthetics"
+  },
+  "category": "poster",
+  "tags": ["海报", "文化", "水墨"],
+  "year": 2024,
+  "image": "/images/placeholder.svg"
+}

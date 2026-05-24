@@ -2,16 +2,17 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { galleryItems } from '@/data/gallery'
 import GalleryItem from './GalleryItem'
 import Lightbox from './Lightbox'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { useScrollReveal } from '@/hooks/useScrollReveal'
+import { useTinaData } from '@/hooks/useTinaData'
 
 export default function Gallery() {
   const [selectedItem, setSelectedItem] = useState<number | null>(null)
   const [filter, setFilter] = useState<string>('all')
   const { lang } = useLanguage()
+  const { galleryItems, isLoading } = useTinaData()
   const { ref: sectionRef, isVisible } = useScrollReveal(0.1)
 
   const filteredItems =

@@ -1,0 +1,15 @@
+{
+  "id": "photo-5",
+  "title": {
+    "zh": "废弃游乐园",
+    "en": "Abandoned Amusement Park"
+  },
+  "description": {
+    "zh": "城市边缘废弃游乐园的荒凉之美，锈蚀的摩天轮与杂草丛生的旋转木马",
+    "en": "Desolate beauty of an abandoned park at the city's edge, rusted ferris wheel and overgrown carousel"
+  },
+  "category": "photography",
+  "tags": ["摄影", "废墟", "纪实"],
+  "year": 2023,
+  "image": "/images/placeholder.svg"
+}

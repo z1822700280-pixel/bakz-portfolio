@@ -1,0 +1,15 @@
+{
+  "id": "aigc-6",
+  "title": {
+    "zh": "折叠城市",
+    "en": "Folded City"
+  },
+  "description": {
+    "zh": "AI 想象的非欧几何城市空间，建筑在不可能的角度折叠，挑战空间认知",
+    "en": "AI-imagined non-Euclidean urban space, architecture folding at impossible angles, challenging spatial perception"
+  },
+  "category": "aigc",
+  "tags": ["AIGC", "建筑", "超现实"],
+  "year": 2025,
+  "image": "/images/placeholder.svg"
+}

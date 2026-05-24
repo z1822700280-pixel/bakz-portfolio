@@ -1,0 +1,15 @@
+{
+  "id": "photo-2",
+  "title": {
+    "zh": "雨后成都",
+    "en": "Chengdu After Rain"
+  },
+  "description": {
+    "zh": "雨后湿润的街道倒映霓虹，成都夜晚的安静与喧嚣并存",
+    "en": "Wet streets reflecting neon after rain, the quiet and bustle of Chengdu nights coexisting"
+  },
+  "category": "photography",
+  "tags": ["摄影", "街拍", "夜景"],
+  "year": 2024,
+  "image": "/images/placeholder.svg"
+}

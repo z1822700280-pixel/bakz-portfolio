@@ -1,0 +1,17 @@
+{
+  "id": "ue-scene-1",
+  "title": {
+    "zh": "废墟图书馆",
+    "en": "Ruined Library"
+  },
+  "description": {
+    "zh": "后启示录风格的废弃图书馆场景，融合自然侵蚀与人工建筑的对比美学。动态光影系统营造沉浸式氛围。",
+    "en": "Post-apocalyptic abandoned library scene, blending natural erosion with architectural contrast. Dynamic lighting system creates an immersive atmosphere."
+  },
+  "category": "game",
+  "tags": ["UE5", "场景搭建", "灯光设计"],
+  "year": 2024,
+  "thumbnail": "/images/placeholder.svg",
+  "images": ["/images/placeholder.svg", "/images/placeholder.svg"],
+  "tools": ["Unreal Engine 5", "Substance Painter"]
+}

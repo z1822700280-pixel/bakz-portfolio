@@ -1,0 +1,15 @@
+{
+  "id": "photo-4",
+  "title": {
+    "zh": "植物标本",
+    "en": "Botanical Specimens"
+  },
+  "description": {
+    "zh": "微距镜头下的植物纹理，叶脉与花瓣的精密结构如同外星地形",
+    "en": "Plant textures under macro lens, leaf veins and petal structures resembling alien terrain"
+  },
+  "category": "photography",
+  "tags": ["摄影", "微距", "自然"],
+  "year": 2024,
+  "image": "/images/placeholder.svg"
+}

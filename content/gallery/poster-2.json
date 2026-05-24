@@ -1,0 +1,15 @@
+{
+  "id": "poster-2",
+  "title": {
+    "zh": "声音实验展海报",
+    "en": "Sound Experiment Exhibition Poster"
+  },
+  "description": {
+    "zh": "新媒体艺术展视觉设计，声波图形化与极简构图",
+    "en": "Visual design for new media art exhibition, sound wave graphics with minimal composition"
+  },
+  "category": "poster",
+  "tags": ["海报", "展览", "极简"],
+  "year": 2024,
+  "image": "/images/placeholder.svg"
+}

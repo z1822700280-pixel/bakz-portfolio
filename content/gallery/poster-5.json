@@ -1,0 +1,15 @@
+{
+  "id": "poster-5",
+  "title": {
+    "zh": "摄影展 · 无界",
+    "en": "Photography Exhibition · Boundless"
+  },
+  "description": {
+    "zh": "个人摄影展主海报，大面积留白与摄影作品的对话关系",
+    "en": "Main poster for solo photography exhibition, dialogue between white space and photographs"
+  },
+  "category": "poster",
+  "tags": ["海报", "摄影展", "留白"],
+  "year": 2024,
+  "image": "/images/placeholder.svg"
+}

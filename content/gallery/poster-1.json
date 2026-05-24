@@ -1,0 +1,15 @@
+{
+  "id": "poster-1",
+  "title": {
+    "zh": "校园电影节海报",
+    "en": "Campus Film Festival Poster"
+  },
+  "description": {
+    "zh": "第四届校园独立电影节主视觉设计，胶片质感与手写字体的碰撞",
+    "en": "Main visual for the 4th campus indie film festival, combining film texture with hand-lettering"
+  },
+  "category": "poster",
+  "tags": ["海报", "电影节", "排版"],
+  "year": 2024,
+  "image": "/images/placeholder.svg"
+}

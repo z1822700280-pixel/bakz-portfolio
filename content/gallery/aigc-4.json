@@ -1,0 +1,15 @@
+{
+  "id": "aigc-4",
+  "title": {
+    "zh": "记忆碎片",
+    "en": "Memory Fragments"
+  },
+  "description": {
+    "zh": "将模糊的记忆片段通过 AI 重建为具象画面，介于真实与虚构之间的视觉叙事",
+    "en": "Reconstructing vague memory fragments into vivid imagery through AI, visual narrative between reality and fiction"
+  },
+  "category": "aigc",
+  "tags": ["AIGC", "概念艺术", "叙事"],
+  "year": 2025,
+  "image": "/images/placeholder.svg"
+}

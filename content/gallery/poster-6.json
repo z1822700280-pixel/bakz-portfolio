@@ -1,0 +1,15 @@
+{
+  "id": "poster-6",
+  "title": {
+    "zh": "电竞比赛海报",
+    "en": "Esports Tournament Poster"
+  },
+  "description": {
+    "zh": "校园电竞联赛视觉设计，几何切割与霓虹色彩传达竞技张力",
+    "en": "Campus esports league visual, geometric cuts and neon colors conveying competitive tension"
+  },
+  "category": "poster",
+  "tags": ["海报", "电竞", "几何"],
+  "year": 2023,
+  "image": "/images/placeholder.svg"
+}
