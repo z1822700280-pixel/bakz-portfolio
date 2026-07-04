@@ -55,7 +55,7 @@ export default function Works() {
           const catProjects = projects.filter((p) => p.category === cat.key)
           return (
             <div key={cat.key}>
-              {catIndex > 0 && <div className="section-divider my-16" />}
+              {catIndex > 0 && <div className="mt-32" />}
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
