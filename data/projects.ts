@@ -2,7 +2,7 @@ export interface Project {
   id: string
   title: { zh: string; en: string }
   description: { zh: string; en: string }
-  category: 'game' | 'video'
+  category: 'game' | 'ai-visual' | 'post-production'
   tags: string[]
   year: number
   thumbnail: string
@@ -11,7 +11,7 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-  // UE Scene Projects
+  // ── ① 游戏与交互设计 ──
   {
     id: 'ue-scene-1',
     title: { zh: '废墟图书馆', en: 'Ruined Library' },
@@ -54,8 +54,6 @@ export const projects: Project[] = [
     images: ['/images/placeholder.svg', '/images/placeholder.svg'],
     tools: ['Unreal Engine 5', 'World Creator'],
   },
-
-  // Unity Indie Games
   {
     id: 'unity-game-1',
     title: { zh: '纸鹤旅途', en: 'Paper Crane Journey' },
@@ -85,37 +83,7 @@ export const projects: Project[] = [
     tools: ['Unity', 'FMOD'],
   },
 
-  // UI Design Projects
-  {
-    id: 'ui-design-1',
-    title: { zh: 'EGORGO 动态界面', en: 'EGORGO Dynamic Interface' },
-    description: {
-      zh: '概念化动态 UI 系统设计，探索界面元素的运动语言与情感表达，打造具有生命力的交互体验。',
-      en: 'Conceptual dynamic UI system design, exploring motion language and emotional expression of interface elements to create living interactions.',
-    },
-    category: 'video',
-    tags: ['UI设计', '动态设计', 'Figma'],
-    year: 2024,
-    thumbnail: '/images/placeholder.svg',
-    images: ['/images/placeholder.svg'],
-    tools: ['Figma', 'After Effects'],
-  },
-  {
-    id: 'ui-design-2',
-    title: { zh: 'Zenith 音乐播放器', en: 'Zenith Music Player' },
-    description: {
-      zh: '以声波可视化为核心的音乐播放器 UI 概念设计，界面随音乐节奏实时变化，让视觉与听觉同步律动。',
-      en: 'Music player UI concept centered on sound wave visualization, where the interface transforms in sync with musical rhythm.',
-    },
-    category: 'video',
-    tags: ['UI设计', '音乐可视化', '原型设计'],
-    year: 2025,
-    thumbnail: '/images/placeholder.svg',
-    images: ['/images/placeholder.svg'],
-    tools: ['Figma', 'Lottie'],
-  },
-
-  // AIGC Video Projects
+  // ── ② AI 视觉与数字艺术 ──
   {
     id: 'aigc-video-1',
     title: { zh: '梦境漫游', en: 'Dreamscape Drift' },
@@ -123,7 +91,7 @@ export const projects: Project[] = [
       zh: '利用 AI 生成技术构建的超现实梦境短片，融合真实影像与 AI 想象，探索意识流叙事的视觉可能。',
       en: 'Surreal dream short film built with AI generation, blending real footage with AI imagination to explore stream-of-consciousness visual narrative.',
     },
-    category: 'video',
+    category: 'ai-visual',
     tags: ['AIGC', '短片', '超现实'],
     year: 2024,
     thumbnail: '/images/placeholder.svg',
@@ -137,7 +105,7 @@ export const projects: Project[] = [
       zh: '将传统水墨山水画通过 AI 技术动态化呈现，古典意境与现代算法的碰撞，赋予千年画卷新的生命力。',
       en: 'Animating traditional Chinese ink landscapes through AI — a collision of classical aesthetics and modern algorithms, breathing new life into ancient art.',
     },
-    category: 'video',
+    category: 'ai-visual',
     tags: ['AIGC', '中国风', '动态艺术'],
     year: 2024,
     thumbnail: '/images/placeholder.svg',
@@ -151,11 +119,111 @@ export const projects: Project[] = [
       zh: '以成都城市景观为素材，通过 AI 图像生成实现四季更替与风格转换的视觉实验，展现城市肌理的多面性。',
       en: 'A visual experiment using Chengdu cityscapes as source material, achieving seasonal shifts and style transfers through AI to reveal urban texture.',
     },
-    category: 'video',
+    category: 'ai-visual',
     tags: ['AIGC', '城市', '风格迁移'],
     year: 2025,
     thumbnail: '/images/placeholder.svg',
     images: ['/images/placeholder.svg'],
     tools: ['ComfyUI', 'AnimateDiff', 'After Effects'],
+  },
+  {
+    id: 'concept-design-1',
+    title: { zh: '幻境概念设计', en: 'Dreamscape Concept' },
+    description: {
+      zh: 'AI 生成的概念设计系列，探索超现实梦境中的空间结构与色彩情绪，为虚拟世界构筑视觉基调。',
+      en: 'AI-generated concept design series exploring spatial structures and color moods in surreal dreamscapes, building visual foundations for virtual worlds.',
+    },
+    category: 'ai-visual',
+    tags: ['AIGC', '概念设计', '超现实'],
+    year: 2025,
+    thumbnail: '/images/placeholder.svg',
+    images: ['/images/placeholder.svg'],
+    tools: ['Midjourney', 'Photoshop'],
+  },
+  {
+    id: 'character-design-1',
+    title: { zh: '机械共生', en: 'Mechanical Symbiosis' },
+    description: {
+      zh: 'AI 驱动的角色设计项目，将有机生物形态与机械结构融合，创造未来主义风格的原创角色概念。',
+      en: 'AI-driven character design project blending organic biological forms with mechanical structures, creating futuristic original character concepts.',
+    },
+    category: 'ai-visual',
+    tags: ['AIGC', '角色设计', '未来主义'],
+    year: 2025,
+    thumbnail: '/images/placeholder.svg',
+    images: ['/images/placeholder.svg'],
+    tools: ['Midjourney', 'ComfyUI', 'Photoshop'],
+  },
+
+  // ── ③ 影视后期与视觉设计 ──
+  {
+    id: 'ui-design-1',
+    title: { zh: 'EGORGO 动态界面', en: 'EGORGO Dynamic Interface' },
+    description: {
+      zh: '概念化动态 UI 系统设计，探索界面元素的运动语言与情感表达，打造具有生命力的交互体验。',
+      en: 'Conceptual dynamic UI system design, exploring motion language and emotional expression of interface elements to create living interactions.',
+    },
+    category: 'post-production',
+    tags: ['UI设计', '动态设计', 'Figma'],
+    year: 2024,
+    thumbnail: '/images/placeholder.svg',
+    images: ['/images/placeholder.svg'],
+    tools: ['Figma', 'After Effects'],
+  },
+  {
+    id: 'ui-design-2',
+    title: { zh: 'Zenith 音乐播放器', en: 'Zenith Music Player' },
+    description: {
+      zh: '以声波可视化为核心的音乐播放器 UI 概念设计，界面随音乐节奏实时变化，让视觉与听觉同步律动。',
+      en: 'Music player UI concept centered on sound wave visualization, where the interface transforms in sync with musical rhythm.',
+    },
+    category: 'post-production',
+    tags: ['UI设计', '音乐可视化', '原型设计'],
+    year: 2025,
+    thumbnail: '/images/placeholder.svg',
+    images: ['/images/placeholder.svg'],
+    tools: ['Figma', 'Lottie'],
+  },
+  {
+    id: 'edit-project-1',
+    title: { zh: '城市记忆', en: 'City Memory' },
+    description: {
+      zh: '以城市人文为主题的纪实短片，通过剪辑节奏与配乐情绪的交织，记录街头巷尾的真实故事与温度。',
+      en: 'A documentary short film on urban humanity, weaving editing rhythm with musical emotion to capture real stories and warmth from the streets.',
+    },
+    category: 'post-production',
+    tags: ['剪辑', '纪实', '城市'],
+    year: 2025,
+    thumbnail: '/images/placeholder.svg',
+    images: ['/images/placeholder.svg'],
+    tools: ['Premiere Pro', 'DaVinci Resolve', 'After Effects'],
+  },
+  {
+    id: 'poster-design-1',
+    title: { zh: '墨韵', en: 'Ink Rhythm' },
+    description: {
+      zh: '融合水墨与极简主义的海报设计系列，以留白与笔触的对话传递东方美学的当代诠释。',
+      en: 'A poster design series blending ink wash with minimalism, conveying a contemporary interpretation of Eastern aesthetics through the dialogue of negative space and brushstrokes.',
+    },
+    category: 'post-production',
+    tags: ['海报设计', '极简', '东方美学'],
+    year: 2025,
+    thumbnail: '/images/placeholder.svg',
+    images: ['/images/placeholder.svg'],
+    tools: ['Photoshop', 'Illustrator'],
+  },
+  {
+    id: 'branding-1',
+    title: { zh: '森屿咖啡品牌视觉', en: 'Forest Isle Branding' },
+    description: {
+      zh: '为精品咖啡品牌打造的全套视觉识别系统，包含 logo 设计、包装物料、空间导视及社交媒体视觉规范。',
+      en: 'Complete visual identity system for a specialty coffee brand, including logo design, packaging materials, signage, and social media visual guidelines.',
+    },
+    category: 'post-production',
+    tags: ['品牌设计', 'UI设计', '物料设计'],
+    year: 2025,
+    thumbnail: '/images/placeholder.svg',
+    images: ['/images/placeholder.svg'],
+    tools: ['Illustrator', 'Photoshop', 'Figma'],
   },
 ]

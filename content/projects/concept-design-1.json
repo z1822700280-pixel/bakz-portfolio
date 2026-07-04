@@ -1,0 +1,22 @@
+{
+  "id": "concept-design-1",
+  "title": {
+    "zh": "幻境概念设计",
+    "en": "Dreamscape Concept"
+  },
+  "description": {
+    "zh": "AI 生成的概念设计系列，探索超现实梦境中的空间结构与色彩情绪，为虚拟世界构筑视觉基调。",
+    "en": "AI-generated concept design series exploring spatial structures and color moods in surreal dreamscapes, building visual foundations for virtual worlds."
+  },
+  "category": "ai-visual",
+  "tags": ["AIGC", "概念设计", "超现实"],
+  "year": 2025,
+  "thumbnail": "/images/placeholder.svg",
+  "images": ["/images/placeholder.svg"],
+  "tools": ["Midjourney", "Photoshop"],
+  "links": {
+    "behance": "",
+    "figma": "",
+    "youtube": ""
+  }
+}

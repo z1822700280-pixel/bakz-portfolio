@@ -1,0 +1,22 @@
+{
+  "id": "character-design-1",
+  "title": {
+    "zh": "机械共生",
+    "en": "Mechanical Symbiosis"
+  },
+  "description": {
+    "zh": "AI 驱动的角色设计项目，将有机生物形态与机械结构融合，创造未来主义风格的原创角色概念。",
+    "en": "AI-driven character design project blending organic biological forms with mechanical structures, creating futuristic original character concepts."
+  },
+  "category": "ai-visual",
+  "tags": ["AIGC", "角色设计", "未来主义"],
+  "year": 2025,
+  "thumbnail": "/images/placeholder.svg",
+  "images": ["/images/placeholder.svg"],
+  "tools": ["Midjourney", "ComfyUI", "Photoshop"],
+  "links": {
+    "behance": "",
+    "figma": "",
+    "youtube": ""
+  }
+}

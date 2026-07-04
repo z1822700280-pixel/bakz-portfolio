@@ -68,7 +68,7 @@ export default defineConfig({
             type: "string",
             name: "category",
             label: "Category",
-            options: ["game", "video"],
+            options: ["game", "ai-visual", "post-production"],
           },
           {
             type: "string",

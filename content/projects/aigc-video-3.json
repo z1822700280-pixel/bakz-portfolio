@@ -8,7 +8,7 @@
     "zh": "以成都城市景观为素材，通过 AI 图像生成实现四季更替与风格转换的视觉实验，展现城市肌理的多面性。",
     "en": "A visual experiment using Chengdu cityscapes as source material, achieving seasonal shifts and style transfers through AI to reveal urban texture."
   },
-  "category": "video",
+  "category": "ai-visual",
   "tags": ["AIGC", "城市", "风格迁移"],
   "year": 2025,
   "thumbnail": "/images/placeholder.svg",
