@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { useTilt } from '@/hooks/useTilt'
 import { useScrollReveal } from '@/hooks/useScrollReveal'
@@ -27,7 +28,7 @@ export default function About() {
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
-          {/* Portrait placeholder */}
+          {/* Portrait */}
           <motion.div
             ref={tiltRef}
             {...handlers}
@@ -37,21 +38,13 @@ export default function About() {
               transition: 'transform 0.2s ease-out',
             }}
           >
-            <div className="absolute inset-0 flex items-center justify-center text-white/10">
-              <svg
-                className="w-24 h-24"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1}
-                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                />
-              </svg>
-            </div>
+            <Image
+              src="/images/about-me.jpg"
+              alt="张洎彬"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
           </motion.div>
 
           {/* Content */}
