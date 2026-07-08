@@ -53,13 +53,13 @@ export default function Gallery() {
           </h2>
           <p className="text-secondary mb-8 tracking-wide">
             {lang === 'zh'
-              ? '海报 · 摄影 · AIGC 视觉'
-              : 'Poster · Photography · AIGC Visual'}
+              ? '海报 · 摄影 · AIGC · 3D建模'
+              : 'Poster · Photography · AIGC · 3D Modeling'}
           </p>
 
           {/* Filter buttons */}
           <div className="flex gap-4 mb-8">
-            {['all', 'poster', 'photography', 'aigc'].map((cat) => (
+            {['all', 'poster', 'photography', 'aigc', '3d'].map((cat) => (
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
@@ -81,7 +81,11 @@ export default function Gallery() {
                   ? lang === 'zh'
                     ? '摄影'
                     : 'Photography'
-                  : 'AIGC'}
+                  : cat === 'aigc'
+                  ? 'AIGC'
+                  : lang === 'zh'
+                  ? '3D建模'
+                  : '3D Modeling'}
               </button>
             ))}
           </div>

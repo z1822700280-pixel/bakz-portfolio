@@ -1,0 +1,15 @@
+{
+  "id": "3d-1",
+  "title": {
+    "zh": "机械核心",
+    "en": "Mechanical Core"
+  },
+  "description": {
+    "zh": "UE5 实时渲染的机械装置艺术，金属质感与动态光效的精密搭配",
+    "en": "UE5 real-time rendered mechanical installation art, precision pairing of metal textures and dynamic lighting"
+  },
+  "category": "3d",
+  "tags": ["3D建模", "UE5", "实时渲染"],
+  "year": 2025,
+  "image": "/images/placeholder.svg"
+}

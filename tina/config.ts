@@ -148,7 +148,7 @@ export default defineConfig({
             type: "string",
             name: "category",
             label: "Category",
-            options: ["poster", "photography", "aigc"],
+            options: ["poster", "photography", "aigc", "3d"],
           },
           {
             type: "string",

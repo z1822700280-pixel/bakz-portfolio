@@ -2,7 +2,7 @@ export interface GalleryItem {
   id: string
   title: { zh: string; en: string }
   description: { zh: string; en: string }
-  category: 'poster' | 'photography' | 'aigc'
+  category: 'poster' | 'photography' | 'aigc' | '3d'
   tags: string[]
   year: number
   image: string
@@ -144,6 +144,17 @@ export const galleryItems: GalleryItem[] = [
     description: { zh: '川西高原湖泊中的雪山倒影，天地一线间云层翻涌的壮阔瞬间', en: 'Snow mountain reflected in Western Sichuan lakes, the magnificent moment of clouds rolling between sky and earth' },
     category: 'photography',
     tags: ['摄影', '风光', '川西'],
+    year: 2025,
+    image: '/images/placeholder.svg',
+  },
+
+  // 3D Modeling
+  {
+    id: '3d-1',
+    title: { zh: '机械核心', en: 'Mechanical Core' },
+    description: { zh: 'UE5 实时渲染的机械装置艺术，金属质感与动态光效的精密搭配', en: 'UE5 real-time rendered mechanical installation art, precision pairing of metal textures and dynamic lighting' },
+    category: '3d',
+    tags: ['3D建模', 'UE5', '实时渲染'],
     year: 2025,
     image: '/images/placeholder.svg',
   },
