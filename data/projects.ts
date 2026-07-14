@@ -168,7 +168,9 @@ export const projects: Project[] = [
     year: 2024,
     thumbnail: '/images/goldfish-chamber/thumbnail.jpg',
     images: [
-      // Content clips (videos)
+      // Full film
+      '/images/goldfish-chamber/full-film.mov',
+      // Content clips
       '/images/goldfish-chamber/clip-0.mov',
       '/images/goldfish-chamber/clip-1.mov',
       // Content images
