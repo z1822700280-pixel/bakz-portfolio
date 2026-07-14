@@ -13,6 +13,8 @@
   "year": 2024,
   "thumbnail": "/images/goldfish-chamber/thumbnail.jpg",
   "images": [
+    "/images/goldfish-chamber/clip-0.mov",
+    "/images/goldfish-chamber/clip-1.mov",
     "/images/goldfish-chamber/content-0.jpg",
     "/images/goldfish-chamber/content-1.jpg",
     "/images/goldfish-chamber/content-2.jpg",
@@ -21,7 +23,15 @@
     "/images/goldfish-chamber/content-5.jpg",
     "/images/goldfish-chamber/content-6.jpg",
     "/images/goldfish-chamber/content-7.jpg",
-    "/images/goldfish-chamber/content-8.jpg"
+    "/images/goldfish-chamber/content-8.jpg",
+    "/images/goldfish-chamber/content-9.jpg",
+    "/images/goldfish-chamber/content-10.jpg",
+    "/images/goldfish-chamber/content-11.jpg",
+    "/images/goldfish-chamber/content-12.jpg",
+    "/images/goldfish-chamber/content-13.jpg",
+    "/images/goldfish-chamber/content-14.jpg",
+    "/images/goldfish-chamber/content-15.jpg",
+    "/images/goldfish-chamber/content-16.jpg"
   ],
   "tools": ["DaVinci Resolve", "Premiere Pro", "Sony"],
   "links": {

@@ -67,25 +67,39 @@ export default function ProjectDetail() {
             {project.description[lang]}
           </p>
 
-          {/* Project Images */}
+          {/* Project Media (images + videos) */}
           <div className="space-y-8">
-            {project.images.map((image, index) => (
-              <motion.div
-                key={index}
-                className="relative aspect-video rounded-lg overflow-hidden border border-[var(--border-subtle)]"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                viewport={{ once: true }}
-              >
-                <Image
-                  src={image}
-                  alt={`${project.title[lang]} - ${index + 1}`}
-                  fill
-                  className="object-cover"
-                />
-              </motion.div>
-            ))}
+            {project.images.map((media, index) => {
+              const isVideo = media.endsWith('.mov') || media.endsWith('.mp4')
+              return (
+                <motion.div
+                  key={index}
+                  className="relative aspect-video rounded-lg overflow-hidden border border-[var(--border-subtle)]"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                  viewport={{ once: true }}
+                >
+                  {isVideo ? (
+                    <video
+                      src={media}
+                      controls
+                      className="w-full h-full object-cover"
+                      playsInline
+                    >
+                      Your browser does not support the video tag.
+                    </video>
+                  ) : (
+                    <Image
+                      src={media}
+                      alt={`${project.title[lang]} - ${index + 1}`}
+                      fill
+                      className="object-cover"
+                    />
+                  )}
+                </motion.div>
+              )
+            })}
           </div>
 
           {/* Navigation */}
