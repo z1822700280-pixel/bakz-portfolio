@@ -209,7 +209,7 @@ export const projects: Project[] = [
   },
   {
     id: 'same-life-different-paths',
-    title: { zh: '异同一生', en: 'Same Life, Different Paths' },
+    title: { zh: '异同人生', en: 'Same Life, Different Paths' },
     description: {
       zh: '这部纪实短片创作于大二春节寒假，全程在老家独立完成，仅用一周时间完成全部拍摄与后期剪辑。影片创作灵感源自纪实作品《人生十年》，镜头聚焦身边普通大众，以平实质朴的纪实视角，捕捉不同年龄人群的生活状态与内心思考。\n\n影片选取四位身处不同人生阶段的普通人作为受访对象，采用统一访谈问题开展一对一录制。访谈内容聚焦金钱观念、婚恋择偶、家庭生活、人生感悟等贴近日常的生活化话题，真实还原不同受访者差异化的观点与内心心声。\n\n通过横向对比不同年龄层的回答，影片直观展现出人生阅历对个人价值观、生活态度的塑造与影响。整体风格朴素真实，深度探寻不同人生阶段的心境变化与生活真谛，以平凡人的真实感悟，勾勒出鲜活治愈的人间烟火与百态人生。',
       en: 'This documentary short film was independently produced during the winter Spring Festival vacation in my sophomore year. Completed in my hometown within just one week, it covers all the shooting and post-editing work. Inspired by the documentary Ten Years of Life, the work focuses on ordinary people around us and adopts a plain and authentic documentary perspective to record the living conditions and inner thoughts of people of different ages.\n\nThe film features four interviewees at distinct life stages, who are asked the same set of one-on-one interview questions. Centering on daily and down-to-earth topics including views on money, marriage and partners, family life, and life perceptions, the documentary truly presents the diverse perspectives and inner voices of the four respondents.\n\nBy comparing answers from different age groups horizontally, the film intuitively reflects how life experience shapes personal values and attitudes toward life. With a simple and realistic style, it explores the emotional changes and true meanings of life at different stages, and depicts the vivid warmth and diverse facets of ordinary life through real insights from everyday people.',
