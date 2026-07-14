@@ -1,0 +1,32 @@
+{
+  "id": "goldfish-chamber",
+  "title": {
+    "zh": "金鱼房间",
+    "en": "The Goldfish Chamber"
+  },
+  "description": {
+    "zh": "《金鱼房间》是一部聚焦当代青年毕业困境的短片，讲述了刚毕业的主人公阿藤在出租屋内通过五通电话串联起的内心挣扎。影片以面试失败为起点，经历母亲的担忧、经济拮据的窘迫、恋情的结束，最终迎来复试机会，传递出"人生如巧克力"的哲思。\n\n本片在视觉语言上强调隐喻与象征：四个猫眼镜头窥探外界，映射阿藤对社会生活的不适应与逃避心理；金鱼作为情绪载体，象征阿藤被束缚的自我；西装男作为幻想人格出现，代表内心成长与直面困境的勇气。全片采用特写镜头传递人物情绪，以克制的影像风格营造沉浸感。\n\n创作过程中，团队历时四天三夜完成拍摄，面临停电、多次NG等挑战，最终通过集体协作完成作品。我们希望借由阿藤的故事，引发对青年群体生存状态的关注与思考。",
+    "en": "The Goldfish Room is a short film centering on the predicaments faced by contemporary young graduates. It follows the protagonist Atou, a fresh graduate, and his inner turmoil woven together by five phone calls made inside his rental apartment. Opening with a failed job interview, the story unfolds to depict his mother's anxious concern, the strain of financial hardship, and the end of his romantic relationship—before he finally receives an offer for a second-round interview. The film conveys a philosophical reflection that \"life is like a box of chocolates.\"\n\nVisually, the short leans heavily on metaphor and symbolism. Four peephole shots that peer out at the outside world mirror Atou's discomfort with social life and his urge to retreat. The goldfish act as a vessel for his emotions, embodying his confined self. A man in a suit appears as his imagined alter ego, representing inner growth and the courage to confront hardships head-on. Tight close-ups are used throughout to convey the character's emotions, and a restrained visual style draws viewers into an immersive viewing experience.\n\nThe crew shot the entire film over four days and three nights, overcoming hurdles including power outages and countless retakes. The finished work came to fruition through full teamwork. Through Atou's story, we hope to spark greater attention and reflection on the living conditions of young people today."
+  },
+  "category": "post-production",
+  "tags": ["剪辑", "短片"],
+  "year": 2024,
+  "thumbnail": "/images/goldfish-chamber/thumbnail.jpg",
+  "images": [
+    "/images/goldfish-chamber/content-0.jpg",
+    "/images/goldfish-chamber/content-1.jpg",
+    "/images/goldfish-chamber/content-2.jpg",
+    "/images/goldfish-chamber/content-3.jpg",
+    "/images/goldfish-chamber/content-4.jpg",
+    "/images/goldfish-chamber/content-5.jpg",
+    "/images/goldfish-chamber/content-6.jpg",
+    "/images/goldfish-chamber/content-7.jpg",
+    "/images/goldfish-chamber/content-8.jpg"
+  ],
+  "tools": ["DaVinci Resolve", "Premiere Pro", "Sony"],
+  "links": {
+    "behance": "",
+    "figma": "",
+    "youtube": ""
+  }
+}
