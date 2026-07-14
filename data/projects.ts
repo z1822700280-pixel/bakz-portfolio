@@ -1,3 +1,13 @@
+export interface Role {
+  zh: string
+  en: string
+}
+
+export interface ExternalLink {
+  label: string
+  url: string
+}
+
 export interface Project {
   id: string
   title: { zh: string; en: string }
@@ -8,6 +18,9 @@ export interface Project {
   thumbnail: string
   images: string[]
   tools: string[]
+  role?: Role
+  externalLinks?: ExternalLink[]
+  reflection?: { zh: string; en: string }
 }
 
 export const projects: Project[] = [
@@ -167,13 +180,11 @@ export const projects: Project[] = [
     tags: ['剪辑', '短片'],
     year: 2024,
     thumbnail: '/images/goldfish-chamber/thumbnail.jpg',
+    role: { zh: '导演 / 剪辑 / 后期', en: 'Director / Editor / Post-production' },
     images: [
-      // Full film
       '/images/goldfish-chamber/full-film.mov',
-      // Content clips
       '/images/goldfish-chamber/clip-0.mov',
       '/images/goldfish-chamber/clip-1.mov',
-      // Content images
       '/images/goldfish-chamber/content-0.jpg',
       '/images/goldfish-chamber/content-1.jpg',
       '/images/goldfish-chamber/content-2.jpg',
@@ -193,6 +204,11 @@ export const projects: Project[] = [
       '/images/goldfish-chamber/content-16.jpg',
     ],
     tools: ['DaVinci Resolve', 'Premiere Pro', 'Sony'],
+    externalLinks: [],
+    reflection: {
+      zh: '团队历时四天三夜完成拍摄，面临停电、多次NG等挑战，最终通过集体协作完成作品。我们希望借由阿藤的故事，引发对青年群体生存状态的关注与思考。',
+      en: 'The crew shot the entire film over four days and three nights, overcoming hurdles including power outages and countless retakes. Through Atou\'s story, we hope to spark greater attention and reflection on the living conditions of young people today.',
+    },
   },
   {
     id: 'ui-design-2',
