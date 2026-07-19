@@ -1,0 +1,41 @@
+{
+  "id": "kill-bill-remake",
+  "title": {
+    "zh": "翻拍-杀死比尔",
+    "en": "Kill Bill Remake"
+  },
+  "description": {
+    "zh": "本短片为大学选修课小组作业，由我与好友共同完成。项目从零筹备，历经场地踩点、器材租赁、道具筹备与分工规划，受场地、灯光、拍摄设备多重条件限制，我们通宵至凌晨四点完成取景拍摄。\n\n我在项目中兼任导演、画面指导与后期剪辑，整体筹备两天、拍摄一晚、剪辑一日，最终成片完成度可观。\n\n本片翻拍《杀死比尔》经典段落，该片段镜头语言层次丰富，以此翻拍实践，深化对镜头调度与影像叙事的理解。",
+    "en": "A university elective course group project completed with a friend. The project was prepared from scratch—scouting locations, renting equipment, sourcing props, and planning分工. Constrained by limited场地, lighting, and filming equipment, we shot through the night until 4 AM.\n\nI served as director, visual director, and editor. With two days of prep, one night of shooting, and one day of editing, the final result achieved a respectable level of completion.\n\nThe film recreates a classic sequence from Kill Bill, whose layered cinematography made this remake a valuable practice in deepening my understanding of shot composition and visual narrative."
+  },
+  "category": "post-production",
+  "tags": ["拍摄", "翻拍", "全流程"],
+  "year": 2025,
+  "thumbnail": "/images/kill-bill-remake/thumbnail.jpg",
+  "images": [
+    "/images/kill-bill-remake/full-film.mov",
+    "/images/kill-bill-remake/clip-0.mp4",
+    "/images/kill-bill-remake/content-0.jpg",
+    "/images/kill-bill-remake/content-1.jpg",
+    "/images/kill-bill-remake/content-2.jpg",
+    "/images/kill-bill-remake/content-3.jpg",
+    "/images/kill-bill-remake/content-4.jpg",
+    "/images/kill-bill-remake/content-5.jpg",
+    "/images/kill-bill-remake/content-6.jpg",
+    "/images/kill-bill-remake/content-7.jpg",
+    "/images/kill-bill-remake/content-8.jpg",
+    "/images/kill-bill-remake/content-9.jpg",
+    "/images/kill-bill-remake/content-10.jpg",
+    "/images/kill-bill-remake/content-11.jpg",
+    "/images/kill-bill-remake/content-12.jpg"
+  ],
+  "tools": ["Premiere Pro", "DaVinci Resolve", "Sony"],
+  "role": {
+    "zh": "导演 / 画面指导 / 剪辑",
+    "en": "Director / Visual Director / Editor"
+  },
+  "reflection": {
+    "zh": "本次实景翻拍拍摄，让我真切体会到优质团队对作品的决定性作用。团队每位成员都极具责任心且执行力出色，各司其职、高效配合，让我们在有限的设备、场地与时间条件下，顺利完成拍摄任务，最终成品效果远超预期。我也深刻意识到，优秀的团队协作是高质量作品产出的核心基础。\n\n同时，全程亲自把控镜头调度、现场画面指导与后期剪辑的实操过程，极大丰富了我的影像创作经验，扎实提升了我的镜头运用、场景调度与剪辑实操能力，让我对镜头语言的理解更加落地、更加成熟。",
+    "en": "This live-action remake shoot gave me a genuine understanding of how decisive a great team is for the final work. Every team member was highly responsible and executed their roles efficiently, allowing us to complete the shoot under limited equipment,场地, and time constraints—with results far exceeding expectations. I deeply realized that excellent teamwork is the foundation of high-quality output.\n\nAt the same time, personally overseeing shot composition, on-site visual direction, and post-production editing greatly enriched my filmmaking experience. It solidly improved my abilities in camera work, scene调度, and editing, making my understanding of visual language more grounded and mature."
+  }
+}

@@ -1,22 +1,47 @@
 {
   "id": "concept-design-1",
   "title": {
-    "zh": "幻境概念设计",
-    "en": "Dreamscape Concept"
+    "zh": "绘面盛唐，赓续宗邦",
+    "en": "Face of Tang, Legacy of the Realm"
   },
   "description": {
-    "zh": "AI 生成的概念设计系列，探索超现实梦境中的空间结构与色彩情绪，为虚拟世界构筑视觉基调。",
-    "en": "AI-generated concept design series exploring spatial structures and color moods in surreal dreamscapes, building visual foundations for virtual worlds."
+    "zh": "本短片为大学课堂小组合作作业，我主要负责片中部分镜头素材生成与制作，并且进行了剧本创作和脚本完善，相关创作过程图单独展示，完整成片为团队共同协作成果。\n\n故事讲述现代少女误入深山古寺，意外穿越至盛唐与男主相遇结缘；脸谱作为贯穿全片的核心信物，最终女主重回当下。这段奇遇让她沉醉于泥塑非遗的独特魅力，此后投身传统泥塑行业。\n\n影片以推广泥塑非遗传统文化为核心立意，项目创作受课堂命题、创作规则多重限制，整套故事与视觉方案由团队共同构思落地。",
+    "en": "A university group project short film. I was responsible for generating and producing部分 shot素材, as well as script development and refinement. The related creative process images are separately displayed; the final film is a collaborative team effort.\n\nThe story follows a modern girl who stumbles into an ancient temple deep in the mountains, accidentally traveling back to the Tang Dynasty where she meets and forms a bond with the protagonist. The painted face (脸谱) serves as the core token throughout the film. She ultimately returns to the present, but this extraordinary encounter immerses her in the unique charm of traditional clay sculpture (泥塑) intangible cultural heritage, inspiring her to dedicate herself to the craft.\n\nThe film aims to promote the intangible cultural heritage of clay sculpture, created within the constraints of a classroom assignment with multiple creative limitations. The entire story and visual方案 were collaboratively developed by the team."
   },
   "category": "ai-visual",
-  "tags": ["AIGC", "概念设计", "超现实"],
+  "tags": ["AIGC", "短片", "全流程"],
   "year": 2025,
-  "thumbnail": "/images/placeholder.svg",
-  "images": ["/images/placeholder.svg"],
-  "tools": ["Midjourney", "Photoshop"],
-  "links": {
-    "behance": "",
-    "figma": "",
-    "youtube": ""
+  "thumbnail": "/images/concept-design-1/thumbnail.jpg",
+  "images": [
+    "/images/concept-design-1/full-film.mov",
+    "/images/concept-design-1/clip-0.mp4",
+    "/images/concept-design-1/clip-1.mp4",
+    "/images/concept-design-1/clip-2.mp4",
+    "/images/concept-design-1/clip-3.mp4",
+    "/images/concept-design-1/clip-4.mp4",
+    "/images/concept-design-1/clip-5.mp4",
+    "/images/concept-design-1/clip-6.mp4",
+    "/images/concept-design-1/content-0.jpg",
+    "/images/concept-design-1/content-1.png",
+    "/images/concept-design-1/content-2.jpg",
+    "/images/concept-design-1/content-3.jpg",
+    "/images/concept-design-1/content-4.jpg",
+    "/images/concept-design-1/content-5.jpg",
+    "/images/concept-design-1/content-6.png",
+    "/images/concept-design-1/content-7.jpg",
+    "/images/concept-design-1/content-8.jpg",
+    "/images/concept-design-1/content-9.jpg",
+    "/images/concept-design-1/content-10.jpg",
+    "/images/concept-design-1/content-11.jpg",
+    "/images/concept-design-1/content-12.jpg"
+  ],
+  "tools": ["ChatGPT", "OiiOii"],
+  "role": {
+    "zh": "编剧 / 素材生成",
+    "en": "Writer /素材 Generation"
+  },
+  "reflection": {
+    "zh": "本次多人团队项目，让我深刻体会到规范化协作是高效产出的关键。相比技术制作，统一的团队工作准则，才是保障项目顺畅推进的核心。\n\n统一文件命名、规范存储格式、及时同步沟通，能有效避免文件混乱、版本出错、信息滞后等问题，杜绝无效耗时。这次经历让我养成了先定团队工作规范再推进创作的习惯，大幅提升整体制作效率。",
+    "en": "This multi-person team project taught me that standardized collaboration is the key to efficient output. More than technical production, unified team working guidelines are the core of smooth project progress.\n\nConsistent file naming, standardized storage formats, and timely communication effectively prevent file chaos, version errors, and information lag—eliminating wasted time. This experience instilled in me the habit of establishing team norms before diving into creative work, greatly improving overall production efficiency."
   }
 }

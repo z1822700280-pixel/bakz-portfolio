@@ -1,17 +1,44 @@
 {
   "id": "aigc-video-3",
   "title": {
-    "zh": "城市变奏曲",
-    "en": "Urban Variations"
+    "zh": "祀烬·蜀立",
+    "en": "Sacred Embers of Shu"
   },
   "description": {
-    "zh": "以成都城市景观为素材，通过 AI 图像生成实现四季更替与风格转换的视觉实验，展现城市肌理的多面性。",
-    "en": "A visual experiment using Chengdu cityscapes as source material, achieving seasonal shifts and style transfers through AI to reveal urban texture."
+    "zh": "本项目为我与友人合作筹备的 AIGC 短片，我们共同完成剧本构思，计划打造一部考据严谨、兼具地方历史底蕴的高质量科普短片。\n\n因双方日程冲突、时间难以协调，项目目前暂缓推进，仅完成概念图产出，包含人物设定、场景原画等视觉素材，在此先行展示。后续空余时间，我们会继续完善内容并完成全片制作。",
+    "en": "An AIGC short film project in collaboration with a friend. Together we developed the script concept, aiming to create a rigorously researched科普 short film grounded in local historical depth.\n\nDue to scheduling conflicts, the project is currently on hold. Only concept art has been produced—including character designs and environment paintings—which are showcased here. We plan to continue and complete the full film when time allows."
   },
   "category": "ai-visual",
-  "tags": ["AIGC", "城市", "风格迁移"],
+  "tags": ["AIGC", "写实", "短片", "全流程"],
   "year": 2025,
-  "thumbnail": "/images/placeholder.svg",
-  "images": ["/images/placeholder.svg"],
-  "tools": ["ComfyUI", "AnimateDiff", "After Effects"]
+  "thumbnail": "/images/aigc-video-3/thumbnail.jpg",
+  "images": [
+    "/images/aigc-video-3/content-0.jpeg",
+    "/images/aigc-video-3/content-1.jpeg",
+    "/images/aigc-video-3/content-2.jpeg",
+    "/images/aigc-video-3/content-3.jpeg",
+    "/images/aigc-video-3/content-4.jpeg",
+    "/images/aigc-video-3/content-5.jpeg",
+    "/images/aigc-video-3/content-6.jpeg",
+    "/images/aigc-video-3/content-7.jpeg",
+    "/images/aigc-video-3/content-8.jpeg",
+    "/images/aigc-video-3/content-9.jpeg",
+    "/images/aigc-video-3/content-10.jpeg",
+    "/images/aigc-video-3/content-11.png",
+    "/images/aigc-video-3/content-12.jpg",
+    "/images/aigc-video-3/content-13.jpg",
+    "/images/aigc-video-3/content-14.jpg",
+    "/images/aigc-video-3/content-15.jpg",
+    "/images/aigc-video-3/content-16.jpg",
+    "/images/aigc-video-3/content-17.jpg"
+  ],
+  "tools": ["ChatGPT", "Midjourney", "OiiOii"],
+  "role": {
+    "zh": "编剧 / 概念设计",
+    "en": "Writer / Concept Artist"
+  },
+  "reflection": {
+    "zh": "创作过程中我持续对比各类最新生成模型，通过效果测试筛选适配历史科普题材的最优模型，以此保障人物、场景设计图的画面精度与风格统一。",
+    "en": "Throughout the creative process, I continuously compared various latest-generation models, running tests to select the optimal model suited for historical科普题材, ensuring visual precision and stylistic consistency across character and environment designs."
+  }
 }

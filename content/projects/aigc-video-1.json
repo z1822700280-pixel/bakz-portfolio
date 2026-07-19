@@ -1,17 +1,32 @@
 {
   "id": "aigc-video-1",
   "title": {
-    "zh": "梦境漫游",
-    "en": "Dreamscape Drift"
+    "zh": "阳光明媚",
+    "en": "Sunshine"
   },
   "description": {
-    "zh": "利用 AI 生成技术构建的超现实梦境短片，融合真实影像与 AI 想象，探索意识流叙事的视觉可能。",
-    "en": "Surreal dream short film built with AI generation, blending real footage with AI imagination to explore stream-of-consciousness visual narrative."
+    "zh": "本片是我的第二部 AIGC 实验短片，前作《用时从生土》为首次 AI 影像尝试，全流程独立完成。\n\n创作全程遵循标准化逻辑流程：从初始灵感出发，借助 AI 迭代完善画面叙事，先用简易描述生成分镜文本，再逐帧手动精修镜头关键词，敲定图生图、图生视频两套完整提示词。通过多款视频模型测试产出素材，最后自主剪辑调色、后期整合输出成片。\n\n作品灵感源自一首治愈感夏日曲目，单日完成全部制作：上午萌生创作想法，下午完成 AIGC 素材生成，晚间剪辑成片。虽篇幅简短，却是我第一次写实风格 AI 短片创作尝试。完整可控的创作流程也让作品收获了不错的专业平台传播流量。",
+    "en": "My second AIGC experimental short film, produced entirely independently from concept to final output.\n\nThe creative process followed a standardized logical workflow: starting from initial inspiration, iterating visual narratives with AI assistance, generating storyboard text from simple descriptions, then manually refining keyframe prompts frame by frame—finalizing two complete prompt sets for image-to-image and image-to-video generation. After testing multiple video models to produce素材, I took over for editing, color grading, and final post-production.\n\nInspired by a治愈 summer track, the entire production was completed in a single day: the idea struck in the morning, AIGC素材 were generated in the afternoon, and the final cut was finished by evening. Though brief, it was my first attempt at a photorealistic AI short film. The well-controlled pipeline also earned decent traction on professional platforms."
   },
   "category": "ai-visual",
-  "tags": ["AIGC", "短片", "超现实"],
+  "tags": ["AI", "写实", "短片", "全流程"],
   "year": 2024,
-  "thumbnail": "/images/placeholder.svg",
-  "images": ["/images/placeholder.svg"],
-  "tools": ["Stable Diffusion", "After Effects", "DaVinci Resolve"]
+  "thumbnail": "/images/aigc-video-1/thumbnail.jpg",
+  "images": [
+    "/images/aigc-video-1/full-film.mov",
+    "/images/aigc-video-1/content-0.jpg",
+    "/images/aigc-video-1/content-1.jpg",
+    "/images/aigc-video-1/content-2.jpg",
+    "/images/aigc-video-1/content-3.jpg",
+    "/images/aigc-video-1/content-4.jpg",
+    "/images/aigc-video-1/content-5.jpg",
+    "/images/aigc-video-1/content-6.jpg",
+    "/images/aigc-video-1/content-7.jpg",
+    "/images/aigc-video-1/content-8.jpg"
+  ],
+  "tools": ["ChatGPT", "Lovart", "Premiere Pro"],
+  "reflection": {
+    "zh": "制作《阳光明媚》的整个过程，我始终带着充足的创作热情，对作品的氛围与表达也有清晰的个人想法，因此整体制作流程十分顺利，没有遇到太多难题。\n\n本次创作的核心挑战，在于和 AI 的反复磨合迭代。我也从中总结出关键经验：与 AI 协作时，清晰的逻辑、完整的任务框架与高效的执行流程，是保证成片质量与创作效率的核心。\n\n同时我深刻体会到，AIGC 作品的最终效果，取决于模型能力和个人审美的双重配合。AI 只是创作工具，画面质感、细节取舍和整体表达，始终由创作者的审美与把控主导。",
+    "en": "Throughout the production of Sunshine, I maintained strong creative enthusiasm and had a clear personal vision for the work's atmosphere and expression, so the entire process went smoothly without major hurdles.\n\nThe core challenge was the iterative back-and-forth with AI. My key takeaway: when collaborating with AI, clear logic, a well-structured task framework, and efficient execution are essential for both output quality and creative efficiency.\n\nI also came to deeply understand that the final quality of an AIGC work depends on the synergy between model capability and personal aesthetics. AI is merely a tool—the visual quality, detail decisions, and overall expression are always shaped by the creator's aesthetic sense and direction."
+  }
 }
