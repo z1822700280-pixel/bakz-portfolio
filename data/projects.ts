@@ -113,35 +113,6 @@ export const projects: Project[] = [
       en: 'This project was a simple hands-on practice in AI-driven rapid modeling workflows. Unlike traditional cumbersome modeling processes, I adopted a lightweight pipeline of "text ideation → text-image iteration → AI model generation → UE rendering output," completing the entire workflow at speed.\n\nThis practice allowed me to熟练 use AIGC tools to quickly produce 3D scenes, enhancing my ability to efficiently implement and flexibly adapt to new creative tools.',
     },
   },
-  {
-    id: 'unity-game-1',
-    title: { zh: '纸鹤旅途', en: 'Paper Crane Journey' },
-    description: {
-      zh: '以折纸为核心机制的叙事冒险游戏。玩家操控纸鹤穿越手工质感的世界，体验关于离别与重逢的故事。',
-      en: 'Narrative adventure game with origami mechanics. Players guide a paper crane through a handcrafted world, experiencing a story of parting and reunion.',
-    },
-    category: 'game',
-    tags: ['Unity', '独立游戏', '叙事设计'],
-    year: 2024,
-    thumbnail: '/images/placeholder.svg',
-    images: ['/images/placeholder.svg', '/images/placeholder.svg'],
-    tools: ['Unity', 'Photoshop'],
-  },
-  {
-    id: 'unity-game-2',
-    title: { zh: '回声迷宫', en: 'Echo Labyrinth' },
-    description: {
-      zh: '基于声音定位的解谜游戏。在黑暗迷宫中，玩家依靠回声判断方向与障碍，探索听觉交互的设计边界。',
-      en: 'Sound-based puzzle game. In dark mazes, players rely on echoes to navigate obstacles, pushing the boundaries of auditory interaction design.',
-    },
-    category: 'game',
-    tags: ['Unity', '独立游戏', '声音设计'],
-    year: 2025,
-    thumbnail: '/images/placeholder.svg',
-    images: ['/images/placeholder.svg', '/images/placeholder.svg'],
-    tools: ['Unity', 'FMOD'],
-  },
-
   // ── ② AI 视觉与数字艺术 ──
   {
     id: 'aigc-video-1',
