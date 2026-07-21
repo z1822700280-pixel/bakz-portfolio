@@ -9,7 +9,7 @@
     "en": "My second AIGC experimental short film, produced entirely independently from concept to final output.\n\nThe creative process followed a standardized logical workflow: starting from initial inspiration, iterating visual narratives with AI assistance, generating storyboard text from simple descriptions, then manually refining keyframe prompts frame by frame—finalizing two complete prompt sets for image-to-image and image-to-video generation. After testing multiple video models to produce素材, I took over for editing, color grading, and final post-production.\n\nInspired by a治愈 summer track, the entire production was completed in a single day: the idea struck in the morning, AIGC素材 were generated in the afternoon, and the final cut was finished by evening. Though brief, it was my first attempt at a photorealistic AI short film. The well-controlled pipeline also earned decent traction on professional platforms."
   },
   "category": "ai-visual",
-  "tags": ["AI", "写实", "短片", "全流程"],
+  "tags": ["AIGC", "写实", "短片", "全流程"],
   "year": 2024,
   "thumbnail": "/images/aigc-video-1/thumbnail.jpg",
   "images": [

@@ -148,7 +148,7 @@ export default defineConfig({
             type: "string",
             name: "category",
             label: "Category",
-            options: ["poster", "photography", "aigc", "3d"],
+            options: ["aigc", "3d", "ui", "illustration"],
           },
           {
             type: "string",
@@ -163,8 +163,14 @@ export default defineConfig({
           },
           {
             type: "image",
-            name: "image",
-            label: "Image",
+            name: "cover",
+            label: "Cover Image",
+          },
+          {
+            type: "image",
+            name: "images",
+            label: "Images",
+            list: true,
           },
         ],
       },

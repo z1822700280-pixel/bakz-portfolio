@@ -1,0 +1,34 @@
+{
+  "id": "ui-design-project",
+  "title": {
+    "zh": "UI 界面设计",
+    "en": "UI Interface Design"
+  },
+  "description": {
+    "zh": "2024 年独立完成购物软件整套 UI 界面设计，全程使用 Figma 搭建。项目搭建完整组件规范，界面海报、页面交互动效均为纯原创制作，未使用 AI 辅助。附带 Figma 在线链接，可直接打开预览完整交互原型，直观体现界面设计功底与工具实操能力。",
+    "en": "Independently completed the full UI interface design for a shopping app in 2024, built entirely with Figma. The project includes a complete component specification system. All interface posters and page interaction animations are original creations without AI assistance. A Figma online link is attached for direct preview of the complete interactive prototype, showcasing interface design skills and tool proficiency."
+  },
+  "category": "post-production",
+  "tags": ["UI设计", "Figma", "移动端", "交互原型"],
+  "year": 2024,
+  "thumbnail": "/images/ui-design-project/thumbnail.jpg",
+  "images": [
+    "/images/ui-design-project/full-film.mp4",
+    "/images/ui-design-project/clip-0.mp4",
+    "/images/ui-design-project/content-0.png",
+    "/images/ui-design-project/content-1.png",
+    "/images/ui-design-project/content-2.png",
+    "/images/ui-design-project/content-3.jpg",
+    "/images/ui-design-project/content-4.jpg",
+    "/images/ui-design-project/content-5.jpg",
+    "/images/ui-design-project/content-6.png",
+    "/images/ui-design-project/content-7.mp4",
+    "/images/ui-design-project/content-8.jpg"
+  ],
+  "tools": ["Figma"],
+  "externalLinks": [],
+  "reflection": {
+    "zh": "本次电商 UI 练习让我熟练掌握 Figma 组件化开发逻辑，自主完成全部视觉插画与动效设计，依靠个人审美把控整体配色、版式层级。可在线交互原型完整呈现页面流转逻辑，既锻炼了标准化 UI 制作思维，也体现独立原创视觉设计能力。",
+    "en": "This e-commerce UI practice helped me master Figma's component-based development logic. I independently completed all visual illustrations and motion designs, relying on personal aesthetics to control overall color schemes and layout hierarchy. The interactive online prototype fully presents the page flow logic, both exercising standardized UI production thinking and demonstrating independent original visual design capability."
+  }
+}

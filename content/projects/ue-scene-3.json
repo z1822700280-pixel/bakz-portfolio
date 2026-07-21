@@ -1,17 +1,35 @@
 {
   "id": "ue-scene-3",
   "title": {
-    "zh": "浮空神殿",
-    "en": "Floating Temple"
+    "zh": "AI古镇",
+    "en": "AI Ancient Town"
   },
   "description": {
-    "zh": "东方幻想风格的浮空建筑群，云海翻涌间若隐若现的古代神殿，探索空间叙事的可能性。",
-    "en": "Eastern fantasy-style floating architecture, ancient temples emerging through rolling clouds, exploring spatial narrative possibilities."
+    "zh": "《AI古镇》是一款轻量化 AIGC 场景创作小项目，主打 AI 快速建模与 UE 引擎极速落地的创作流程。我先通过文字梳理创作思路，迭代优化提示词、生成场景参考图，再依托图文结合的方式，利用 AI 工具快速生成古镇 3D 模型资产。\n\n将生成的优质模型导入 UE 引擎，快速完成场景搭建、氛围调试与动画渲染，短时间内完成成片输出，全程高效轻量化，熟练掌握了 AI 辅助三维场景的快速落地方法。",
+    "en": "AI Ancient Town is a lightweight AIGC scene creation project focused on rapid AI modeling and fast UE engine deployment. I started by organizing creative ideas through text, iteratively optimized prompts, and generated reference images. Then, combining text and images, I used AI tools to quickly generate 3D model assets of an ancient town.\n\nOnce the high-quality models were generated, I imported them into UE for quick scene building, atmosphere tuning, and animation rendering—completing the final output in a short time. The entire process was efficient and lightweight, allowing me to master the rapid implementation of AI-assisted 3D scene creation."
   },
   "category": "game",
-  "tags": ["UE5", "东方美学", "关卡设计"],
+  "tags": ["UE5", "AI建模", "场景搭建", "AIGC", "全流程"],
   "year": 2025,
-  "thumbnail": "/images/placeholder.svg",
-  "images": ["/images/placeholder.svg", "/images/placeholder.svg"],
-  "tools": ["Unreal Engine 5", "World Creator"]
+  "thumbnail": "/images/ue-scene-3/thumbnail.png",
+  "images": [
+    "/images/ue-scene-3/full-film.mp4",
+    "/images/ue-scene-3/clip-1.mp4",
+    "/images/ue-scene-3/clip-2.mp4",
+    "/images/ue-scene-3/clip-3.mp4",
+    "/images/ue-scene-3/clip-4.mp4",
+    "/images/ue-scene-3/content-0.jpg",
+    "/images/ue-scene-3/content-1.jpg",
+    "/images/ue-scene-3/content-2.jpg",
+    "/images/ue-scene-3/content-3.jpg"
+  ],
+  "tools": ["Unreal Engine 5", "AI 3D Generation Tool"],
+  "role": {
+    "zh": "独立开发 / 全流程",
+    "en": "Solo Developer / Full Pipeline"
+  },
+  "reflection": {
+    "zh": "本项目是我对 AI 快速建模工作流的简易实战练习。区别于传统繁琐建模流程，我采用「文字构思—图文迭代—AI 生成模型—UE 渲染输出」的轻量化链路，极速完成全流程创作。\n\n本次实践让我熟练运用 AIGC 工具快速产出三维场景，提升了高效落地、灵活适配新型创作工具的能力。",
+    "en": "This project was a simple hands-on practice in AI-driven rapid modeling workflows. Unlike traditional cumbersome modeling processes, I adopted a lightweight pipeline of \"text ideation → text-image iteration → AI model generation → UE rendering output,\" completing the entire workflow at speed.\n\nThis practice allowed me to熟练 use AIGC tools to quickly produce 3D scenes, enhancing my ability to efficiently implement and flexibly adapt to new creative tools."
+  }
 }

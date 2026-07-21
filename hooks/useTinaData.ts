@@ -2,11 +2,11 @@
 
 import { useState, useEffect } from 'react'
 import { projects as staticProjects, Project } from '@/data/projects'
-import { galleryItems as staticGallery, GalleryItem } from '@/data/gallery'
+import { gallerySeries as staticGallery, GallerySeries } from '@/data/gallery'
 
 interface TinaDataState {
   projects: Project[]
-  galleryItems: GalleryItem[]
+  galleryItems: GallerySeries[]
   isLoading: boolean
   error: Error | null
 }

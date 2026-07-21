@@ -1,40 +1,67 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
-import GalleryItem from './GalleryItem'
-import Lightbox from './Lightbox'
+import { GallerySeries as GallerySeriesType } from '@/data/gallery'
+import GallerySeriesCard from './GallerySeriesCard'
+import PokerLightbox from './PokerLightbox'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { useScrollReveal } from '@/hooks/useScrollReveal'
 import { useTinaData } from '@/hooks/useTinaData'
 
+const FILTERS = [
+  { key: 'all' as const },
+  { key: 'aigc' as const },
+  { key: '3d' as const },
+  { key: 'ui' as const },
+  { key: 'illustration' as const },
+] as const
+
+const FILTER_LABELS_ZH: Record<string, string> = {
+  all: '全部',
+  aigc: 'AIGC 海报',
+  '3d': '3D 建模',
+  ui: 'UI 设计',
+  illustration: '插画作品',
+}
+
+const FILTER_LABELS_EN: Record<string, string> = {
+  all: 'All',
+  aigc: 'AIGC Posters',
+  '3d': '3D Modeling',
+  ui: 'UI Design',
+  illustration: 'Illustrations',
+}
+
 export default function Gallery() {
-  const [selectedItem, setSelectedItem] = useState<number | null>(null)
   const [filter, setFilter] = useState<string>('all')
+  const [selectedSeries, setSelectedSeries] = useState<GallerySeriesType | null>(null)
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0)
   const { lang } = useLanguage()
   const { galleryItems, isLoading } = useTinaData()
   const { ref: sectionRef, isVisible } = useScrollReveal(0.1)
 
-  const filteredItems =
-    filter === 'all'
-      ? galleryItems
-      : galleryItems.filter((item) => item.category === filter)
+  const filteredSeries = useMemo(
+    () =>
+      filter === 'all'
+        ? galleryItems
+        : galleryItems.filter((s) => s.category === filter),
+    [filter, galleryItems]
+  )
 
-  const handleNext = () => {
-    if (selectedItem === null) return
-    setSelectedItem((selectedItem + 1) % filteredItems.length)
+  const openLightbox = (series: GallerySeriesType, imageIndex: number) => {
+    setSelectedSeries(series)
+    setSelectedImageIndex(imageIndex)
   }
 
-  const handlePrev = () => {
-    if (selectedItem === null) return
-    setSelectedItem(
-      (selectedItem - 1 + filteredItems.length) % filteredItems.length
-    )
+  const closeLightbox = () => {
+    setSelectedSeries(null)
   }
+
+  const labels = lang === 'zh' ? FILTER_LABELS_ZH : FILTER_LABELS_EN
 
   return (
     <section id="gallery" ref={sectionRef} className="relative py-20 px-6 overflow-hidden">
-      {/* Gradient overlay that fades in */}
       <motion.div
         className="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--text-primary)]/[0.01] to-transparent pointer-events-none"
         initial={{ opacity: 0 }}
@@ -53,63 +80,46 @@ export default function Gallery() {
           </h2>
           <p className="text-secondary mb-8 tracking-wide">
             {lang === 'zh'
-              ? '海报 · 摄影 · AIGC · 3D建模'
-              : 'Poster · Photography · AIGC · 3D Modeling'}
+              ? 'AIGC 海报 · 3D 建模 · UI 设计 · 插画作品'
+              : 'AIGC Posters · 3D Modeling · UI Design · Illustrations'}
           </p>
 
-          {/* Filter buttons */}
-          <div className="flex gap-4 mb-8">
-            {['all', 'poster', 'photography', 'aigc', '3d'].map((cat) => (
+          {/* Filter bar */}
+          <div className="flex gap-3 flex-wrap mb-12">
+            {FILTERS.map(({ key }) => (
               <button
-                key={cat}
-                onClick={() => setFilter(cat)}
-                className={`px-4 py-2 rounded-full text-sm transition-all duration-300 ${
-                  filter === cat
+                key={key}
+                onClick={() => setFilter(key)}
+                className={`px-5 py-2 rounded-full text-sm transition-all duration-300 ${
+                  filter === key
                     ? 'bg-secondary/20 text-secondary border border-secondary/30'
                     : 'bg-[var(--bg-card)] text-[var(--text-muted)] hover:text-secondary border border-[var(--border-subtle)]'
                 }`}
               >
-                {cat === 'all'
-                  ? lang === 'zh'
-                    ? '全部'
-                    : 'All'
-                  : cat === 'poster'
-                  ? lang === 'zh'
-                    ? '海报'
-                    : 'Poster'
-                  : cat === 'photography'
-                  ? lang === 'zh'
-                    ? '摄影'
-                    : 'Photography'
-                  : cat === 'aigc'
-                  ? 'AIGC'
-                  : lang === 'zh'
-                  ? '3D建模'
-                  : '3D Modeling'}
+                {labels[key]}
               </button>
             ))}
           </div>
 
-          {/* Gallery grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {filteredItems.map((item, index) => (
-              <GalleryItem
-                key={item.id}
-                item={item}
+          {/* Series grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredSeries.map((series, index) => (
+              <GallerySeriesCard
+                key={series.id}
+                series={series}
                 index={index}
-                onClick={() => setSelectedItem(index)}
+                onImageClick={(imgIndex) => openLightbox(series, imgIndex)}
               />
             ))}
           </div>
         </motion.div>
       </div>
 
-      {/* Lightbox */}
-      <Lightbox
-        item={selectedItem !== null ? filteredItems[selectedItem] : null}
-        onClose={() => setSelectedItem(null)}
-        onNext={handleNext}
-        onPrev={handlePrev}
+      {/* Poker-style lightbox */}
+      <PokerLightbox
+        series={selectedSeries}
+        initialIndex={selectedImageIndex}
+        onClose={closeLightbox}
       />
     </section>
   )

@@ -1,17 +1,31 @@
 {
   "id": "ue-scene-2",
   "title": {
-    "zh": "霓虹雨巷",
-    "en": "Neon Rain Alley"
+    "zh": "河滨小镇",
+    "en": "Riverside Town"
   },
   "description": {
-    "zh": "赛博朋克风格的城市雨巷场景，实时反射与体积雾效打造未来都市的潮湿质感。",
-    "en": "Cyberpunk-style rainy city alley, real-time reflections and volumetric fog create a damp futuristic urban texture."
+    "zh": "《河滨小镇》是我在《西部世界》之前完成的 UE 初学实训作业，主要用于熟悉虚幻引擎的基础场景制作流程。项目全程独立完成，依托优质公开资产搭建完整小镇场景，通过大量筛选、比对市面流通模型资源，让我对当下行业主流资产精度、风格类型与制作标准建立了更全面的认知。\n\n制作中，我独立完成整体场景布局、地形整合、资产摆放与氛围统一，并自主制作河水材质球，深度练习材质参数调节、质感表现与引擎光影适配能力。全程依托个人审美进行场景构图、色调把控与氛围营造，在短时间内快速搭建成片完整、视觉舒适的写实小镇场景。\n\n场景制作完成后，我独立完成引擎渲染输出，并在 PR 中完成剪辑、调色与成片整合，完整走完了 UE 场景搭建—材质制作—渲染输出—后期成片的标准制作流程。本次实训充分体现了我的快速上手能力、场景审美能力与高效落地的学习特点，为后续大型场景项目制作打下扎实基础。",
+    "en": "Riverside Town is my introductory UE training project completed before West World, primarily used to familiarize myself with the basic scene production workflow of Unreal Engine. The project was independently completed, using high-quality public assets to build a complete小镇 scene. Through extensive筛选 and comparison of commercially available model resources, I developed a broader understanding of current industry-standard asset precision, style types, and production standards.\n\nDuring production, I independently handled overall scene layout, terrain integration, asset placement, and atmosphere unification. I also created custom river water materials, deeply practicing material parameter adjustment, texture expression, and engine lighting adaptation. Relying entirely on personal aesthetics for scene composition, color control, and atmosphere creation, I quickly built a visually comfortable realistic小镇 scene within a short time.\n\nAfter scene production, I independently handled engine rendering output and completed editing, color grading, and final整合 in Premiere Pro—fully completing the standard workflow of UE scene building → material creation → rendering output → post-production. This training project demonstrated my rapid onboarding ability, scene aesthetics, and efficient execution, laying a solid foundation for subsequent large-scale scene projects."
   },
   "category": "game",
-  "tags": ["UE5", "赛博朋克", "天气系统"],
-  "year": 2024,
-  "thumbnail": "/images/placeholder.svg",
-  "images": ["/images/placeholder.svg", "/images/placeholder.svg"],
-  "tools": ["Unreal Engine 5", "Houdini"]
+  "tags": ["UE5", "场景搭建", "写实", "材质制作", "全流程"],
+  "year": 2025,
+  "thumbnail": "/images/ue-scene-2/thumbnail.jpg",
+  "images": [
+    "/images/ue-scene-2/full-film.mov",
+    "/images/ue-scene-2/clip-0.mp4",
+    "/images/ue-scene-2/clip-1.mp4",
+    "/images/ue-scene-2/clip-2.mp4",
+    "/images/ue-scene-2/clip-3.mp4"
+  ],
+  "tools": ["Unreal Engine 5", "Premiere Pro"],
+  "role": {
+    "zh": "独立开发 / 全流程",
+    "en": "Solo Developer / Full Pipeline"
+  },
+  "reflection": {
+    "zh": "《河滨小镇》是我入门虚幻引擎的实训项目。我通过筛选整合市面各类模型资产，熟悉了行业主流模型精度与风格标准。制作中跳出模板套用，自主调试水体材质、优化场景光影构图，凭借个人审美统一整体氛围，在短时间内高效完成全流程落地。\n\n本次项目充分锻炼了我的快速学习能力与场景把控能力，扎实掌握了 UE 场景搭建、材质调校与后期输出的完整工作流，为后续复杂引擎项目制作积累了充足实战经验。",
+    "en": "Riverside Town was my introductory Unreal Engine training project. By筛选 and integrating various commercial model assets, I familiarized myself with industry-standard model precision and style norms. Moving beyond template-based approaches, I independently debugged water materials, optimized scene lighting and composition, and unified the overall atmosphere through personal aesthetics—efficiently completing the full pipeline in a short time.\n\nThis project thoroughly exercised my rapid learning ability and scene control skills, solidifying my grasp of the complete UE scene building, material tuning, and post-production workflow, accumulating ample practical experience for subsequent complex engine projects."
+  }
 }

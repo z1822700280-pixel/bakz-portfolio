@@ -1,17 +1,40 @@
 {
   "id": "ue-scene-1",
   "title": {
-    "zh": "废墟图书馆",
-    "en": "Ruined Library"
+    "zh": "西部世界",
+    "en": "West World"
   },
   "description": {
-    "zh": "后启示录风格的废弃图书馆场景，融合自然侵蚀与人工建筑的对比美学。动态光影系统营造沉浸式氛围。",
-    "en": "Post-apocalyptic abandoned library scene, blending natural erosion with architectural contrast. Dynamic lighting system creates an immersive atmosphere."
+    "zh": "《西部世界》是我独立完成的大学学期游戏引擎实训项目，历时一个月全程自主开发落地。本项目为西部风格写实场景交互 demo，我独立负责场景搭建、主体建模、材质制作、资产整合、动画编辑、蓝图交互与宣传片输出全流程工作，完整实现了从原画参考、模型搭建到引擎交互落地的完整工作链路。\n\n项目前期，我利用 Midjourney 生成大量西部酒馆场景参考图，确立整体视觉风格。主体酒馆建筑由我在 Maya 中分区模块化手工建模，随后导入 Substance Painter 进行材质烘焙、材质球制作与细节纹理调校，最终接入 UE 引擎完成光影适配、材质调试与细节优化。整套制作过程严格遵循标准化分类规范，保证资产整洁、流程可控。\n\n场景内桌椅、摆件等道具资产，我通过筛选高精度外部资源并统一风格调校，使自制主体建筑与外部模型高度融合，整体画面风格统一、质感协调，达到标准化的场景美术审美与制作水准。在模型制作中，我兼顾项目体量与制作效率，合理把控模型精度，在保证整体视觉效果的同时高效推进项目进度。\n\n除场景美术外，我自主完成角色资源导入、动作数据适配与场景动画编辑。同时利用短时间快速自学 UE 蓝图交互逻辑，落地点击开门、物品查看、物理击打等多种基础交互功能，完整实现可互动的写实游戏场景 Demo。在工期紧张的情况下，我快速吸收全新技术知识点，展现出较强的临场学习能力与落地执行力。\n\n项目最终宣传片制作中，我结合 AI 工具辅助优化画面呈现与镜头效果，让成片观感更具表现力，保持了技术与审美同步迭代的创作状态。整段开发过程，我始终保持主动探索的创作状态，熟练融合 AI 辅助创作、传统建模材质流程与引擎交互开发，实现了审美、技术、流程优化的全方位提升。",
+    "en": "West World is my independently completed university semester game engine training project, developed entirely from scratch over one month. This is a Western-style realistic scene interactive demo. I independently handled the entire pipeline—scene building, core modeling, material creation, asset integration, animation editing, Blueprint interaction, and promotional video production—completing a full workflow from concept art reference and model building to engine-based interactive implementation.\n\nIn the early stages, I used Midjourney to generate大量 reference images of Western saloon scenes to establish the visual direction. The main saloon building was hand-modeled in Maya using modular分区 techniques, then imported into Substance Painter for material baking, material球 creation, and detail texture tuning. Finally, it was brought into UE for lighting adaptation, material debugging, and detail optimization. The entire process followed standardized classification norms to keep assets clean and the workflow可控.\n\nFor props like tables, chairs, and decorations, I curated high-precision external assets and unified their style to seamlessly blend self-made core architecture with external models. The overall visual style was cohesive and materially consistent, meeting a standardized level of scene art quality. I balanced project scope with production efficiency, maintaining visual quality while keeping the schedule on track.\n\nBeyond environmental art, I independently handled character asset import, motion data adaptation, and scene animation editing. I also quickly self-taught UE Blueprint interaction logic within a short timeframe, implementing basic interactive functions like door opening on click, item inspection, and physical striking—completing a fully interactive realistic game scene demo. Despite the tight schedule, I rapidly absorbed new technical knowledge, demonstrating strong on-the-spot learning ability and execution.\n\nFor the final promotional video, I used AI tools to optimize visual presentation and shot effects, making the final output more expressive while maintaining a state of continuous iteration between technology and aesthetics. Throughout development, I proactively explored and熟练 integrated AI-assisted creation with traditional modeling, material workflows, and engine interaction development—achieving comprehensive improvement in aesthetics, technology, and workflow optimization."
   },
   "category": "game",
-  "tags": ["UE5", "场景搭建", "灯光设计"],
-  "year": 2024,
-  "thumbnail": "/images/placeholder.svg",
-  "images": ["/images/placeholder.svg", "/images/placeholder.svg"],
-  "tools": ["Unreal Engine 5", "Substance Painter"]
+  "tags": ["UE5", "场景搭建", "写实", "交互", "全流程"],
+  "year": 2025,
+  "thumbnail": "/images/ue-scene-1/thumbnail.jpg",
+  "images": [
+    "/images/ue-scene-1/full-film.mov",
+    "/images/ue-scene-1/clip-0.mp4",
+    "/images/ue-scene-1/clip-1.mp4",
+    "/images/ue-scene-1/content-0.jpg",
+    "/images/ue-scene-1/content-1.png",
+    "/images/ue-scene-1/content-2.png",
+    "/images/ue-scene-1/content-3.png",
+    "/images/ue-scene-1/content-4.png",
+    "/images/ue-scene-1/content-5.jpg",
+    "/images/ue-scene-1/content-6.jpg",
+    "/images/ue-scene-1/content-7.jpg",
+    "/images/ue-scene-1/content-8.jpg",
+    "/images/ue-scene-1/content-9.jpg",
+    "/images/ue-scene-1/content-10.jpg"
+  ],
+  "tools": ["Unreal Engine 5", "Maya", "Substance Painter", "Midjourney", "Premiere Pro"],
+  "role": {
+    "zh": "独立开发 / 全流程",
+    "en": "Solo Developer / Full Pipeline"
+  },
+  "reflection": {
+    "zh": "本次《西部世界》项目是我全程独立攻坚的游戏引擎实训作品，耗时一月独立完成全流程开发，让我的综合创作与技术落地能力得到极大锻炼。不同于单一的建模或渲染作业，本次项目覆盖美术设计、模型制作、材质调校、引擎交互、动画编辑、后期宣发全链路，对我的统筹能力和快速学习能力是极大的考验。\n\n项目制作中，我摒弃固化的制作思维，灵活结合 AI 工具高效获取视觉参考，搭配标准化的建模、材质制作流程，兼顾了创作效率与画面质感，同时通过统一场景资产风格，让自制模型与外部高精度资产完美融合，也夯实了我的场景审美与画面把控能力。面对工期紧张的问题，我自主突击学习 UE 蓝图交互技术，在短时间内落地多项实用交互功能，高效突破技术难点。\n\n整个创作过程我始终保持积极的探索欲，不局限于基础流程落地，主动融合新兴 AI 工具优化创作链路，与时俱进更新创作方式。这次项目让我清晰掌握游戏场景全流程制作规范，也印证了自己高效的自学能力、扎实的美术审美和独立解决问题的实操能力。",
+    "en": "This West World project was a game engine training work that I independently攻坚 over one month, giving my comprehensive creative and technical implementation abilities a major workout. Unlike single modeling or rendering assignments, this project covered the entire chain—art design, modeling, material tuning, engine interaction, animation editing, and post-production promotion—severely testing my coordination and rapid learning skills.\n\nThroughout production, I abandoned rigid thinking patterns and flexibly used AI tools for efficient visual reference, paired with standardized modeling and material workflows to balance efficiency and visual quality. By unifying scene asset styles, self-made models seamlessly integrated with high-precision external assets, solidifying my scene aesthetics and visual control abilities. Facing tight deadlines, I independently突击 learned UE Blueprint interaction technology, implementing multiple practical interactive functions in a short time and efficiently overcoming technical bottlenecks.\n\nI maintained a strong exploratory drive throughout, not limited to basic pipeline execution but actively integrating emerging AI tools to optimize the creative chain and keep pace with evolving methods. This project gave me a clear grasp of the full game scene production workflow and confirmed my efficient self-learning ability, solid artistic aesthetics, and practical problem-solving skills."
+  }
 }
