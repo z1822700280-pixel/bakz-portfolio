@@ -304,9 +304,122 @@ export const projects: Project[] = [
     ],
     tools: ['Unreal Engine 5', 'AI 3D Generation Tool'],
     role: { zh: '独立开发 / 全流程', en: 'Solo Developer / Full Pipeline' },
+    snapshot: [
+      { label: '项目类型', value: 'AIGC场景创作实验项目' },
+      { label: '项目定位', value: 'AI辅助三维场景快速生成' },
+      { label: '我的职责', value: '创意规划 / 提示词设计 / 场景搭建 / 渲染输出' },
+      { label: '核心工具', value: 'UE5 / AI 3D Generation Tool' },
+      { label: '项目重点', value: 'AI建模 / 工作流验证 / 快速落地' },
+      { label: '核心能力', value: 'AIGC应用 / 流程设计 / 工具适应能力' },
+    ],
+    pipeline: [
+      {
+        title: '创意构思',
+        target: '明确古镇场景主题，梳理整体视觉方向与核心风格',
+        work: '确定古镇场景主题方向，规划轻量化 AIGC 创作流程',
+        problems: '需在有限时间内完成从概念到成片的完整输出',
+        solutions: '采用「文字构思—图文迭代—AI生成模型—UE搭建」的轻量化链路',
+      },
+      {
+        title: '提示词迭代',
+        target: '持续优化文本描述，探索最符合预期的视觉方案',
+        work: '多轮迭代提示词，生成多组参考图，对比不同视觉方向',
+        problems: 'AI 生成结果具有随机性，需要反复调试才能获得符合预期的效果',
+        solutions: '系统化记录提示词版本，逐步逼近目标风格',
+      },
+      {
+        title: 'AI模型生成',
+        target: '利用AI工具快速生成古镇建筑模型',
+        work: '结合参考图与文字描述，利用 AI 3D 工具生成古镇建筑模型资产',
+        problems: 'AI 生成模型的精度与结构需人工筛选和调整',
+        solutions: '筛选结构合理的模型，剔除不符合场景需求的资产',
+      },
+      {
+        title: '场景搭建',
+        target: '将生成资产导入UE，完成场景组织与空间布局',
+        work: '将 AI 生成模型导入 UE 引擎，完成场景布局与空间组织',
+        problems: '需确保 AI 生成资产在 UE 中的适配性与视觉一致性',
+        solutions: '调整资产比例、位置与材质参数，统一整体风格',
+      },
+      {
+        title: '氛围调试',
+        target: '调整光影、镜头与环境效果，强化整体表现力',
+        work: '调试场景光照、镜头运动和环境特效，营造沉浸氛围',
+        problems: 'AI 生成资产的材质与 UE 光照系统需要配合调试',
+        solutions: '多轮迭代测试光照参数，找到最佳视觉方案',
+      },
+      {
+        title: '渲染输出',
+        target: '完成动画渲染与最终成片制作',
+        work: '完成场景动画渲染，输出最终成片',
+      },
+    ],
+    challenges: [
+      {
+        question: '如何让AI生成符合预期的古镇风格？',
+        solutions: [
+          '通过多轮提示词优化，持续调整建筑风格、材质特征与场景元素',
+          '对比不同提示词版本的生成结果，筛选最优方案',
+          '提升生成结果的可控性，逐步逼近预期风格',
+        ],
+      },
+      {
+        question: '如何保证AI生成资产能够实际落地？',
+        solutions: [
+          '筛选结构合理的模型资源，确保可导入 UE 引擎',
+          '在 UE 中重新组织与布局，调整资产适配性',
+          '确保场景具备完整空间逻辑与视觉统一性',
+        ],
+      },
+      {
+        question: '如何验证AI工作流效率？',
+        solutions: [
+          '将传统建模流程与 AI 生成流程进行对比',
+          '缩短资产制作周期，实现快速原型验证',
+          '建立可重复、可迭代的 AI 辅助创作流程',
+        ],
+      },
+    ],
+    overviewSections: [
+      {
+        title: '项目背景',
+        content: '《AI古镇》是一项轻量化 AIGC 场景创作实验项目，主要探索 AI 快速建模与 UE 场景搭建结合的可能性。项目从创意构思开始，通过文字规划、提示词设计与视觉方向探索，建立完整的 AI 辅助创作流程。',
+      },
+      {
+        title: 'AI建模工作流实践',
+        content: '在明确场景方向后，通过持续迭代提示词与参考图生成结果，不断优化建筑风格与视觉表现。随后利用 AI 工具快速生成古镇模型资产，大幅缩短传统建模流程所需时间。',
+      },
+      {
+        title: '场景落地与成果输出',
+        content: '将生成资产导入 UE 引擎后，快速完成场景搭建、氛围调试与镜头设计，并最终输出动画成片。本项目验证了 AI 辅助三维场景制作的可行性，也积累了实际应用 AIGC 工具的经验。',
+      },
+    ],
+    mediaItems: [
+      { src: '/images/ue-scene-3/full-film.mp4', type: 'video', title: 'AI古镇｜完整展示影片', description: 'AI 辅助生成古镇场景的全流程展示' },
+      { src: '/images/ue-scene-3/clip-1.mp4', type: 'video', title: '场景整体展示', description: 'UE 引擎中搭建完成的 AI 古镇全局场景展示' },
+      { src: '/images/ue-scene-3/clip-2.mp4', type: 'video', title: '建筑区域展示', description: 'AI 生成建筑模型在场景中的具体呈现效果' },
+      { src: '/images/ue-scene-3/clip-3.mp4', type: 'video', title: '镜头漫游展示', description: '场景镜头漫游，展示古镇空间布局与氛围' },
+      { src: '/images/ue-scene-3/clip-4.mp4', type: 'video', title: '氛围表现展示', description: '光影与氛围调试后的最终场景效果' },
+      { src: '/images/ue-scene-3/content-0.jpg', type: 'image', title: '概念探索', description: '通过提示词设计与参考图生成，探索古镇场景整体视觉方向' },
+      { src: '/images/ue-scene-3/content-1.jpg', type: 'image', title: 'AI模型生成', description: '利用 AI 工具生成建筑模型，验证快速资产生产流程' },
+      { src: '/images/ue-scene-3/content-2.jpg', type: 'image', title: '资产导入测试', description: '将生成模型导入 UE，检查结构与场景适配效果' },
+      { src: '/images/ue-scene-3/content-3.jpg', type: 'image', title: '最终场景搭建', description: '完成场景组织、氛围调试与镜头设计' },
+    ],
+    aiWorkflow: [
+      {
+        stage: '视觉探索与方案验证',
+        ai: '生成参考图，探索视觉方向，辅助风格验证',
+        human: '筛选方案，确定设计方向，制定制作策略',
+      },
+      {
+        stage: '三维资产生成',
+        ai: '生成古镇建筑模型',
+        human: '模型筛选，场景搭建，光影调试，镜头设计，最终输出',
+      },
+    ],
     reflection: {
-      zh: '本项目是我对 AI 快速建模工作流的简易实战练习。区别于传统繁琐建模流程，我采用「文字构思—图文迭代—AI 生成模型—UE 渲染输出」的轻量化链路，极速完成全流程创作。\n\n本次实践让我熟练运用 AIGC 工具快速产出三维场景，提升了高效落地、灵活适配新型创作工具的能力。',
-      en: 'This project was a simple hands-on practice in AI-driven rapid modeling workflows. Unlike traditional cumbersome modeling processes, I adopted a lightweight pipeline of "text ideation → text-image iteration → AI model generation → UE rendering output," completing the entire workflow at speed.\n\nThis practice allowed me to熟练 use AIGC tools to quickly produce 3D scenes, enhancing my ability to efficiently implement and flexibly adapt to new creative tools.',
+      zh: '《AI古镇》是我针对AI快速建模工作流进行的一次实践探索。项目尝试摆脱传统建模流程中的高时间成本，通过「文字构思—图文迭代—AI生成模型—UE场景搭建」的轻量化链路，在较短时间内完成完整场景创作。\n\n实践过程中，我不仅学习了提示词优化与AI资产生成方法，也进一步理解了AI在创意验证、资产生产与场景搭建中的实际价值。相比单纯使用工具，本项目更重要的收获在于建立了一套可重复、可迭代的AI辅助创作流程。\n\n本次项目有效提升了我对AIGC工具的应用能力、快速落地能力以及适应新型创作方式的能力，也为未来探索AI与游戏场景制作结合提供了实践基础。',
+      en: 'AI Ancient Town was a practical exploration of AI-driven rapid modeling workflows. The project attempted to break away from the high time cost of traditional modeling by adopting a lightweight pipeline of "text ideation → text-image iteration → AI model generation → UE scene building," completing a full scene creation in a relatively short time.\n\nThrough this practice, I not only learned prompt optimization and AI asset generation methods, but also further understood AI\'s practical value in creative validation, asset production, and scene building. More importantly, the key takeaway was establishing a repeatable, iterable AI-assisted creative workflow.\n\nThis project effectively enhanced my ability to apply AIGC tools, rapidly implement solutions, and adapt to new creative methods, laying a practical foundation for future exploration of AI combined with game scene production.',
     },
   },
   // ── ② AI 视觉与数字艺术 ──
