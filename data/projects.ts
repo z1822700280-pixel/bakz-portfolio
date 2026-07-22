@@ -447,9 +447,128 @@ export const projects: Project[] = [
       '/images/aigc-video-1/content-8.jpg',
     ],
     tools: ['ChatGPT', 'Lovart', 'Premiere Pro'],
+    snapshot: [
+      { label: '项目类型', value: 'AIGC写实短片实验' },
+      { label: '项目定位', value: 'AI影像创作流程实践' },
+      { label: '制作周期', value: '单日完成全流程创作' },
+      { label: '核心工具', value: 'ChatGPT / Lovart / PR' },
+      { label: '项目重点', value: '视觉叙事 / 提示词设计 / 影像表达' },
+      { label: '核心能力', value: '创意转化 / AI协作 / 快速落地' },
+    ],
+    pipeline: [
+      {
+        title: '灵感构思',
+        target: '从一首治愈感夏日音乐获得创作灵感，明确作品情绪与表达方向',
+        work: '聆听音乐确定情绪基调，构思画面方向',
+        problems: '抽象情绪需要转化为可执行的画面方案',
+        solutions: '通过关键词拆解与画面联想，逐步建立视觉框架',
+      },
+      {
+        title: '故事拆解',
+        target: '将抽象情绪转化为可执行画面，建立分镜结构与镜头逻辑',
+        work: '将整体情绪拆解为逐镜头画面，建立分镜方案',
+        problems: '需保证分镜逻辑连贯且符合情绪表达',
+        solutions: '以音乐节奏为参考，设计镜头序列与叙事节奏',
+      },
+      {
+        title: '提示词设计',
+        target: '逐镜头编写与优化提示词，形成完整图生图与图生视频方案',
+        work: '为每个镜头独立编写和优化提示词，敲定两套完整提示词方案',
+        problems: '需保证不同镜头间视觉风格的一致性',
+        solutions: '统一关键词体系，控制主体、环境、光线与情绪表达',
+      },
+      {
+        title: '素材生成',
+        target: '测试多种视频模型，筛选最符合预期的素材结果',
+        work: '通过多款视频模型测试产出素材，对比生成效果',
+        problems: '不同模型生成风格不一致，筛选工作量大',
+        solutions: '建立素材评估标准，系统化比较和筛选',
+      },
+      {
+        title: '后期整合',
+        target: '完成镜头编排、节奏控制与整体叙事组织',
+        work: '完成镜头剪辑、叙事编排与节奏控制',
+        problems: 'AI 生成素材的连贯性与一致性需要后期调整',
+        solutions: '通过剪辑节奏与镜头排序弥补素材差异',
+      },
+      {
+        title: '调色输出',
+        target: '在Premiere中完成调色与最终成片输出',
+        work: '后期调色统一整体视觉风格，输出最终成片',
+      },
+    ],
+    challenges: [
+      {
+        question: '如何将抽象情绪转化为具体画面？',
+        solutions: [
+          '通过分镜设计与关键词拆解，逐步将音乐感受转化为可执行视觉语言',
+          '以音乐节奏为框架，建立镜头序列',
+          '确保画面情绪与音乐氛围相匹配',
+        ],
+      },
+      {
+        question: '如何提高AI生成结果的一致性？',
+        solutions: [
+          '逐镜头独立优化提示词，控制主体、环境、光线与情绪表达',
+          '统一关键词体系，保持视觉风格连贯',
+          '多轮迭代测试，筛选最优方案',
+        ],
+      },
+      {
+        question: '如何保证作品具备个人表达？',
+        solutions: [
+          '将 AI 作为执行工具，由创作者主导镜头选择',
+          '由本人控制节奏控制与整体审美判断',
+          '确保技术服务于表达而非替代表达',
+        ],
+      },
+    ],
+    overviewSections: [
+      {
+        title: '项目背景',
+        content: '《阳光明媚》是我创作的第二部 AIGC 实验短片，也是第一次尝试写实风格 AI 影像表达。项目灵感来源于一首充满治愈感与夏日氛围的音乐，希望通过连续画面传递温暖、轻松与积极的情绪体验。',
+      },
+      {
+        title: 'AI影像创作流程',
+        content: '项目全程遵循标准化创作流程，从灵感构思开始，逐步完成分镜规划、提示词设计、素材生成与画面筛选。通过多轮迭代优化关键词，并结合多种视频模型测试结果，逐渐建立完整的 AI 影像创作链路。',
+      },
+      {
+        title: '成果与收获',
+        content: '从上午产生创意到晚间完成成片输出，项目在单日内完成全部制作流程。虽然作品篇幅较短，但验证了完整的 AIGC 影像工作流，也帮助我积累了写实风格 AI 短片创作经验，并获得不错的平台传播反馈。',
+      },
+    ],
+    mediaItems: [
+      { src: '/images/aigc-video-1/full-film.mov', type: 'video', title: '阳光明媚｜完整短片', description: 'AIGC 写实风格短片完整展示' },
+      { src: '/images/aigc-video-1/content-0.jpg', type: 'image', title: '灵感来源', description: '以夏日音乐情绪为基础，确定作品整体表达方向' },
+      { src: '/images/aigc-video-1/content-1.jpg', type: 'image', title: '镜头概念探索', description: '测试不同视觉方案，寻找最符合主题的画面表达' },
+      { src: '/images/aigc-video-1/content-2.jpg', type: 'image', title: '角色氛围设计', description: '建立人物与环境关系，强化情绪传递效果' },
+      { src: '/images/aigc-video-1/content-3.jpg', type: 'image', title: '场景风格测试', description: '调整光线、天气与色彩关系，统一整体氛围' },
+      { src: '/images/aigc-video-1/content-4.jpg', type: 'image', title: '视觉方向迭代', description: '通过提示词优化，持续提高画面一致性' },
+      { src: '/images/aigc-video-1/content-5.jpg', type: 'image', title: '镜头语言构建', description: '完善画面节奏与镜头衔接逻辑' },
+      { src: '/images/aigc-video-1/content-6.jpg', type: 'image', title: '素材筛选', description: '对多轮生成结果进行比较与筛选' },
+      { src: '/images/aigc-video-1/content-7.jpg', type: 'image', title: '风格统一', description: '强化写实质感与视觉表达' },
+      { src: '/images/aigc-video-1/content-8.jpg', type: 'image', title: '最终画面定稿', description: '形成完整短片视觉方案' },
+    ],
+    aiWorkflow: [
+      {
+        stage: '创意扩展与视觉探索',
+        ai: '生成参考画面，辅助视觉发散，快速验证方向',
+        human: '确定主题，筛选方案，制定叙事结构',
+      },
+      {
+        stage: '镜头素材生成',
+        ai: '根据提示词生成画面与视频素材',
+        human: '逐镜头优化提示词，控制视觉一致性，筛选最终素材',
+      },
+      {
+        stage: '内容整合与表达',
+        ai: '提供生成素材',
+        human: '剪辑节奏，镜头排序，调色输出，最终表达',
+      },
+    ],
     reflection: {
-      zh: '制作《阳光明媚》的整个过程，我始终带着充足的创作热情，对作品的氛围与表达也有清晰的个人想法，因此整体制作流程十分顺利，没有遇到太多难题。\n\n本次创作的核心挑战，在于和 AI 的反复磨合迭代。我也从中总结出关键经验：与 AI 协作时，清晰的逻辑、完整的任务框架与高效的执行流程，是保证成片质量与创作效率的核心。\n\n同时我深刻体会到，AIGC 作品的最终效果，取决于模型能力和个人审美的双重配合。AI 只是创作工具，画面质感、细节取舍和整体表达，始终由创作者的审美与把控主导。',
-      en: 'Throughout the production of Sunshine, I maintained strong creative enthusiasm and had a clear personal vision for the work\'s atmosphere and expression, so the entire process went smoothly without major hurdles.\n\nThe core challenge was the iterative back-and-forth with AI. My key takeaway: when collaborating with AI, clear logic, a well-structured task framework, and efficient execution are essential for both output quality and creative efficiency.\n\nI also came to deeply understand that the final quality of an AIGC work depends on the synergy between model capability and personal aesthetics. AI is merely a tool—the visual quality, detail decisions, and overall expression are always shaped by the creator\'s aesthetic sense and direction.',
+      zh: '《阳光明媚》的创作过程让我进一步验证了 AIGC 影像创作的可行性。由于前期已经具备较明确的创作方向，整个制作流程推进十分顺畅，也让我能够更加专注于画面氛围与情绪表达本身。\n\n本项目最大的收获来自与 AI 协作方式的探索。实践过程中，我逐渐意识到提示词只是表层工具，更重要的是建立清晰的逻辑框架、稳定的执行流程以及明确的创作目标。只有这样，AI 才能真正成为高效的创作伙伴。\n\n同时我也更加坚定了一点：AI 能够提升效率，但最终决定作品质量的仍然是创作者本身。审美判断、镜头选择、节奏控制以及情感表达，始终需要由人来完成。这也是我未来持续探索 AIGC 创作的重要方向。',
+      en: 'The creative process of Sunshine further validated the feasibility of AIGC filmmaking. With a clear creative direction established early on, the entire production process went smoothly, allowing me to focus more on the visual atmosphere and emotional expression itself.\n\nThe greatest takeaway from this project came from exploring the mode of collaboration with AI. Through practice, I gradually realized that prompts are just surface-level tools—what truly matters is establishing a clear logical framework, a stable execution process, and明确的 creative goals. Only then can AI truly become an efficient creative partner.\n\nAt the same time, I became more certain of one thing: AI can enhance efficiency, but the final quality of the work is still determined by the creator. Aesthetic judgment, shot selection, rhythm control, and emotional expression will always need to be done by humans. This is also an important direction for my continued exploration of AIGC creation in the future.',
     },
   },
   {
