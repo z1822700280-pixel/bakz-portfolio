@@ -8,6 +8,42 @@ export interface ExternalLink {
   url: string
 }
 
+export interface SnapshotItem {
+  label: string
+  value: string
+}
+
+export interface PipelineStage {
+  title: string
+  target?: string
+  work?: string
+  problems?: string
+  solutions?: string
+}
+
+export interface Challenge {
+  question: string
+  solutions: string[]
+}
+
+export interface OverviewSection {
+  title: string
+  content: string
+}
+
+export interface MediaItem {
+  src: string
+  type: 'image' | 'video'
+  title?: string
+  description?: string
+}
+
+export interface AIWorkflowItem {
+  stage: string
+  ai: string
+  human: string
+}
+
 export interface Project {
   id: string
   title: { zh: string; en: string }
@@ -21,6 +57,12 @@ export interface Project {
   role?: Role
   externalLinks?: ExternalLink[]
   reflection?: { zh: string; en: string }
+  snapshot?: SnapshotItem[]
+  pipeline?: PipelineStage[]
+  challenges?: Challenge[]
+  overviewSections?: OverviewSection[]
+  mediaItems?: MediaItem[]
+  aiWorkflow?: AIWorkflowItem[]
 }
 
 export const projects: Project[] = [
@@ -58,6 +100,160 @@ export const projects: Project[] = [
       zh: '本次《西部世界》项目是我全程独立攻坚的游戏引擎实训作品，耗时一月独立完成全流程开发，让我的综合创作与技术落地能力得到极大锻炼。不同于单一的建模或渲染作业，本次项目覆盖美术设计、模型制作、材质调校、引擎交互、动画编辑、后期宣发全链路，对我的统筹能力和快速学习能力是极大的考验。\n\n项目制作中，我摒弃固化的制作思维，灵活结合 AI 工具高效获取视觉参考，搭配标准化的建模、材质制作流程，兼顾了创作效率与画面质感，同时通过统一场景资产风格，让自制模型与外部高精度资产完美融合，也夯实了我的场景审美与画面把控能力。面对工期紧张的问题，我自主突击学习 UE 蓝图交互技术，在短时间内落地多项实用交互功能，高效突破技术难点。\n\n整个创作过程我始终保持积极的探索欲，不局限于基础流程落地，主动融合新兴 AI 工具优化创作链路，与时俱进更新创作方式。这次项目让我清晰掌握游戏场景全流程制作规范，也印证了自己高效的自学能力、扎实的美术审美和独立解决问题的实操能力。',
       en: 'This West World project was a game engine training work that I independently攻坚 over one month, giving my comprehensive creative and technical implementation abilities a major workout. Unlike single modeling or rendering assignments, this project covered the entire chain—art design, modeling, material tuning, engine interaction, animation editing, and post-production promotion—severely testing my coordination and rapid learning skills.\n\nThroughout production, I abandoned rigid thinking patterns and flexibly used AI tools for efficient visual reference, paired with standardized modeling and material workflows to balance efficiency and visual quality. By unifying scene asset styles, self-made models seamlessly integrated with high-precision external assets, solidifying my scene aesthetics and visual control abilities. Facing tight deadlines, I independently突击 learned UE Blueprint interaction technology, implementing multiple practical interactive functions in a short time and efficiently overcoming technical bottlenecks.\n\nI maintained a strong exploratory drive throughout, not limited to basic pipeline execution but actively integrating emerging AI tools to optimize the creative chain and keep pace with evolving methods. This project gave me a clear grasp of the full game scene production workflow and confirmed my efficient self-learning ability, solid artistic aesthetics, and practical problem-solving skills.',
     },
+    snapshot: [
+      { label: '项目周期', value: '1个月' },
+      { label: '项目类型', value: 'UE5交互场景Demo' },
+      { label: '我的职责', value: '独立开发 / 全流程' },
+      { label: '核心工具', value: 'UE5 / Maya / SP' },
+      { label: 'AI参与', value: 'Midjourney前期视觉探索' },
+      { label: '项目关键词', value: '场景搭建 / 蓝图交互 / 写实风格' },
+    ],
+    pipeline: [
+      {
+        title: '前期调研',
+        target: '确立项目整体方向与制作范围',
+        work: '分析项目需求，确定西部写实风格方向，规划一个月工期内的制作范围与资产清单',
+        problems: '项目周期紧张，需要在有限时间内完成全流程制作',
+        solutions: '合理规划自制与外部资产比例，主体建筑手工建模，道具资产筛选高精度外部资源',
+      },
+      {
+        title: '视觉参考探索',
+        target: '确定统一的视觉风格与色彩体系',
+        work: '利用 Midjourney 生成大量西部酒馆场景参考图，对比不同风格方向',
+        problems: '多种风格方向难以取舍，需快速锁定方向',
+        solutions: '以"写实西部"为核心方向，统一所有参考图标准，多轮迭代优化提示词',
+      },
+      {
+        title: '资产规划',
+        target: '规划模型资产的自制与外部采购方案',
+        work: '梳理场景所需全部资产，划分自制范围与外部资源范围',
+        problems: '需要在项目体量与制作效率之间找到平衡',
+        solutions: '主体酒馆建筑由 Maya 手工建模，桌椅摆件等道具筛选高精度外部资源并统一风格',
+      },
+      {
+        title: '建模制作',
+        target: '完成主体建筑与场景模型制作',
+        work: 'Maya 中分区模块化手工建模，严格按照标准化分类规范保证资产整洁',
+        problems: '模型精度需要兼顾视觉效果与制作效率',
+        solutions: '合理把控模型精度，在保证视觉质量的同时高效推进',
+      },
+      {
+        title: '材质制作',
+        target: '制作写实质感材质，确保画面统一协调',
+        work: '导入 Substance Painter 进行材质烘焙、材质球制作与细节纹理调校',
+        problems: '材质与引擎光照的配合需要反复调试',
+        solutions: '多轮测试材质参数，确保在 UE 引擎中呈现最佳光影效果',
+      },
+      {
+        title: '场景搭建',
+        target: '在 UE 引擎中完成完整场景组装',
+        work: '将自制资产与外部资源导入 UE，完成场景布局与氛围统一',
+        problems: '自制资产与外部资源的风格统一是最大挑战',
+        solutions: '统一材质参数、灯光环境、色彩关系，使整体画面高度融合',
+      },
+      {
+        title: '灯光优化',
+        target: '强化场景氛围与画面质感，营造沉浸感',
+        work: '调试引擎光照参数，营造黄昏西部氛围',
+        problems: '灯光与材质的配合调试复杂',
+        solutions: '参考西部电影灯光方案，反复迭代测试实现理想效果',
+      },
+      {
+        title: '交互开发',
+        target: '实现可交互的写实游戏场景 Demo',
+        work: '短时间快速自学 UE 蓝图交互逻辑，落地多项基础交互功能',
+        problems: '需在短期内掌握全新的蓝图交互技术',
+        solutions: '从简单案例入手，逐步实现开门触发、物品查看、物理击打等交互',
+      },
+      {
+        title: '宣传片制作',
+        target: '制作高质量项目宣传片',
+        work: '结合 AI 工具辅助优化画面呈现与镜头效果，后期剪辑与调色',
+        problems: '如何让宣传片在有限素材下更具表现力',
+        solutions: 'AI 辅助画面增强与镜头优化，配合精细后期调色',
+      },
+      {
+        title: '项目完成',
+        target: '项目交付与流程复盘',
+        work: '全流程梳理，总结制作经验与技术收获',
+      },
+    ],
+    challenges: [
+      {
+        question: '如何统一自制资产与外部资产风格？',
+        solutions: [
+          '统一材质参数——所有资产使用匹配的材质预设',
+          '统一灯光环境——同场景光照条件下测试所有资产',
+          '统一色彩关系——整体调色确保画面协调一致',
+        ],
+      },
+      {
+        question: '如何在短期内掌握全新交互技术？',
+        solutions: [
+          '从基础案例入手快速入门 UE 蓝图系统',
+          '实现三大核心交互功能：点击开门、物品查看、物理击打',
+          '边学边做，在实际开发中逐步深入',
+        ],
+      },
+      {
+        question: '如何高效确定视觉方向？',
+        solutions: [
+          '利用 Midjourney 快速探索多种视觉方案',
+          '多轮迭代优化提示词，筛选高质量参考图',
+          '人工筛选整合，最终设计决策由本人完成',
+        ],
+      },
+    ],
+    overviewSections: [
+      {
+        title: '项目背景',
+        content: '《西部世界》是我独立完成的大学学期游戏引擎实训项目，历时一个月全程自主开发落地。本项目为西部风格写实场景交互 demo，我独立负责场景搭建、主体建模、材质制作、资产整合、动画编辑、蓝图交互与宣传片输出全流程工作，完整实现了从原画参考、模型搭建到引擎交互落地的完整工作链路。',
+      },
+      {
+        title: '视觉探索与制作流程',
+        content: '项目前期，我利用 Midjourney 生成大量西部酒馆场景参考图，确立整体视觉风格。主体酒馆建筑由我在 Maya 中分区模块化手工建模，随后导入 Substance Painter 进行材质烘焙、材质球制作与细节纹理调校，最终接入 UE 引擎完成光影适配、材质调试与细节优化。整套制作过程严格遵循标准化分类规范，保证资产整洁、流程可控。',
+      },
+      {
+        title: '资产整合与场景统一',
+        content: '场景内桌椅、摆件等道具资产，我通过筛选高精度外部资源并统一风格调校，使自制主体建筑与外部模型高度融合，整体画面风格统一、质感协调，达到标准化的场景美术审美与制作水准。在模型制作中，我兼顾项目体量与制作效率，合理把控模型精度，在保证整体视觉效果的同时高效推进项目进度。',
+      },
+      {
+        title: '交互开发与功能实现',
+        content: '除场景美术外，我自主完成角色资源导入、动作数据适配与场景动画编辑。同时利用短时间快速自学 UE 蓝图交互逻辑，落地点击开门、物品查看、物理击打等多种基础交互功能，完整实现可互动的写实游戏场景 Demo。在工期紧张的情况下，我快速吸收全新技术知识点，展现出较强的临场学习能力与落地执行力。',
+      },
+      {
+        title: '宣传与总结',
+        content: '项目最终宣传片制作中，我结合 AI 工具辅助优化画面呈现与镜头效果，让成片观感更具表现力，保持了技术与审美同步迭代的创作状态。\n\n整段开发过程，我始终保持主动探索的创作状态，熟练融合 AI 辅助创作、传统建模材质流程与引擎交互开发，实现了审美、技术、流程优化的全方位提升。',
+      },
+    ],
+    mediaItems: [
+      { src: '/images/ue-scene-1/full-film.mov', type: 'video', title: '项目宣传片', description: '全流程展示西部酒馆场景交互 Demo 最终效果' },
+      { src: '/images/ue-scene-1/clip-0.mp4', type: 'video', title: '场景漫游', description: 'UE 引擎实时渲染的西部酒馆完整场景展示' },
+      { src: '/images/ue-scene-1/clip-1.mp4', type: 'video', title: '交互功能演示', description: '展示开门触发、物品查看、物理击打等交互功能' },
+      { src: '/images/ue-scene-1/content-0.jpg', type: 'image', title: '酒馆主体建筑', description: 'Maya 分区模块化手工建模，用于提高资产复用效率' },
+      { src: '/images/ue-scene-1/content-1.png', type: 'image', title: '材质效果展示', description: 'Substance Painter 材质烘焙与纹理调校结果' },
+      { src: '/images/ue-scene-1/content-2.png', type: 'image', title: '场景全局光照', description: 'UE 引擎中调试完成的光影效果与氛围呈现' },
+      { src: '/images/ue-scene-1/content-3.png', type: 'image', title: '灯光测试', description: '调整主光方向，强化黄昏氛围' },
+      { src: '/images/ue-scene-1/content-4.png', type: 'image', title: '材质细节', description: '木质纹理与金属质感的精细调校' },
+      { src: '/images/ue-scene-1/content-5.jpg', type: 'image', title: '场景局部', description: '酒馆内部道具布置与氛围营造' },
+      { src: '/images/ue-scene-1/content-6.jpg', type: 'image', title: '蓝图交互逻辑', description: 'UE 蓝图节点编辑实现的门禁交互系统' },
+      { src: '/images/ue-scene-1/content-7.jpg', type: 'image', title: '角色与动画', description: '角色资源导入与动作数据适配' },
+      { src: '/images/ue-scene-1/content-8.jpg', type: 'image', title: '画面调色', description: '宣传片后期调色，统一整体视觉风格' },
+      { src: '/images/ue-scene-1/content-9.jpg', type: 'image', title: '项目截图', description: '最终交付场景的整体效果展示' },
+      { src: '/images/ue-scene-1/content-10.jpg', type: 'image', title: '成品展示', description: '项目宣传片关键帧展示' },
+    ],
+    aiWorkflow: [
+      {
+        stage: '视觉参考生成',
+        ai: 'AI 根据文字描述生成大量西部酒馆场景参考图，快速探索多种视觉方向',
+        human: '人工筛选符合项目风格的方向，确立视觉基调，最终设计决策由本人完成',
+      },
+      {
+        stage: '宣传片优化',
+        ai: 'AI 辅助优化画面呈现效果，增强镜头表现力',
+        human: '剪辑、调色、成片整合，把控最终画面审美与节奏',
+      },
+    ],
   },
   {
     id: 'ue-scene-2',

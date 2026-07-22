@@ -6,24 +6,17 @@ import { projects } from '@/data/projects'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useLanguage } from '@/contexts/LanguageContext'
+import ProjectSnapshot from '@/components/ProjectSnapshot'
+import ProjectTimeline from '@/components/ProjectTimeline'
+import KeyChallenges from '@/components/KeyChallenges'
+import OverviewAccordion from '@/components/OverviewAccordion'
+import MediaShowcase from '@/components/MediaShowcase'
+import AIWorkflow from '@/components/AIWorkflow'
+import ReflectionSection from '@/components/ReflectionSection'
+import RelatedProjects from '@/components/RelatedProjects'
 
 function isVideo(path: string) {
   return path.endsWith('.mov') || path.endsWith('.mp4')
-}
-
-function SectionHeading({ zh, en }: { zh: string; en: string }) {
-  const { lang } = useLanguage()
-  return (
-    <div className="mb-8">
-      <span className="text-xs tracking-[0.3em] text-secondary/50 uppercase">
-        {lang === 'zh' ? '章节' : 'Section'}
-      </span>
-      <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-[var(--text-primary)] mt-2">
-        {lang === 'zh' ? zh : en}
-      </h2>
-      <div className="w-12 h-px bg-primary/30 mt-4" />
-    </div>
-  )
 }
 
 export default function ProjectDetail() {
@@ -39,14 +32,16 @@ export default function ProjectDetail() {
     )
   }
 
-  const videos = project.images.filter(isVideo)
-  const images = project.images.filter((m) => !isVideo(m))
-  const fullFilm = videos[0]
-  const clips = videos.slice(1)
+  const fullFilm = project.images.filter(isVideo)[0]
+  const hasAI = project.tools.some((t) =>
+    ['midjourney', 'chatgpt', 'aigc', 'ai', 'oii oii', 'lovart'].includes(t.toLowerCase())
+  ) || project.tags.some((t) =>
+    ['aigc', 'ai建模', 'ai'].includes(t.toLowerCase())
+  )
 
   return (
     <main className="min-h-screen">
-      {/* ── Hero ── */}
+      {/* ── Section 1: Hero ── */}
       <section className="relative h-[70vh] md:h-[85vh] overflow-hidden">
         {fullFilm ? (
           <video
@@ -68,7 +63,6 @@ export default function ProjectDetail() {
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)] via-transparent to-transparent" />
 
-        {/* Title overlay */}
         <div className="absolute bottom-0 left-0 right-0 p-6 md:p-16 pb-12 md:pb-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -99,200 +93,34 @@ export default function ProjectDetail() {
         </div>
       </section>
 
-      {/* ── Content ── */}
-      <div className="max-w-5xl mx-auto px-6 md:px-12 py-16 md:py-24">
+      {/* ── Section 2: Project Snapshot ── */}
+      <ProjectSnapshot items={project.snapshot || []} />
 
-        {/* ── Overview ── */}
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="mb-24"
-        >
-          <SectionHeading zh="项目概览" en="Overview" />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="md:col-span-2">
-              <p className="text-base md:text-lg leading-relaxed text-[var(--text-secondary)] whitespace-pre-line">
-                {project.description[lang]}
-              </p>
-            </div>
-            <div className="md:col-span-1">
-              <div className="space-y-6 p-6 bg-[var(--bg-card)] border border-[var(--border-subtle)] rounded-lg">
-                <div>
-                  <h4 className="text-[10px] tracking-[0.3em] text-secondary/50 uppercase mb-2">
-                    {lang === 'zh' ? '年份' : 'Year'}
-                  </h4>
-                  <p className="text-sm text-[var(--text-primary)]">{project.year}</p>
-                </div>
-                {project.role && (
-                  <div>
-                    <h4 className="text-[10px] tracking-[0.3em] text-secondary/50 uppercase mb-2">
-                      {lang === 'zh' ? '角色' : 'Role'}
-                    </h4>
-                    <p className="text-sm text-[var(--text-primary)]">{project.role[lang]}</p>
-                  </div>
-                )}
-                <div>
-                  <h4 className="text-[10px] tracking-[0.3em] text-secondary/50 uppercase mb-2">
-                    {lang === 'zh' ? '工具' : 'Tools'}
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tools.map((t) => (
-                      <span key={t} className="text-xs px-2.5 py-1 text-[var(--text-muted)] border border-[var(--border-subtle)] rounded">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <h4 className="text-[10px] tracking-[0.3em] text-secondary/50 uppercase mb-2">
-                    {lang === 'zh' ? '标签' : 'Tags'}
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((t) => (
-                      <span key={t} className="text-xs px-2.5 py-1 text-secondary bg-secondary/10 border border-secondary/20 rounded">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.section>
+      {/* ── Section 3: Development Pipeline ── */}
+      <ProjectTimeline stages={project.pipeline || []} />
 
-        {/* ── Full Film ── */}
-        {fullFilm && (
-          <motion.section
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            viewport={{ once: true, margin: '-100px' }}
-            className="mb-24"
-          >
-            <SectionHeading zh="正片" en="Full Film" />
-            <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-[var(--border-subtle)] bg-black">
-              <video
-                src={fullFilm}
-                controls
-                className="w-full h-full"
-                playsInline
-              >
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </motion.section>
-        )}
+      {/* ── Section 4: Key Challenges ── */}
+      <KeyChallenges items={project.challenges || []} />
 
-        {/* ── Video Clips ── */}
-        {clips.length > 0 && (
-          <motion.section
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            viewport={{ once: true, margin: '-100px' }}
-            className="mb-24"
-          >
-            <SectionHeading zh="视频片段" en="Video Clips" />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {clips.map((src, i) => (
-                <div
-                  key={i}
-                  className="relative aspect-video rounded-lg overflow-hidden border border-[var(--border-subtle)] bg-black"
-                >
-                  <video
-                    src={src}
-                    controls
-                    className="w-full h-full"
-                    playsInline
-                  >
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              ))}
-            </div>
-          </motion.section>
-        )}
+      {/* ── Section 5: Project Overview (Accordion) ── */}
+      <OverviewAccordion sections={project.overviewSections || []} />
 
-        {/* ── Visual Gallery ── */}
-        {images.length > 0 && (
-          <motion.section
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            viewport={{ once: true, margin: '-100px' }}
-            className="mb-24"
-          >
-            <SectionHeading zh="内容图" en="Gallery" />
-            <div className="space-y-8">
-              {images.map((src, i) => (
-                <motion.div
-                  key={i}
-                  className="relative aspect-video rounded-lg overflow-hidden border border-[var(--border-subtle)] bg-[var(--bg-card)]"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: i * 0.05, ease: [0.22, 1, 0.36, 1] }}
-                  viewport={{ once: true }}
-                >
-                  <Image
-                    src={src}
-                    alt={`${project.title[lang]} - ${i + 1}`}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 80vw"
-                  />
-                </motion.div>
-              ))}
-            </div>
-          </motion.section>
-        )}
+      {/* ── Section 6: Media Showcase ── */}
+      <MediaShowcase items={project.mediaItems || []} />
 
-        {/* ── Reflection ── */}
-        {project.reflection && (
-          <motion.section
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            viewport={{ once: true, margin: '-100px' }}
-            className="mb-24"
-          >
-            <SectionHeading zh="创作手记" en="Reflection" />
-            <blockquote className="text-lg md:text-xl leading-relaxed text-[var(--text-secondary)] italic border-l-2 border-primary/30 pl-6">
-              {project.reflection[lang]}
-            </blockquote>
-          </motion.section>
-        )}
+      {/* ── Section 7: AI Workflow (conditional) ── */}
+      {hasAI && <AIWorkflow items={project.aiWorkflow || []} />}
 
-        {/* ── External Links ── */}
-        {project.externalLinks && project.externalLinks.length > 0 && (
-          <motion.section
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            viewport={{ once: true, margin: '-100px' }}
-            className="mb-24"
-          >
-            <SectionHeading zh="外部链接" en="External Links" />
-            <div className="flex flex-wrap gap-4">
-              {project.externalLinks.map((link, i) => (
-                <a
-                  key={i}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 text-sm tracking-wider border border-[var(--border-subtle)] rounded-lg text-[var(--text-primary)] hover:border-primary/30 hover:text-primary transition-all duration-300"
-                >
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                  {link.label}
-                </a>
-              ))}
-            </div>
-          </motion.section>
-        )}
+      {/* ── Section 8: Reflection ── */}
+      {project.reflection && (
+        <ReflectionSection zh={project.reflection.zh} en={project.reflection.en} />
+      )}
 
-        {/* ── Navigation ── */}
+      {/* ── Section 9: Related Projects ── */}
+      <RelatedProjects currentId={project.id} />
+
+      {/* ── Back Navigation ── */}
+      <div className="max-w-5xl mx-auto px-6 md:px-12 pb-12">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -309,7 +137,6 @@ export default function ProjectDetail() {
             {lang === 'zh' ? '返回首页' : 'Back to Home'}
           </Link>
         </motion.div>
-
       </div>
     </main>
   )
