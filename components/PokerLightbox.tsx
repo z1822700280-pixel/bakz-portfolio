@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { GallerySeries } from '@/data/gallery'
 import Image from 'next/image'
 import { useLanguage } from '@/contexts/LanguageContext'
+import WatermarkOverlay from './WatermarkOverlay'
 
 interface PokerLightboxProps {
   series: GallerySeries | null
@@ -154,6 +155,7 @@ export default function PokerLightbox({ series, initialIndex, onClose }: PokerLi
               animate={{ scale: 1, opacity: 1, x: dragX }}
               exit={{ scale: 0.92, opacity: 0.5 }}
               transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+              onContextMenu={(e) => e.preventDefault()}
             >
               <Image
                 src={allImages[currentIndex]}
@@ -162,6 +164,7 @@ export default function PokerLightbox({ series, initialIndex, onClose }: PokerLi
                 className="object-contain"
                 draggable={false}
               />
+              <WatermarkOverlay />
             </motion.div>
           </div>
         </div>

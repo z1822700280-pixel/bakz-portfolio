@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { GallerySeries } from '@/data/gallery'
 import Image from 'next/image'
 import { useLanguage } from '@/contexts/LanguageContext'
+import WatermarkOverlay from './WatermarkOverlay'
 
 interface GallerySeriesCardProps {
   series: GallerySeries
@@ -48,13 +49,14 @@ export default function GallerySeriesCard({ series, index, onImageClick }: Galle
           )}
 
           {/* Front cover image */}
-          <div className="relative w-full h-full z-10">
+          <div className="relative w-full h-full z-10" onContextMenu={(e) => e.preventDefault()}>
             <Image
               src={series.cover}
               alt={series.title[lang]}
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
+            <WatermarkOverlay />
           </div>
 
           {/* Hover overlay */}
@@ -88,6 +90,7 @@ export default function GallerySeriesCard({ series, index, onImageClick }: Galle
                 key={i}
                 onClick={() => onImageClick(i)}
                 className="relative flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border border-[var(--border-subtle)] hover:border-primary/40 transition-colors duration-300"
+                onContextMenu={(e) => e.preventDefault()}
               >
                 <Image
                   src={img}
@@ -95,6 +98,7 @@ export default function GallerySeriesCard({ series, index, onImageClick }: Galle
                   fill
                   className="object-cover"
                 />
+                <WatermarkOverlay />
               </button>
             ))}
           </div>

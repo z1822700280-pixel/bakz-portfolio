@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import { MediaItem } from '@/data/projects'
 import { useLanguage } from '@/contexts/LanguageContext'
+import WatermarkOverlay from './WatermarkOverlay'
 
 function ImageLightbox({ item, onClose }: { item: MediaItem; onClose: () => void }) {
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
@@ -44,6 +45,7 @@ function ImageLightbox({ item, onClose }: { item: MediaItem; onClose: () => void
         transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
         className="relative w-[90vw] h-[85vh]"
         onClick={(e) => e.stopPropagation()}
+        onContextMenu={(e) => e.preventDefault()}
       >
         <Image
           src={item.src}
@@ -53,6 +55,7 @@ function ImageLightbox({ item, onClose }: { item: MediaItem; onClose: () => void
           sizes="90vw"
           priority
         />
+        <WatermarkOverlay />
       </motion.div>
     </motion.div>
   )
@@ -92,9 +95,10 @@ export default function MediaShowcase({ items }: { items: MediaItem[] }) {
                 {lang === 'zh' ? '正片' : 'Full Film'}
               </h3>
               <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-[var(--border-subtle)] bg-black">
-                <video src={fullFilm.src} controls className="w-full h-full" playsInline>
+                <video src={fullFilm.src} controls className="w-full h-full" playsInline onContextMenu={(e) => e.preventDefault()}>
                   Your browser does not support the video tag.
                 </video>
+                <WatermarkOverlay />
               </div>
             </div>
           )}
@@ -108,8 +112,9 @@ export default function MediaShowcase({ items }: { items: MediaItem[] }) {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                 {clips.map((clip, i) => (
                   <div key={i}>
-                    <div className="relative aspect-video rounded-lg overflow-hidden border border-[var(--border-subtle)] bg-black">
-                      <video src={clip.src} controls className="w-full h-full" playsInline />
+                  <div className="relative aspect-video rounded-lg overflow-hidden border border-[var(--border-subtle)] bg-black">
+                      <video src={clip.src} controls className="w-full h-full" playsInline onContextMenu={(e) => e.preventDefault()} />
+                      <WatermarkOverlay />
                     </div>
                     <p className="text-xs text-secondary/50 mt-2 tracking-wide">{lang === 'zh' ? `片段 ${i + 1}` : `Clip ${i + 1}`}</p>
                   </div>
@@ -136,6 +141,7 @@ export default function MediaShowcase({ items }: { items: MediaItem[] }) {
                     <div
                       className="relative aspect-video rounded-lg overflow-hidden border border-[var(--border-subtle)] bg-[var(--bg-card)] cursor-zoom-in group"
                       onClick={() => setLightboxItem(item)}
+                      onContextMenu={(e) => e.preventDefault()}
                     >
                       <Image
                         src={item.src}
@@ -144,6 +150,7 @@ export default function MediaShowcase({ items }: { items: MediaItem[] }) {
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                         sizes="(max-width: 768px) 100vw, 80vw"
                       />
+                      <WatermarkOverlay />
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
                         <svg className="w-8 h-8 text-white/0 group-hover:text-white/70 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
