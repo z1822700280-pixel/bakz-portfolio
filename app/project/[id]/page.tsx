@@ -2,9 +2,8 @@
 
 import { useParams } from 'next/navigation'
 import { motion } from 'framer-motion'
-import { projects } from '@/data/projects'
+import { projects, MediaItem } from '@/data/projects'
 import Image from 'next/image'
-import Link from 'next/link'
 import { useLanguage } from '@/contexts/LanguageContext'
 import ProjectSnapshot from '@/components/ProjectSnapshot'
 import ProjectTimeline from '@/components/ProjectTimeline'
@@ -13,10 +12,18 @@ import OverviewAccordion from '@/components/OverviewAccordion'
 import MediaShowcase from '@/components/MediaShowcase'
 import AIWorkflow from '@/components/AIWorkflow'
 import ReflectionSection from '@/components/ReflectionSection'
-import RelatedProjects from '@/components/RelatedProjects'
+import ResourcesSection from '@/components/ResourcesSection'
+import NextProject from '@/components/NextProject'
 
 function isVideo(path: string) {
   return path.endsWith('.mov') || path.endsWith('.mp4')
+}
+
+function fallbackMediaItems(images: string[]): MediaItem[] {
+  return images.map((src) => ({
+    src,
+    type: isVideo(src) ? 'video' as const : 'image' as const,
+  }))
 }
 
 export default function ProjectDetail() {
@@ -102,13 +109,13 @@ export default function ProjectDetail() {
       {/* ── Section 4: Key Challenges ── */}
       <KeyChallenges items={project.challenges || []} />
 
-      {/* ── Section 5: Project Overview (Accordion) ── */}
+      {/* ── Section 5: Project Overview ── */}
       <OverviewAccordion sections={project.overviewSections || []} />
 
       {/* ── Section 6: Media Showcase ── */}
-      <MediaShowcase items={project.mediaItems || []} />
+      <MediaShowcase items={project.mediaItems || fallbackMediaItems(project.images)} />
 
-      {/* ── Section 7: AI Workflow (conditional) ── */}
+      {/* ── Section 7: AI Workflow ── */}
       {hasAI && <AIWorkflow items={project.aiWorkflow || []} />}
 
       {/* ── Section 8: Reflection ── */}
@@ -116,28 +123,11 @@ export default function ProjectDetail() {
         <ReflectionSection zh={project.reflection.zh} en={project.reflection.en} />
       )}
 
-      {/* ── Section 9: Related Projects ── */}
-      <RelatedProjects currentId={project.id} />
+      {/* ── Section 9: Resources ── */}
+      <ResourcesSection links={project.externalLinks} />
 
-      {/* ── Back Navigation ── */}
-      <div className="max-w-5xl mx-auto px-6 md:px-12 pb-12">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="pt-12 border-t border-[var(--border-subtle)]"
-        >
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-sm tracking-wider text-[var(--text-muted)] hover:text-secondary transition-colors group"
-          >
-            <svg className="w-4 h-4 transition-transform duration-300 group-hover:-translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19l-7-7 7-7" />
-            </svg>
-            {lang === 'zh' ? '返回首页' : 'Back to Home'}
-          </Link>
-        </motion.div>
-      </div>
+      {/* ── Section 10: Next Project ── */}
+      <NextProject currentId={project.id} />
     </main>
   )
 }
