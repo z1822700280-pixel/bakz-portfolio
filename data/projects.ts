@@ -1199,9 +1199,11 @@ export const projects: Project[] = [
       en: 'This documentary short film was independently produced during the winter Spring Festival vacation in my sophomore year. Completed in my hometown within just one week, it covers all the shooting and post-editing work. Inspired by the documentary Ten Years of Life, the work focuses on ordinary people around us and adopts a plain and authentic documentary perspective to record the living conditions and inner thoughts of people of different ages.\n\nThe film features four interviewees at distinct life stages, who are asked the same set of one-on-one interview questions. Centering on daily and down-to-earth topics including views on money, marriage and partners, family life, and life perceptions, the documentary truly presents the diverse perspectives and inner voices of the four respondents.\n\nBy comparing answers from different age groups horizontally, the film intuitively reflects how life experience shapes personal values and attitudes toward life. With a simple and realistic style, it explores the emotional changes and true meanings of life at different stages, and depicts the vivid warmth and diverse facets of ordinary life through real insights from everyday people.',
     },
     category: 'post-production',
-    tags: ['剪辑', '纪录片'],
+    tags: ['纪录片', '人物', '纪实', '独立制作'],
     year: 2024,
     thumbnail: '/images/same-life-different-paths/thumbnail.png',
+    role: { zh: '导演 / 摄影 / 剪辑', en: 'Director / Cinematographer / Editor' },
+    tools: ['Premiere Pro', 'Canon'],
     images: [
       '/images/same-life-different-paths/full-film.mov',
       '/images/same-life-different-paths/content-0.png',
@@ -1213,12 +1215,100 @@ export const projects: Project[] = [
       '/images/same-life-different-paths/content-6.png',
       '/images/same-life-different-paths/content-7.png',
     ],
-    tools: ['Premiere Pro', 'Canon'],
-    role: { zh: '导演 / 摄影 / 剪辑', en: 'Director / Cinematographer / Editor' },
-    externalLinks: [],
+    snapshot: [
+      { label: '项目类型', value: '人物纪录短片' },
+      { label: '创作模式', value: '独立完成' },
+      { label: '拍摄周期', value: '7天完成' },
+      { label: '采访对象', value: '4位不同年龄受访者' },
+      { label: '核心工具', value: 'Canon / Premiere Pro' },
+      { label: '核心能力', value: '纪录片创作 / 人物采访 / 叙事剪辑' },
+    ],
+    pipeline: [
+      {
+        title: '选题确定',
+        target: '确立不同年龄群体人生观对比的纪录主题',
+        work: '受纪录作品《人生十年》启发，确立不同年龄群体人生观对比的纪录主题',
+      },
+      {
+        title: '采访设计',
+        target: '确保受访内容具备横向对比价值',
+        work: '设计统一访谈问题，确保受访内容具备横向对比价值',
+      },
+      {
+        title: '人物寻找',
+        target: '邀请不同年龄阶段受访者参与拍摄',
+        work: '联系并邀请不同年龄阶段受访者参与拍摄',
+      },
+      {
+        title: '实地拍摄',
+        target: '完成全部采访素材采集',
+        work: '采用固定机位与手持拍摄，完成全部采访素材采集',
+      },
+      {
+        title: '内容整理',
+        target: '提炼具有代表性的观点与表达',
+        work: '筛选采访内容，提炼具有代表性的观点与表达',
+      },
+      {
+        title: '剪辑输出',
+        target: '构建年龄层之间的观点对照，完成成片',
+        work: '通过交叉剪辑构建年龄层之间的观点对照，完成最终成片制作',
+      },
+    ],
+    challenges: [
+      {
+        question: '如何让纪录片主题更具普适性？',
+        solutions: [
+          '围绕金钱观、婚恋观、家庭观等生活议题展开访谈',
+          '选择不同年龄层受访者增强对比维度',
+          '以真实生活经验引发观众共鸣',
+        ],
+      },
+      {
+        question: '如何体现不同年龄阶段的差异？',
+        solutions: [
+          '采用统一问题采访机制',
+          '通过横向对比强化观点碰撞',
+          '保留受访者原话与真实情绪',
+        ],
+      },
+      {
+        question: '如何在有限设备条件下保证表达？',
+        solutions: [
+          '弱化设备限制，将重点放在真实内容上',
+          '聚焦人物情感与纪实价值',
+          '用内容本身打动观众',
+        ],
+      },
+    ],
+    overviewSections: [
+      {
+        title: '项目背景',
+        content: '《异同人生》创作于大学二年级寒假期间，是我独立完成的一部人物纪录短片。项目从选题、采访、拍摄到后期剪辑均由我一人完成，希望通过普通人的真实讲述，记录不同年龄阶段的人生思考与生活状态。',
+      },
+      {
+        title: '纪录内容与访谈设计',
+        content: '影片选取四位处于不同人生阶段的普通人作为采访对象，围绕金钱观念、婚恋选择、家庭关系与人生感悟等问题展开交流。所有受访者面对相同问题，却给出了截然不同的回答，使影片形成天然的对照关系与思辨空间。',
+      },
+      {
+        title: '项目收获与表达思考',
+        content: '本片采用极简纪录方式完成拍摄，弱化技术包装，将重心放在人物情感与内容表达上。通过纪录真实个体的生活经验，我更加深刻地理解了纪录影像的价值，也积累了独立采访、纪录拍摄与内容剪辑的完整实践经验。',
+      },
+    ],
+    mediaItems: [
+      { src: '/images/same-life-different-paths/full-film.mov', type: 'video', title: '异同人生｜完整纪录短片', description: '人物纪录短片完整展示' },
+      { src: '/images/same-life-different-paths/content-0.png', type: 'image', title: '项目采访现场', description: '记录受访对象采访过程' },
+      { src: '/images/same-life-different-paths/content-1.png', type: 'image', title: '人物访谈画面', description: '展现真实交流状态与情绪表达' },
+      { src: '/images/same-life-different-paths/content-2.png', type: 'image', title: '不同年龄的人生视角', description: '展示跨年龄层访谈内容' },
+      { src: '/images/same-life-different-paths/content-3.png', type: 'image', title: '生活状态记录', description: '捕捉受访者真实生活场景' },
+      { src: '/images/same-life-different-paths/content-4.png', type: 'image', title: '纪录片拍摄过程', description: '展示独立完成拍摄的工作状态' },
+      { src: '/images/same-life-different-paths/content-5.png', type: 'image', title: '采访内容整理', description: '梳理核心观点与故事线索' },
+      { src: '/images/same-life-different-paths/content-6.png', type: 'image', title: '后期剪辑阶段', description: '构建不同人物之间的观点对照关系' },
+      { src: '/images/same-life-different-paths/content-7.png', type: 'image', title: '最终成片画面', description: '呈现纪录片整体视觉效果' },
+    ],
     reflection: {
-      zh: '这部作品是我大二寒假在老家用一周时间独立完成的，没有团队，全程一个人操作。设备只有一台 Canon 老相机，预算几乎为零，但题材本身不需要太多技术包装——普通人的真实讲述就是最大的力量。\n\n受访的四位对象年龄跨度很大，从七岁出头到年近八十。每个人对同样问题的回答截然不同，这种横向对比本身就很有力量。后期剪辑时我尽量让受访者的话语本身成为影片的核心。主要是手持（未使用稳定器）和单个固定机位拍摄，当时对光和调色的知识还不够所以色彩上很粗糙，所以把重心放在了人物情感和剪辑手法上了。',
-      en: 'This was a solo project completed in one week at my hometown during sophomore winter break. No crew, just me and my Canon camera. Budget was nearly zero, but the subject matter didn\'t need technical polish—the authentic voices of ordinary people carried the film.\n\nThe four interviewees spanned a wide age range, from early twenties to over fifty. Each person\'s answers to the same questions were strikingly different, and this horizontal comparison itself became the film\'s strength. In editing, I tried to stay restrained, letting the interviewees\' words remain at the center.',
+      zh: '《异同人生》是我第一次真正意义上独立完成的纪录片项目。从选题、采访到拍摄和剪辑，全部工作都由我一人完成。虽然设备条件有限，但也让我更加专注于内容本身，而不是依赖复杂的技术包装。\n\n在拍摄过程中，我最深的感受来自不同年龄受访者对同一个问题给出的完全不同答案。从孩童到老人，每个人的经历塑造了不同的人生观与价值判断。这种天然形成的对照关系，也成为影片最有力量的部分。\n\n回头看，这部作品在摄影、灯光与调色层面仍然比较青涩，但它让我第一次真正理解纪录片的核心价值——记录真实的人、真实的情绪与真实的人生。相比技术本身，我更珍惜这次与不同人生阶段的人交流和倾听的经历，也让我对影像表达有了更深的认识。',
+      en: 'Same Life, Different Paths was my first truly independent documentary project. From topic selection to interviewing, shooting, and editing, I did everything myself. Limited equipment forced me to focus on content rather than technical polish.\n\nDuring production, what struck me most was how different age groups gave completely different answers to the same questions. From young to old, each person\'s life experiences shaped their unique worldview and value judgments. This naturally formed contrast became the film\'s most powerful element.\n\nLooking back, the cinematography, lighting, and color grading are still rough. But this project made me truly understand the core value of documentary filmmaking—recording real people, real emotions, and real lives. Beyond technique, I cherish the experience of listening to people at different life stages, which deepened my understanding of visual storytelling.',
     },
   },
   {
