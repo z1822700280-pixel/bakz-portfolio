@@ -54,16 +54,6 @@ function ImageLightbox({ item, onClose }: { item: MediaItem; onClose: () => void
           priority
         />
       </motion.div>
-      {(item.title || item.description) && (
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-center pointer-events-none">
-          {item.title && (
-            <p className="text-sm font-medium text-white/90">{item.title}</p>
-          )}
-          {item.description && (
-            <p className="text-xs text-white/50 mt-1">{item.description}</p>
-          )}
-        </div>
-      )}
     </motion.div>
   )
 }
@@ -106,9 +96,6 @@ export default function MediaShowcase({ items }: { items: MediaItem[] }) {
                   Your browser does not support the video tag.
                 </video>
               </div>
-              {fullFilm.description && (
-                <p className="text-xs text-secondary/60 mt-3 tracking-wide">{fullFilm.description}</p>
-              )}
             </div>
           )}
 
@@ -124,12 +111,7 @@ export default function MediaShowcase({ items }: { items: MediaItem[] }) {
                     <div className="relative aspect-video rounded-lg overflow-hidden border border-[var(--border-subtle)] bg-black">
                       <video src={clip.src} controls className="w-full h-full" playsInline />
                     </div>
-                    {clip.title && (
-                      <p className="text-xs font-medium text-[var(--text-primary)] mt-2">{clip.title}</p>
-                    )}
-                    {clip.description && (
-                      <p className="text-xs text-secondary/60 mt-0.5">{clip.description}</p>
-                    )}
+                    <p className="text-xs text-secondary/50 mt-2 tracking-wide">{lang === 'zh' ? `片段 ${i + 1}` : `Clip ${i + 1}`}</p>
                   </div>
                 ))}
               </div>
@@ -168,16 +150,7 @@ export default function MediaShowcase({ items }: { items: MediaItem[] }) {
                         </svg>
                       </div>
                     </div>
-                    {(item.title || item.description) && (
-                      <div className="mt-3">
-                        {item.title && (
-                          <p className="text-sm font-medium text-[var(--text-primary)]">{item.title}</p>
-                        )}
-                        {item.description && (
-                          <p className="text-xs text-secondary/60 mt-0.5">{item.description}</p>
-                        )}
-                      </div>
-                    )}
+                    <p className="text-xs text-secondary/50 mt-3 tracking-wide">{i + 1}</p>
                   </motion.div>
                 ))}
               </div>
