@@ -750,7 +750,7 @@ export const projects: Project[] = [
       en: 'An AIGC short film project in collaboration with a friend. Together we developed the script concept, aiming to create a rigorously researched科普 short film grounded in local historical depth.\n\nDue to scheduling conflicts, the project is currently on hold. Only concept art has been produced—including character designs and environment paintings—which are showcased here. We plan to continue and complete the full film when time allows.',
     },
     category: 'ai-visual',
-    tags: ['AIGC', '写实', '短片', '全流程'],
+    tags: ['AIGC', '历史', '概念设计', '前期开发', 'AI辅助'],
     year: 2025,
     thumbnail: '/images/aigc-video-3/thumbnail.jpg',
     images: [
@@ -775,9 +775,112 @@ export const projects: Project[] = [
     ],
     tools: ['ChatGPT', 'Midjourney', 'OiiOii'],
     role: { zh: '编剧 / 概念设计', en: 'Writer / Concept Artist' },
+    snapshot: [
+      { label: '项目类型', value: '历史科普短片前期开发' },
+      { label: '项目阶段', value: '世界观与视觉开发' },
+      { label: '项目身份', value: '编剧 / 概念设计' },
+      { label: '核心内容', value: '人物设定 / 场景原画 / 视觉探索' },
+      { label: '核心工具', value: 'ChatGPT / Midjourney / OiiOii' },
+      { label: '核心能力', value: '历史研究 / 概念设计 / 视觉统一' },
+    ],
+    pipeline: [
+      {
+        title: '历史资料调研',
+        target: '收集四川地方历史资料，梳理文化背景与时代特征',
+        work: '收集四川地方历史资料，梳理文化背景与时代特征',
+      },
+      {
+        title: '剧本与世界观构思',
+        target: '建立整体叙事方向',
+        work: '与合作伙伴共同讨论故事框架，建立整体叙事方向',
+      },
+      {
+        title: '视觉风格探索',
+        target: '确定整体美术方向',
+        work: '设计人物形象、场景氛围与整体美术方向',
+      },
+      {
+        title: '概念图生成与筛选',
+        target: '完成大量视觉方案迭代',
+        work: '测试不同模型表现效果，完成大量视觉方案迭代',
+      },
+      {
+        title: '视觉体系建立',
+        target: '形成项目视觉基调',
+        work: '统一角色、建筑、场景风格，形成项目视觉基调',
+      },
+    ],
+    challenges: [
+      {
+        question: '如何兼顾历史真实性与视觉表现？',
+        solutions: [
+          '查阅历史资料与地方文化内容',
+          '保证设计建立在真实背景基础上',
+          '将文化元素自然融入视觉表达',
+        ],
+      },
+      {
+        question: '如何统一不同模型生成结果？',
+        solutions: [
+          '持续测试生成模型，统一风格标准',
+          '建立统一的提示词体系',
+          '严格筛选与迭代视觉方案',
+        ],
+      },
+      {
+        question: '如何建立具有辨识度的视觉语言？',
+        solutions: [
+          '反复优化角色与场景设定',
+          '强化地域文化特征与整体氛围',
+          '在真实感与艺术表达间寻找平衡',
+        ],
+      },
+    ],
+    overviewSections: [
+      {
+        title: '项目背景与创作目标',
+        content: '《祀烬·蜀立》是我与友人共同策划的历史题材AIGC短片项目。项目希望通过严谨考据与现代视觉表达相结合的方式，打造兼具文化传播价值与观赏性的科普影像作品。前期阶段主要围绕故事构思、历史研究与视觉开发展开。',
+      },
+      {
+        title: '视觉开发成果',
+        content: '目前项目已完成世界观探索、人物设定与场景概念设计等前期内容。通过大量生成测试与风格筛选，逐步建立统一视觉体系，形成较完整的概念设计成果，为后续正式制作奠定基础。',
+      },
+    ],
+    mediaItems: [
+      { src: '/images/aigc-video-3/content-0.jpeg', type: 'image', title: '项目视觉方向探索', description: '建立整体历史氛围与视觉基调' },
+      { src: '/images/aigc-video-3/content-1.jpeg', type: 'image', title: '人物概念设计 A', description: '探索主要角色造型与身份特征' },
+      { src: '/images/aigc-video-3/content-2.jpeg', type: 'image', title: '人物概念设计 B', description: '完善人物服饰与时代特征' },
+      { src: '/images/aigc-video-3/content-3.jpeg', type: 'image', title: '人物概念设计 C', description: '统一角色视觉语言与气质表达' },
+      { src: '/images/aigc-video-3/content-4.jpeg', type: 'image', title: '场景原画 A', description: '探索主要故事场景氛围' },
+      { src: '/images/aigc-video-3/content-5.jpeg', type: 'image', title: '场景原画 B', description: '强化地域文化与历史背景表达' },
+      { src: '/images/aigc-video-3/content-6.jpeg', type: 'image', title: '建筑概念设计', description: '研究传统建筑元素与结构风格' },
+      { src: '/images/aigc-video-3/content-7.jpeg', type: 'image', title: '空间氛围设计', description: '构建具有历史感的场景环境' },
+      { src: '/images/aigc-video-3/content-8.jpeg', type: 'image', title: '镜头概念探索', description: '尝试未来影像镜头表现方向' },
+      { src: '/images/aigc-video-3/content-9.jpeg', type: 'image', title: '视觉语言测试', description: '测试不同画面风格表现效果' },
+      { src: '/images/aigc-video-3/content-10.jpeg', type: 'image', title: '角色关系探索', description: '建立角色间的视觉关联' },
+      { src: '/images/aigc-video-3/content-11.png', type: 'image', title: '场景细节研究', description: '强化环境真实感与历史质感' },
+      { src: '/images/aigc-video-3/content-12.jpg', type: 'image', title: '构图方案测试', description: '寻找更具表现力的画面结构' },
+      { src: '/images/aigc-video-3/content-13.jpg', type: 'image', title: '色彩方向研究', description: '统一项目整体色彩体系' },
+      { src: '/images/aigc-video-3/content-14.jpg', type: 'image', title: '叙事氛围探索', description: '强化故事情绪表达能力' },
+      { src: '/images/aigc-video-3/content-15.jpg', type: 'image', title: '世界观视觉补充', description: '完善项目整体设定逻辑' },
+      { src: '/images/aigc-video-3/content-16.jpg', type: 'image', title: '视觉开发成果', description: '形成较完整的概念设计体系' },
+      { src: '/images/aigc-video-3/content-17.jpg', type: 'image', title: '阶段性设计汇总', description: '展示当前阶段主要开发成果' },
+    ],
+    aiWorkflow: [
+      {
+        stage: '历史题材视觉探索',
+        ai: '生成概念图，快速验证设计方向，辅助视觉发散',
+        human: '历史资料调研，视觉方向决策，内容筛选',
+      },
+      {
+        stage: '概念设计迭代',
+        ai: '批量生成角色与场景方案',
+        human: '风格统一，细节优化，最终视觉确定',
+      },
+    ],
     reflection: {
-      zh: '创作过程中我持续对比各类最新生成模型，通过效果测试筛选适配历史科普题材的最优模型，以此保障人物、场景设计图的画面精度与风格统一。',
-      en: 'Throughout the creative process, I continuously compared various latest-generation models, running tests to select the optimal model suited for historical科普题材, ensuring visual precision and stylistic consistency across character and environment designs.',
+      zh: '《祀烬·蜀立》让我进一步认识到，优秀的历史题材创作不仅需要视觉表现能力，更需要建立在充分研究与考据基础之上。项目开发过程中，我持续查阅相关资料，并尝试将地方历史文化转化为具有传播力的视觉内容。\n\n同时，本项目也是一次针对AIGC视觉开发流程的探索实践。我对比测试了多个生成模型，筛选最适合历史题材表现的工具方案，并逐步建立统一的风格控制方法。虽然项目目前仍处于前期开发阶段，但已完成较完整的视觉体系建设，并为未来正式制作积累了扎实基础。',
+      en: 'Sacred Embers of Shu deepened my understanding that excellent historical creation requires not only visual expression skills but also sufficient research and textual criticism. Throughout the development process, I continuously consulted relevant materials and attempted to transform local historical culture into communicable visual content.\n\nAt the same time, this project was an exploration of the AIGC visual development workflow. I compared and tested multiple generation models, selected the most suitable tool方案 for historical题材, and gradually established unified style control methods. Although the project is still in its early development stage, it has established a relatively complete visual system and laid a solid foundation for future正式 production.',
     },
   },
   {
