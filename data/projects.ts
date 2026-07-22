@@ -1451,9 +1451,11 @@ export const projects: Project[] = [
       en: 'Independently completed the full UI interface design for a shopping app in 2024, built entirely with Figma. The project includes a complete component specification system. All interface posters and page interaction animations are original creations without AI assistance. A Figma online link is attached for direct preview of the complete interactive prototype, showcasing interface design skills and tool proficiency.',
     },
     category: 'post-production',
-    tags: ['UI设计', 'Figma', '移动端', '交互原型'],
+    tags: ['UI设计', 'Figma', '移动端', '交互原型', '独立设计'],
     year: 2024,
     thumbnail: '/images/ui-design-project/thumbnail.jpg',
+    role: { zh: '独立设计', en: 'Independent Designer' },
+    tools: ['Figma'],
     images: [
       '/images/ui-design-project/full-film.mov',
       '/images/ui-design-project/clip-0.mp4',
@@ -1467,11 +1469,98 @@ export const projects: Project[] = [
       '/images/ui-design-project/content-7.mp4',
       '/images/ui-design-project/content-8.jpg',
     ],
-    tools: ['Figma'],
-    externalLinks: [],
+    snapshot: [
+      { label: '项目类型', value: '移动端电商UI设计' },
+      { label: '设计模式', value: '独立完成' },
+      { label: '设计范围', value: '视觉设计 / 交互原型 / 组件系统' },
+      { label: '设计平台', value: 'Figma' },
+      { label: '核心能力', value: 'UI设计 / 交互设计 / 视觉表达' },
+      { label: '项目特点', value: '原创插画 / 原创动效 / 完整原型' },
+    ],
+    pipeline: [
+      {
+        title: '需求构思',
+        target: '确定移动端电商应用主题，规划整体产品结构',
+        work: '确定移动端电商应用主题，规划整体产品结构',
+      },
+      {
+        title: '信息架构设计',
+        target: '梳理页面关系，建立导航与交互逻辑',
+        work: '梳理页面关系，建立导航与交互逻辑',
+      },
+      {
+        title: '视觉风格设计',
+        target: '确定色彩体系、版式规范与视觉语言',
+        work: '确定色彩体系、版式规范与视觉语言',
+      },
+      {
+        title: '组件系统搭建',
+        target: '建立可复用组件，提升界面一致性',
+        work: '建立可复用组件与统一设计规范，提升界面一致性',
+      },
+      {
+        title: '高保真界面制作',
+        target: '完成核心页面设计与视觉细节优化',
+        work: '完成核心页面设计、插画设计与视觉细节优化',
+      },
+      {
+        title: '交互原型搭建',
+        target: '形成完整可交互原型',
+        work: '制作页面跳转逻辑与动效演示，形成完整可交互原型',
+      },
+    ],
+    challenges: [
+      {
+        question: '如何保持多页面视觉一致性？',
+        solutions: [
+          '建立统一组件库与设计规范',
+          '确保界面风格统一',
+          '系统化管理设计元素',
+        ],
+      },
+      {
+        question: '如何提升界面层级与可读性？',
+        solutions: [
+          '优化版式结构与色彩对比',
+          '设计信息优先级排列',
+          '提升用户浏览效率',
+        ],
+      },
+      {
+        question: '如何让原型更具真实产品体验？',
+        solutions: [
+          '补充页面跳转逻辑与动效设计',
+          '提升交互完整度',
+          '模拟真实使用场景',
+        ],
+      },
+    ],
+    overviewSections: [
+      {
+        title: '项目背景',
+        content: '本项目为独立完成的移动端电商 UI 设计练习，全程使用 Figma 搭建。从信息架构设计、视觉规范建立到界面设计与交互原型制作均由我独立完成，完整呈现了一套电商产品从视觉设计到交互体验的实现过程。',
+      },
+      {
+        title: '设计实践与项目收获',
+        content: '项目中我自主建立组件系统与设计规范，完成界面海报、插画元素及页面交互动效设计，未使用任何 AI 辅助工具。通过本次练习，我系统掌握了 Figma 的组件化设计逻辑、原型设计能力以及界面视觉表达方法，也进一步提升了个人审美判断与产品界面设计能力。',
+      },
+    ],
+    mediaItems: [
+      { src: '/images/ui-design-project/full-film.mov', type: 'video', title: 'UI 界面设计｜完整展示', description: '移动端电商UI设计完整展示' },
+      { src: '/images/ui-design-project/clip-0.mp4', type: 'video', title: '交互原型演示', description: '展示页面跳转逻辑与交互反馈效果' },
+      { src: '/images/ui-design-project/content-0.png', type: 'image', title: '首页设计展示', description: '展示产品首页整体视觉风格' },
+      { src: '/images/ui-design-project/content-1.png', type: 'image', title: '商品浏览页面', description: '展示商品信息层级与布局设计' },
+      { src: '/images/ui-design-project/content-2.png', type: 'image', title: '分类导航界面', description: '优化用户查找与浏览效率' },
+      { src: '/images/ui-design-project/content-3.jpg', type: 'image', title: '活动运营页面', description: '展示营销内容与视觉氛围设计' },
+      { src: '/images/ui-design-project/content-4.jpg', type: 'image', title: '商品详情页面', description: '强化商品展示与购买引导' },
+      { src: '/images/ui-design-project/content-5.jpg', type: 'image', title: '购物流程设计', description: '展示下单流程与用户体验设计' },
+      { src: '/images/ui-design-project/content-6.png', type: 'image', title: '组件规范展示', description: '展示项目组件库与设计系统' },
+      { src: '/images/ui-design-project/content-7.mp4', type: 'video', title: '页面交互动效', description: '展示原型跳转与界面反馈效果' },
+      { src: '/images/ui-design-project/content-8.jpg', type: 'image', title: '最终设计成果', description: '展示项目整体视觉效果与设计规范' },
+    ],
     reflection: {
-      zh: '本次电商 UI 练习让我熟练掌握 Figma 组件化开发逻辑，自主完成全部视觉插画与动效设计，依靠个人审美把控整体配色、版式层级。可在线交互原型完整呈现页面流转逻辑，既锻炼了标准化 UI 制作思维，也体现独立原创视觉设计能力。',
-      en: 'This e-commerce UI practice helped me master Figma\'s component-based development logic. I independently completed all visual illustrations and motion designs, relying on personal aesthetics to control overall color schemes and layout hierarchy. The interactive online prototype fully presents the page flow logic, both exercising standardized UI production thinking and demonstrating independent original visual design capability.',
+      zh: '本项目是我对移动端 UI 设计与交互原型设计的一次系统实践。从产品结构规划到视觉设计，再到原型交互搭建，全部工作均由我独立完成。\n\n在设计过程中，我重点学习并实践了 Figma 的组件化设计思维，通过建立统一组件系统提升页面一致性与后期维护效率。同时自主完成插画、海报与交互动效设计，使整体视觉风格更加完整统一。\n\n通过本次项目，我不仅掌握了标准化 UI 设计流程，也进一步理解了界面设计不仅仅是视觉美观，更需要兼顾信息传达效率、交互逻辑与用户体验。对于未来涉及产品设计、游戏 UI 或交互设计相关工作，这次实践为我积累了扎实的基础经验。',
+      en: 'This project was a systematic practice in mobile UI design and interactive prototyping. From product structure planning to visual design to prototype interaction, all work was completed independently.\n\nDuring the design process, I focused on learning and practicing Figma\'s component-based design thinking, establishing a unified component system to improve page consistency and maintenance efficiency. I also independently completed illustrations, posters, and interaction motion designs, making the overall visual style more complete and unified.\n\nThrough this project, I not only mastered standardized UI design processes but also deepened my understanding that interface design is not just about visual aesthetics—it also requires efficient information delivery, clear interaction logic, and good user experience. This practice has laid a solid foundation for future work in product design, game UI, or interaction design.',
     },
   },
 ]
