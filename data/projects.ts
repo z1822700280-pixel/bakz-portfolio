@@ -1319,9 +1319,11 @@ export const projects: Project[] = [
       en: 'A university elective course group project completed with a friend. The project was prepared from scratch—scouting locations, renting equipment, sourcing props, and planning分工. Constrained by limited场地, lighting, and filming equipment, we shot through the night until 4 AM.\n\nI served as director, visual director, and editor. With two days of prep, one night of shooting, and one day of editing, the final result achieved a respectable level of completion.\n\nThe film recreates a classic sequence from Kill Bill, whose layered cinematography made this remake a valuable practice in deepening my understanding of shot composition and visual narrative.',
     },
     category: 'post-production',
-    tags: ['拍摄', '翻拍', '全流程'],
+    tags: ['翻拍', '短片', '镜头研究', '团队协作'],
     year: 2025,
     thumbnail: '/images/kill-bill-remake/thumbnail.jpg',
+    role: { zh: '导演 / 画面指导 / 剪辑', en: 'Director / Visual Director / Editor' },
+    tools: ['Premiere Pro', 'DaVinci Resolve', 'Sony'],
     images: [
       '/images/kill-bill-remake/full-film.mov',
       '/images/kill-bill-remake/clip-0.mp4',
@@ -1339,11 +1341,106 @@ export const projects: Project[] = [
       '/images/kill-bill-remake/content-11.jpg',
       '/images/kill-bill-remake/content-12.jpg',
     ],
-    tools: ['Premiere Pro', 'DaVinci Resolve', 'Sony'],
-    role: { zh: '导演 / 画面指导 / 剪辑', en: 'Director / Visual Director / Editor' },
+    snapshot: [
+      { label: '项目类型', value: '经典电影翻拍' },
+      { label: '创作模式', value: '双人核心团队' },
+      { label: '个人职责', value: '导演 / 画面指导 / 后期剪辑' },
+      { label: '研究重点', value: '镜头调度 / 视觉叙事 / 节奏控制' },
+      { label: '核心工具', value: 'Sony / Premiere Pro / DaVinci Resolve' },
+      { label: '核心能力', value: '导演执行 / 现场调度 / 影视剪辑' },
+    ],
+    pipeline: [
+      {
+        title: '片段选定',
+        target: '确定翻拍目标与研究重点',
+        work: '分析《杀死比尔》经典桥段，确定翻拍目标与研究重点',
+      },
+      {
+        title: '前期筹备',
+        target: '完成场地、器材、道具与分工准备',
+        work: '完成场地踩点、器材租赁、道具准备与人员分工',
+      },
+      {
+        title: '镜头拆解',
+        target: '逐镜分析原片镜头语言、构图与运动逻辑',
+        work: '逐镜分析原片镜头语言、构图方式与运动逻辑',
+      },
+      {
+        title: '现场拍摄',
+        target: '完成演员调度、镜头执行与画面指导',
+        work: '完成演员调度、镜头执行与画面指导',
+      },
+      {
+        title: '后期剪辑',
+        target: '还原原片节奏，优化镜头衔接',
+        work: '还原原片节奏，优化镜头衔接与叙事效果',
+      },
+      {
+        title: '调色输出',
+        target: '统一视觉风格，完成成片',
+        work: '统一视觉风格，完成最终成片制作',
+      },
+    ],
+    challenges: [
+      {
+        question: '如何还原经典镜头语言？',
+        solutions: [
+          '逐镜分析原片构图、运镜方式与剪辑节奏',
+          '拆解后重新组织拍摄方案',
+          '在还原基础上融入个人理解',
+        ],
+      },
+      {
+        question: '如何在有限条件下接近原作质感？',
+        solutions: [
+          '合理调度场地、灯光与镜头设计',
+          '最大化利用现有资源',
+          '通过后期调色统一视觉风格',
+        ],
+      },
+      {
+        question: '如何保证高强度拍摄效率？',
+        solutions: [
+          '提前完成详细分工与流程规划',
+          '优化拍摄流程减少冗余操作',
+          '通宵完成全部镜头采集保证进度',
+        ],
+      },
+    ],
+    overviewSections: [
+      {
+        title: '项目背景',
+        content: '本项目为大学选修课实践作业，由我与好友共同完成。项目从零开始筹备，涵盖场地寻找、设备租赁、道具准备以及拍摄计划制定等多个环节。为了完成目标镜头拍摄，我们连续工作至凌晨完成全部素材采集。',
+      },
+      {
+        title: '翻拍目标与镜头研究',
+        content: '选择《杀死比尔》经典片段作为翻拍对象，主要原因在于其拥有丰富且成熟的镜头语言体系。通过拆解原片构图、景别变化、镜头运动与剪辑节奏，我系统学习并实践了影视镜头调度与视觉叙事的方法。',
+      },
+      {
+        title: '个人职责与项目收获',
+        content: '项目中我主要负责导演、画面指导与后期剪辑工作，参与整体视觉风格把控与现场执行。通过本次翻拍实践，我进一步理解了镜头设计背后的叙事逻辑，也提升了现场调度、画面控制与后期制作能力。',
+      },
+    ],
+    mediaItems: [
+      { src: '/images/kill-bill-remake/full-film.mov', type: 'video', title: '翻拍《杀死比尔》｜完整作品', description: '经典电影翻拍实践完整展示' },
+      { src: '/images/kill-bill-remake/clip-0.mp4', type: 'video', title: '经典桥段复刻片段', description: '还原原片镜头语言与节奏' },
+      { src: '/images/kill-bill-remake/content-0.jpg', type: 'image', title: '前期场地勘察', description: '寻找适合还原原片氛围的拍摄环境' },
+      { src: '/images/kill-bill-remake/content-1.jpg', type: 'image', title: '拍摄筹备阶段', description: '完成设备与道具准备工作' },
+      { src: '/images/kill-bill-remake/content-2.jpg', type: 'image', title: '镜头拆解分析', description: '研究原片镜头结构与画面语言' },
+      { src: '/images/kill-bill-remake/content-3.jpg', type: 'image', title: '现场构图测试', description: '调整机位与景别关系' },
+      { src: '/images/kill-bill-remake/content-4.jpg', type: 'image', title: '拍摄现场记录', description: '执行主要镜头拍摄任务' },
+      { src: '/images/kill-bill-remake/content-5.jpg', type: 'image', title: '演员调度过程', description: '协调人物运动与镜头运动关系' },
+      { src: '/images/kill-bill-remake/content-6.jpg', type: 'image', title: '光影氛围营造', description: '利用有限条件塑造视觉层次' },
+      { src: '/images/kill-bill-remake/content-7.jpg', type: 'image', title: '动作镜头执行', description: '完成重点镜头拍摄与还原' },
+      { src: '/images/kill-bill-remake/content-8.jpg', type: 'image', title: '画面风格控制', description: '统一影片视觉表达方向' },
+      { src: '/images/kill-bill-remake/content-9.jpg', type: 'image', title: '后期剪辑阶段', description: '调整节奏与镜头衔接' },
+      { src: '/images/kill-bill-remake/content-10.jpg', type: 'image', title: '调色制作过程', description: '优化整体视觉氛围与色彩表现' },
+      { src: '/images/kill-bill-remake/content-11.jpg', type: 'image', title: '成片画面展示', description: '呈现最终视觉效果' },
+      { src: '/images/kill-bill-remake/content-12.jpg', type: 'image', title: '项目成果记录', description: '展示翻拍项目最终完成状态' },
+    ],
     reflection: {
-      zh: '本次实景翻拍拍摄，让我真切体会到优质团队对作品的决定性作用。团队每位成员都极具责任心且执行力出色，各司其职、高效配合，让我们在有限的设备、场地与时间条件下，顺利完成拍摄任务，最终成品效果远超预期。我也深刻意识到，优秀的团队协作是高质量作品产出的核心基础。\n\n同时，全程亲自把控镜头调度、现场画面指导与后期剪辑的实操过程，极大丰富了我的影像创作经验，扎实提升了我的镜头运用、场景调度与剪辑实操能力，让我对镜头语言的理解更加落地、更加成熟。',
-      en: 'This live-action remake shoot gave me a genuine understanding of how decisive a great team is for the final work. Every team member was highly responsible and executed their roles efficiently, allowing us to complete the shoot under limited equipment,场地, and time constraints—with results far exceeding expectations. I deeply realized that excellent teamwork is the foundation of high-quality output.\n\nAt the same time, personally overseeing shot composition, on-site visual direction, and post-production editing greatly enriched my filmmaking experience. It solidly improved my abilities in camera work, scene调度, and editing, making my understanding of visual language more grounded and mature.',
+      zh: '《翻拍·杀死比尔》让我第一次以"研究者"的角度重新观察电影镜头语言。相比单纯观看影片，真正拆解并复刻经典镜头时，才能理解导演在构图、调度、景别变化和剪辑节奏上的设计逻辑。\n\n整个项目最深刻的体验来自团队协作。虽然设备、场地和拍摄时间都受到限制，但团队成员始终保持高度执行力与责任感，每个人都能快速响应并完成自己的任务。这让我更加理解影视创作并非单纯依靠个人能力，而是依赖团队整体协同运转。\n\n作为导演、画面指导与剪辑负责人，我全程参与镜头设计、现场执行与后期制作。通过这次翻拍实践，我不仅提升了镜头运用与画面表达能力，也进一步建立起从前期策划到后期成片的完整影视制作认知。',
+      en: 'Kill Bill Remake was my first time examining film language from a "researcher\'s" perspective. Compared to simply watching a film, truly deconstructing and recreating classic shots gave me insight into the director\'s design logic in composition, blocking, shot variation, and editing rhythm.\n\nThe most profound takeaway was teamwork. Despite limitations in equipment,场地, and shooting time, the team maintained high execution and responsibility—everyone responded quickly and completed their tasks. This deepened my understanding that filmmaking relies not on individual ability alone, but on the entire team\'s synergistic operation.\n\nAs director, visual director, and editor, I participated in every stage from shot design to on-set execution to post-production. This remake practice not only improved my camera work and visual expression skills but also established a complete filmmaking认知 from pre-production to final output.',
     },
   },
   {
