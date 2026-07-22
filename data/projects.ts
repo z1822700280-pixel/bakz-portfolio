@@ -579,7 +579,7 @@ export const projects: Project[] = [
       en: 'Dream of Memory is an original animated short film created from scratch as a course final project. Combining UE5, motion capture, AI-assisted creation, and post-production editing. As project lead and director, I oversaw the entire pipeline—script development, motion direction, scene building, MetaHuman digital human modeling, animation rendering, and final editing.\n\nEarly in the project, the team and I developed the story framework, divided scriptwriting tasks, and consolidated the final draft. During motion capture prep, I independently studied MetaHuman technology, solved the core character modeling challenge, and efficiently produced rigged assets ready for real-time rendering—ensuring both schedule and visual quality. Due to equipment constraints, the mocap recording window was severely compressed, leaving tight timelines for animation correction, scene tuning, engine rendering, and editing. I optimized workflows within the limited schedule, using AI assistance to fill visual transitions and correct deviations between script and footage, maximizing the final result while maintaining completeness.\n\nThe film uses a reverse-chronological narrative, wrapping deep philosophical questions in a sci-fi shell. It centers on the conflict between technology and family: the protagonist resents AI and technological progress, believing his AI-researcher mother prioritizes work over family. After a heated argument, he is critically injured in a car accident caused by an AI system error. His mother ultimately transfers his complete memories into a mechanical body, "reviving" her son in an unconventional way.\n\nThe story unfolds as the mechanical protagonist revisits memories from a hospital bed. After fully reading his past experiences, it poses the core philosophical question—echoing the three fundamental inquiries: Who am I? Where do I come from? Where am I going? When a mechanical body carries all of a human\'s memories and possesses independent AI thinking capability—is it still the original human, merely with a changed vessel? Or is it a new AI entity that has simply replicated those memories?\n\nThe film embeds a fatalistic closed-loop foreshadowing throughout, reinforcing its critical tone and sense of helplessness: the protagonist despises technology, dies due to an AI error, and is ultimately "reborn" through AI. This circular contradiction makes the conflicts between technology and humanity, family and technology, existence and self more dimensional, adding layers of depth to the film\'s themes. This end-to-end production gave me solid, hands-on knowledge of motion capture workflows, UE real-time rendering, digital human production, and AI-assisted filmmaking.',
     },
     category: 'ai-visual',
-    tags: ['UE', '动作捕捉', '写实', '短片', '全流程'],
+    tags: ['UE', '动作捕捉', '数字人', '短片', '全流程', 'AI辅助'],
     year: 2024,
     thumbnail: '/images/aigc-video-2/thumbnail.png',
     images: [
@@ -594,9 +594,152 @@ export const projects: Project[] = [
     ],
     tools: ['Xsens MVN Animate', 'UE5.7', 'ChatGPT', 'Premiere Pro'],
     role: { zh: '项目组长 / 导演', en: 'Project Lead / Director' },
+    snapshot: [
+      { label: '项目类型', value: '原创科幻动画短片' },
+      { label: '项目身份', value: '项目组长 / 导演' },
+      { label: '项目规模', value: '团队协作全流程项目' },
+      { label: '核心技术', value: 'UE5.7 / MetaHuman / 动作捕捉' },
+      { label: '项目重点', value: '数字人制作 / 实时渲染 / 流程优化' },
+      { label: '核心能力', value: '团队统筹 / 技术攻坚 / 问题解决' },
+    ],
+    pipeline: [
+      {
+        title: '故事构思',
+        target: '围绕科技、人性与身份认同主题，构建影片世界观与核心命题',
+        work: '组织团队讨论剧情结构，确定影片核心冲突与主题方向',
+      },
+      {
+        title: '剧本创作',
+        target: '完成完整剧本创作，统一审核定稿',
+        work: '组织团队讨论剧情结构，完成剧本创作与统一审核定稿',
+      },
+      {
+        title: '项目规划',
+        target: '制定制作流程、分配团队任务、建立项目推进计划',
+        work: '制定制作流程、分配团队任务、建立项目推进计划',
+      },
+      {
+        title: 'MetaHuman角色制作',
+        target: '完成核心角色数字人制作，构建可直接用于实时渲染的角色资产',
+        work: '自主学习MetaHuman技术，完成核心角色数字人制作，构建可直接用于实时渲染的角色资产',
+      },
+      {
+        title: '动作设计与动捕录制',
+        target: '完成动作方案设计与动作捕捉拍摄',
+        work: '完成动作方案设计，组织动作捕捉拍摄，获取角色动画数据',
+      },
+      {
+        title: 'UE动作重定向',
+        target: '直接完成动作适配，跳过传统Maya中转流程',
+        work: '自主研究动作重定向技术，跳过传统Maya中转流程，直接完成动作适配',
+      },
+      {
+        title: '场景搭建与动画制作',
+        target: '完成场景制作、镜头设计与动画整合',
+        work: '完成场景制作、镜头设计、动画整合与调试',
+      },
+      {
+        title: '实时渲染输出',
+        target: '利用UE完成镜头渲染，优化整体画面表现',
+        work: '利用UE完成镜头渲染，优化整体画面表现',
+      },
+      {
+        title: '后期制作',
+        target: '完成剪辑、节奏控制与内容整合',
+        work: '完成剪辑、节奏控制、画面优化与内容整合',
+      },
+      {
+        title: '最终输出',
+        target: '完成成片包装与最终交付',
+        work: '完成成片包装与最终交付',
+      },
+    ],
+    challenges: [
+      {
+        question: '如何在有限工期内完成角色制作？',
+        solutions: [
+          '放弃传统角色绑定流程，采用MetaHuman数字人技术',
+          '快速获得高质量角色资产，省去手动调权重环节',
+          '保障项目进度与画面质感同步推进',
+        ],
+      },
+      {
+        question: '如何压缩动捕制作周期？',
+        solutions: [
+          '自主研究UE动作重定向工作流，取消Maya中转环节',
+          '在引擎内直接完成动作适配与迁移',
+          '大幅压缩制作工期',
+        ],
+      },
+      {
+        question: '如何保证团队协作效率？',
+        solutions: [
+          '明确成员分工，同步项目进度',
+          '统一审核标准与制作节奏',
+          '定期对齐制作进度与问题反馈',
+        ],
+      },
+      {
+        question: '如何在素材不足情况下完成成片？',
+        solutions: [
+          '利用AI辅助优化过渡画面，修补素材缺口',
+          '提升整体完成度与叙事连贯性',
+          '在有限条件下最大化最终效果',
+        ],
+      },
+    ],
+    overviewSections: [
+      {
+        title: '项目背景',
+        content: '《记忆之梦》是课程结课原创动画短片项目，结合UE虚幻引擎、动作捕捉技术、MetaHuman数字人技术与AI辅助创作完成。作为项目组长与导演，我主导了整体制作流程，并参与剧本创作、角色制作、场景搭建、动画渲染与后期剪辑等核心环节。',
+      },
+      {
+        title: '制作流程与技术方案',
+        content: '项目初期与团队共同完成剧本设计与故事结构规划。在筹备阶段，自主学习MetaHuman数字人技术，独立完成核心角色制作。动作捕捉完成后，研究并实践UE动作重定向方案，大幅优化传统动画制作流程，提升项目整体效率。',
+      },
+      {
+        title: '剧情与主题表达',
+        content: '影片采用倒叙叙事结构，以科技与家庭关系作为故事核心。主角因长期抵触AI技术，与从事人工智能研究的母亲产生矛盾。一次意外后，母亲利用先进科技将其记忆迁移至机械躯体中，使其以另一种形式获得新生。影片围绕身份认同、自我意识与科技伦理展开思考，探讨记忆、人格与存在本质之间的关系。',
+      },
+      {
+        title: '流程优化与团队统筹',
+        content: '面对设备限制与极度紧张的制作周期，我主动优化项目工作流。通过MetaHuman与UE动作重定向技术替代传统制作方式，大幅缩短角色与动画制作时间。同时负责团队任务协调、进度管理与质量把控，保障项目按计划推进。',
+      },
+      {
+        title: '项目成果与收获',
+        content: '项目最终顺利完成从剧本创作到动画成片输出的全流程制作。通过本次实践，我系统掌握了数字人制作、动作捕捉、实时渲染与AI辅助影视创作等技术，也进一步提升了项目管理、流程优化与团队协作能力。',
+      },
+    ],
+    mediaItems: [
+      { src: '/images/aigc-video-2/full-film.mov', type: 'video', title: '记忆之梦｜完整动画短片', description: '原创科幻动画短片完整展示' },
+      { src: '/images/aigc-video-2/clip-0.mp4', type: 'video', title: '剧情开场片段', description: '以病床上的机械主角回溯记忆展开叙事' },
+      { src: '/images/aigc-video-2/clip-1.mp4', type: 'video', title: '角色演出展示', description: 'MetaHuman数字人角色表演与情感表达' },
+      { src: '/images/aigc-video-2/clip-2.mp4', type: 'video', title: '动作捕捉成果展示', description: '动作捕捉数据在UE中的实时渲染效果' },
+      { src: '/images/aigc-video-2/clip-3.mp4', type: 'video', title: 'MetaHuman角色展示', description: '高精度数字人角色模型与绑定展示' },
+      { src: '/images/aigc-video-2/clip-4.mp4', type: 'video', title: '场景与镜头展示', description: 'UE场景搭建与镜头语言设计' },
+      { src: '/images/aigc-video-2/clip-5.mp4', type: 'video', title: '核心剧情片段', description: '母子冲突与转折关键剧情展示' },
+      { src: '/images/aigc-video-2/clip-6.mp4', type: 'video', title: '结尾与主题表达', description: '结局揭示与科技人性主题呼应' },
+    ],
+    aiWorkflow: [
+      {
+        stage: '剧本辅助与内容优化',
+        ai: '辅助剧情梳理，优化部分文本内容，提供创意参考',
+        human: '主题设计，剧情决策，最终定稿',
+      },
+      {
+        stage: '镜头补全与内容过渡',
+        ai: '辅助生成过渡内容，补充部分画面方案',
+        human: '镜头设计，内容审核，视觉统一',
+      },
+      {
+        stage: '后期优化支持',
+        ai: '辅助修补素材缺口，提供优化建议',
+        human: '剪辑节奏，情绪表达，最终成片输出',
+      },
+    ],
     reflection: {
-      zh: '通过《记忆之梦》的全流程制作，我积累了宝贵的项目实战经验。作为项目组长兼导演，我深刻意识到深耕钻研、团队统筹、问题解决三项能力，是项目顺利落地的核心关键。\n\n课堂教授的传统动画制作流程繁琐低效，需要在 Maya 中手动绑定骨骼、调试权重，再导入 UE 完成动作适配与渲染，耗时极久。本次项目工期严重不足，固守传统流程根本无法按时交付，因此我主动探索全新的高效制作方案，自主优化迭代工作流程。\n\n我核心优化了人物与动捕制作流程：依托 MetaHuman 数字人技术，利用其高精度模型与预绑定骨骼的优势，省去手动调权重的繁琐步骤，规避模型出错问题。同时自研掌握 UE5 动作重定向投射技术，彻底砍掉 Maya 中转环节，可直接在引擎内完成动捕数据适配、动作迁移，大幅压缩制作工期。这让我明白，实战项目中灵活优化流程，远比死守标准化流程更为重要。\n\n其次，本次项目极大锻炼了我的团队统筹能力。面对紧张工期与繁杂工序，我合理调配组员工作、同步制作进度、把控项目节奏，保障项目稳定推进、按时完成交付。\n\n最后，各类设备、工期、素材适配的突发问题，全面锻炼了我的临场解决问题能力。我结合 AI 辅助优化画面过渡、修补素材瑕疵，在有限条件下提升成片质量。全程从零到一的实战落地，让我精通动捕、UE 渲染、数字人制作等技术，也让我懂得优质创作的核心，是兼顾技术落地、流程优化与全局把控。',
-      en: 'Through the end-to-end production of Dream of Memory, I gained invaluable hands-on project experience. As project lead and director, I came to deeply understand that deep research, team coordination, and problem-solving are the three essential pillars for successful project delivery.\n\nThe traditional animation pipeline taught in class is cumbersome and inefficient—manually rigging bones and adjusting weights in Maya, then importing to UE for motion adaptation and rendering. This is extremely time-consuming. With the severely tight deadline, sticking to the traditional workflow would have made on-time delivery impossible. So I proactively explored new efficient solutions and optimized the workflow on my own.\n\nMy key optimization was in the character and motion capture pipeline: leveraging MetaHuman digital human technology with its high-precision models and pre-rigged skeletons, I eliminated the tedious manual weight-painting steps and avoided model errors. I also independently mastered UE5\'s motion retargeting technology, completely cutting out the Maya intermediary step—motion capture data could be adapted and transferred directly within the engine, dramatically compressing production time. This taught me that in real projects, flexibly optimizing workflows is far more important than rigidly following standard procedures.\n\nSecond, this project greatly strengthened my team coordination skills. Facing tight timelines and complex工序, I reasonably assigned tasks, synchronized progress, and controlled the project rhythm to ensure steady progress and on-time delivery.\n\nFinally, the unexpected issues with equipment, schedules, and素材 adaptation thoroughly tested my on-the-spot problem-solving abilities. I used AI assistance to optimize visual transitions and patch素材 flaws, improving the final quality under constrained conditions. This from-zero-to-one实战 experience gave me mastery of mocap, UE rendering, and digital human production, and taught me that the core of quality creation lies in balancing technical implementation, workflow optimization, and overall project control.',
+      zh: '通过《记忆之梦》的全流程制作，我积累了宝贵的项目实战经验。作为项目组长兼导演，我深刻认识到技术钻研、团队统筹与问题解决能力，是推动项目顺利落地的重要基础。\n\n面对传统动画流程耗时较长的问题，我主动探索并优化制作方案。通过MetaHuman数字人技术与UE动作重定向工作流，省去了传统角色绑定与中转环节，大幅提升制作效率。这让我更加理解，在实际项目中灵活优化流程往往比机械执行标准流程更具价值。\n\n本项目也显著提升了我的团队管理能力。在紧张工期下，我持续协调成员分工、同步项目进度并控制整体质量，保证项目按时完成。\n\n同时，设备限制、素材适配与工期压力等问题也锻炼了我的应变能力。我结合AI辅助工具优化部分画面与流程，在有限条件下尽可能提升作品质量。\n\n本次项目让我系统掌握了动作捕捉、数字人制作、UE实时渲染与AI辅助影视创作等技术，并进一步理解了技术实现、流程优化与团队协作在项目中的重要意义。',
+      en: 'Through the end-to-end production of Dream of Memory, I gained valuable hands-on project experience. As project lead and director, I came to deeply understand that technical research, team coordination, and problem-solving are essential foundations for successful project delivery.\n\nFacing the lengthy traditional animation pipeline, I proactively explored and optimized the production approach. By leveraging MetaHuman digital human technology and UE motion retargeting workflows, I eliminated traditional rigging and middleware steps, dramatically improving production efficiency. This reinforced my understanding that flexibly optimizing workflows in real projects is often more valuable than rigidly following standard procedures.\n\nThis project also significantly strengthened my team management skills. Under tight deadlines, I continuously coordinated team member responsibilities, synchronized project progress, and controlled overall quality to ensure on-time delivery.\n\nAt the same time, constraints from equipment, material adaptation, and schedule pressure honed my adaptability. I used AI-assisted tools to optimize certain visuals and workflows, maximizing quality within limited conditions.\n\nThis project gave me systematic mastery of motion capture, digital human production, UE real-time rendering, and AI-assisted filmmaking, and deepened my understanding of the importance of technical execution, workflow optimization, and team collaboration in project development.',
     },
   },
   {
