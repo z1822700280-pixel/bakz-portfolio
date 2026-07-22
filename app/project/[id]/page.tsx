@@ -120,14 +120,14 @@ export default function ProjectDetail() {
       {/* ── Section 3: Development Pipeline ── */}
       <ProjectTimeline stages={project.pipeline || []} />
 
-      {/* ── Section 4: Project Overview ── */}
+      {/* ── Section 4: Media Showcase ── */}
+      <MediaShowcase items={project.mediaItems || fallbackMediaItems(project.images)} />
+
+      {/* ── Section 5: Project Overview ── */}
       <OverviewAccordion sections={project.overviewSections || []} />
 
-      {/* ── Section 5: Key Challenges ── */}
+      {/* ── Section 6: Key Challenges ── */}
       <KeyChallenges items={project.challenges || []} />
-
-      {/* ── Section 6: Media Showcase ── */}
-      <MediaShowcase items={project.mediaItems || fallbackMediaItems(project.images)} />
 
       {/* ── Section 7: AI Workflow ── */}
       {hasAI && <AIWorkflow items={project.aiWorkflow || []} />}
