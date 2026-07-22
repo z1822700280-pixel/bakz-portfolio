@@ -4,6 +4,7 @@ import { useParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { projects, MediaItem } from '@/data/projects'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useLanguage } from '@/contexts/LanguageContext'
 import ProjectSnapshot from '@/components/ProjectSnapshot'
 import ProjectTimeline from '@/components/ProjectTimeline'
@@ -48,6 +49,19 @@ export default function ProjectDetail() {
 
   return (
     <main className="min-h-screen">
+      {/* ── Back to Home Button ── */}
+      <div className="fixed top-6 left-6 z-50">
+        <Link
+          href="/"
+          className="flex items-center gap-2 px-3 py-2 text-xs tracking-wider text-white/70 hover:text-white bg-black/20 hover:bg-black/40 backdrop-blur-sm rounded-full transition-all duration-300 border border-white/10"
+        >
+          <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+          {lang === 'zh' ? '返回' : 'Back'}
+        </Link>
+      </div>
+
       {/* ── Section 1: Hero ── */}
       <section className="relative h-[70vh] md:h-[85vh] overflow-hidden">
         {fullFilm ? (

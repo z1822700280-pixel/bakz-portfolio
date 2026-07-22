@@ -1,12 +1,76 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { useState, useEffect, useCallback } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import { MediaItem } from '@/data/projects'
 import { useLanguage } from '@/contexts/LanguageContext'
 
+function ImageLightbox({ item, onClose }: { item: MediaItem; onClose: () => void }) {
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    if (e.key === 'Escape') onClose()
+  }, [onClose])
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+      document.body.style.overflow = ''
+    }
+  }, [handleKeyDown])
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.2 }}
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm cursor-zoom-out"
+      onClick={onClose}
+    >
+      <button
+        onClick={onClose}
+        className="absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white/70 hover:text-white transition-all z-10"
+      >
+        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <motion.div
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.9, opacity: 0 }}
+        transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+        className="relative w-[90vw] h-[85vh]"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <Image
+          src={item.src}
+          alt={item.title || ''}
+          fill
+          className="object-contain"
+          sizes="90vw"
+          priority
+        />
+      </motion.div>
+      {(item.title || item.description) && (
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-center pointer-events-none">
+          {item.title && (
+            <p className="text-sm font-medium text-white/90">{item.title}</p>
+          )}
+          {item.description && (
+            <p className="text-xs text-white/50 mt-1">{item.description}</p>
+          )}
+        </div>
+      )}
+    </motion.div>
+  )
+}
+
 export default function MediaShowcase({ items }: { items: MediaItem[] }) {
   const { lang } = useLanguage()
+  const [lightboxItem, setLightboxItem] = useState<MediaItem | null>(null)
 
   if (!items || items.length === 0) return null
 
@@ -87,14 +151,22 @@ export default function MediaShowcase({ items }: { items: MediaItem[] }) {
                     transition={{ duration: 0.5, delay: i * 0.03, ease: [0.22, 1, 0.36, 1] }}
                     viewport={{ once: true }}
                   >
-                    <div className="relative aspect-video rounded-lg overflow-hidden border border-[var(--border-subtle)] bg-[var(--bg-card)]">
+                    <div
+                      className="relative aspect-video rounded-lg overflow-hidden border border-[var(--border-subtle)] bg-[var(--bg-card)] cursor-zoom-in group"
+                      onClick={() => setLightboxItem(item)}
+                    >
                       <Image
                         src={item.src}
                         alt={item.title || `Process image ${i + 1}`}
                         fill
-                        className="object-cover"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
                         sizes="(max-width: 768px) 100vw, 80vw"
                       />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+                        <svg className="w-8 h-8 text-white/0 group-hover:text-white/70 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                        </svg>
+                      </div>
                     </div>
                     {(item.title || item.description) && (
                       <div className="mt-3">
@@ -113,6 +185,13 @@ export default function MediaShowcase({ items }: { items: MediaItem[] }) {
           )}
         </motion.div>
       </div>
+
+      {/* Lightbox */}
+      <AnimatePresence>
+        {lightboxItem && (
+          <ImageLightbox item={lightboxItem} onClose={() => setLightboxItem(null)} />
+        )}
+      </AnimatePresence>
     </section>
   )
 }
