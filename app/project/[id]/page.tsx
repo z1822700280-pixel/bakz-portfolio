@@ -120,11 +120,11 @@ export default function ProjectDetail() {
       {/* ── Section 3: Development Pipeline ── */}
       <ProjectTimeline stages={project.pipeline || []} />
 
-      {/* ── Section 4: Key Challenges ── */}
-      <KeyChallenges items={project.challenges || []} />
-
-      {/* ── Section 5: Project Overview ── */}
+      {/* ── Section 4: Project Overview ── */}
       <OverviewAccordion sections={project.overviewSections || []} />
+
+      {/* ── Section 5: Key Challenges ── */}
+      <KeyChallenges items={project.challenges || []} />
 
       {/* ── Section 6: Media Showcase ── */}
       <MediaShowcase items={project.mediaItems || fallbackMediaItems(project.images)} />
