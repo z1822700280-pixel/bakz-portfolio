@@ -1053,10 +1053,11 @@ export const projects: Project[] = [
       en: 'The Goldfish Room is a short film centering on the predicaments faced by contemporary young graduates. It follows the protagonist Atou, a fresh graduate, and his inner turmoil woven together by five phone calls made inside his rental apartment. Opening with a failed job interview, the story unfolds to depict his mother\'s anxious concern, the strain of financial hardship, and the end of his romantic relationship—before he finally receives an offer for a second-round interview. The film conveys a philosophical reflection that "life is like a box of chocolates."\n\nVisually, the short leans heavily on metaphor and symbolism. Four peephole shots that peer out at the outside world mirror Atou\'s discomfort with social life and his urge to retreat. The goldfish act as a vessel for his emotions, embodying his confined self. A man in a suit appears as his imagined alter ego, representing inner growth and the courage to confront hardships head-on. Tight close-ups are used throughout to convey the character\'s emotions, and a restrained visual style draws viewers into an immersive viewing experience.\n\nThe crew shot the entire film over four days and three nights, overcoming hurdles including power outages and countless retakes. The finished work came to fruition through full teamwork. Through Atou\'s story, we hope to spark greater attention and reflection on the living conditions of young people today.',
     },
     category: 'post-production',
-    tags: ['剪辑', '短片'],
+    tags: ['短片', '剧情', '纪实', '团队协作', '导演'],
     year: 2024,
     thumbnail: '/images/goldfish-chamber/thumbnail.jpg',
     role: { zh: '导演 / 剪辑 / 后期', en: 'Director / Editor / Post-production' },
+    tools: ['DaVinci Resolve', 'Premiere Pro', 'Sony'],
     images: [
       '/images/goldfish-chamber/full-film.mov',
       '/images/goldfish-chamber/clip-0.mov',
@@ -1076,11 +1077,118 @@ export const projects: Project[] = [
       '/images/goldfish-chamber/content-12.jpg',
       '/images/goldfish-chamber/content-13.jpg',
     ],
-    tools: ['DaVinci Resolve', 'Premiere Pro', 'Sony'],
-    externalLinks: [],
+    snapshot: [
+      { label: '项目类型', value: '原创剧情短片' },
+      { label: '项目身份', value: '导演 / 剪辑 / 后期' },
+      { label: '项目主题', value: '毕业困境 / 成长 / 自我和解' },
+      { label: '核心表达', value: '视觉隐喻 / 情绪叙事 / 人物成长' },
+      { label: '核心工具', value: 'Sony / DaVinci Resolve / Premiere Pro' },
+      { label: '核心能力', value: '导演思维 / 镜头设计 / 后期剪辑' },
+    ],
+    pipeline: [
+      {
+        title: '主题构思',
+        target: '围绕毕业生现实困境，建立故事主题与情绪基调',
+        work: '围绕毕业生现实困境，建立故事主题与情绪基调',
+      },
+      {
+        title: '剧本创作',
+        target: '设计角色成长线，构建电话串联式叙事结构',
+        work: '设计角色成长线，构建电话串联式叙事结构',
+      },
+      {
+        title: '分镜设计',
+        target: '规划镜头语言、视觉隐喻与场景调度',
+        work: '规划镜头语言、视觉隐喻与场景调度',
+      },
+      {
+        title: '现场拍摄',
+        target: '完成演员调度、镜头执行与素材采集',
+        work: '完成演员调度、镜头执行与素材采集',
+      },
+      {
+        title: '素材整理',
+        target: '建立后期制作素材库',
+        work: '筛选有效镜头，建立后期制作素材库',
+      },
+      {
+        title: '剪辑制作',
+        target: '完成叙事节奏控制，构建完整故事结构',
+        work: '完成叙事节奏控制，构建完整故事结构',
+      },
+      {
+        title: '调色与声音处理',
+        target: '统一影片视觉风格，优化观影体验',
+        work: '统一影片视觉风格，优化观影体验',
+      },
+      {
+        title: '成片输出',
+        target: '完成最终短片包装与交付',
+        work: '完成最终短片包装与交付',
+      },
+    ],
+    challenges: [
+      {
+        question: '如何用有限场景完成完整叙事？',
+        solutions: [
+          '利用电话串联剧情发展',
+          '强化角色心理变化与情绪表达',
+          '在单一空间内构建完整故事',
+        ],
+      },
+      {
+        question: '如何让影片具备更强象征意义？',
+        solutions: [
+          '引入猫眼、金鱼、西装男等视觉符号',
+          '构建多层次隐喻表达体系',
+          '通过视觉元素服务主题表达',
+        ],
+      },
+      {
+        question: '如何在紧张周期内完成拍摄？',
+        solutions: [
+          '通过团队协作与现场调度克服困难',
+          '应对停电与反复NG等突发问题',
+          '保障项目顺利完成',
+        ],
+      },
+    ],
+    overviewSections: [
+      {
+        title: '项目背景',
+        content: '《金鱼房间》是一部聚焦当代青年毕业困境的原创剧情短片。故事围绕刚毕业的主人公阿藤展开，通过五通电话串联起求职失败、家庭压力、经济困境与情感挫折等人生阶段，展现青年人在现实压力下的迷茫与成长。',
+      },
+      {
+        title: '视觉语言与叙事设计',
+        content: '影片采用大量特写镜头强化情绪表达，并通过猫眼、金鱼与西装男等视觉元素构建象征体系。猫眼象征与外部社会的隔阂，金鱼象征受困的内心状态，而西装男则代表主人公内在成长与面对现实的勇气。通过克制的镜头语言与有限空间叙事，强化沉浸感与主题表达。',
+      },
+      {
+        title: '制作过程与项目收获',
+        content: '项目历时四天三夜完成拍摄与制作。在有限预算与紧张周期下，团队共同克服设备、场地与拍摄过程中的各种问题，最终完成作品。通过本次实践，我积累了导演、现场统筹、后期剪辑等多方面经验，也更加理解团队协作对于影视项目的重要意义。',
+      },
+    ],
+    mediaItems: [
+      { src: '/images/goldfish-chamber/full-film.mov', type: 'video', title: '金鱼房间｜完整短片', description: '原创剧情短片完整展示' },
+      { src: '/images/goldfish-chamber/clip-0.mov', type: 'video', title: '情绪表达片段', description: '展现主人公阿藤的内心挣扎与情绪变化' },
+      { src: '/images/goldfish-chamber/clip-1.mov', type: 'video', title: '核心剧情片段', description: '通过电话串联展开故事推进' },
+      { src: '/images/goldfish-chamber/content-0.jpg', type: 'image', title: '影片开场氛围', description: '建立主人公生活状态与情绪基调' },
+      { src: '/images/goldfish-chamber/content-1.jpg', type: 'image', title: '出租屋场景设计', description: '展现角色生活环境与现实压力' },
+      { src: '/images/goldfish-chamber/content-2.jpg', type: 'image', title: '电话叙事结构', description: '通过通话推动剧情发展' },
+      { src: '/images/goldfish-chamber/content-3.jpg', type: 'image', title: '角色情绪特写', description: '强化人物内心变化表达' },
+      { src: '/images/goldfish-chamber/content-4.jpg', type: 'image', title: '猫眼意象设计', description: '象征角色对现实世界的疏离感' },
+      { src: '/images/goldfish-chamber/content-5.jpg', type: 'image', title: '金鱼视觉隐喻', description: '表现主人公被束缚的心理状态' },
+      { src: '/images/goldfish-chamber/content-6.jpg', type: 'image', title: '幻想人格呈现', description: '西装男象征角色成长与突破' },
+      { src: '/images/goldfish-chamber/content-7.jpg', type: 'image', title: '镜头构图设计', description: '利用空间关系强化故事氛围' },
+      { src: '/images/goldfish-chamber/content-8.jpg', type: 'image', title: '情绪转折时刻', description: '表现角色面对现实的挣扎' },
+      { src: '/images/goldfish-chamber/content-9.jpg', type: 'image', title: '剧情推进节点', description: '展示关键叙事片段' },
+      { src: '/images/goldfish-chamber/content-10.jpg', type: 'image', title: '光影氛围设计', description: '利用光线塑造情绪层次' },
+      { src: '/images/goldfish-chamber/content-11.jpg', type: 'image', title: '拍摄现场记录', description: '展示项目制作过程' },
+      { src: '/images/goldfish-chamber/content-12.jpg', type: 'image', title: '后期剪辑阶段', description: '完成节奏与叙事结构优化' },
+      { src: '/images/goldfish-chamber/content-13.jpg', type: 'image', title: '最终影片画面', description: '展示成片视觉效果' },
+    ],
     reflection: {
-      zh: '本片是我大三拍摄的第一部正式短片，拍摄时预算和周期都很紧张，属于极限创作，好在团队通力配合顺利完成。\n\n影片在镜头语言、拍摄技法上仍需提高，但核心是真诚、纯粹地表达，刻画青年毕业生的迷茫与挣扎，我认为这是短片的关键。这次创作也让我学到了剧组统筹和团队协作的意义：不只依靠个人能力，还要做好整体调度，让团队高效协作，才能更好地完成作品。',
-      en: 'This short film was my first official narrative production, made during my third year of university. We worked with a very tight budget and schedule, a form of constrained filmmaking, but the whole team pulled together and finished the piece, and I\'m happy with the final result.\n\nI know there are imperfections in our cinematography and visual storytelling techniques, yet the core goal was sincere emotional expression, capturing the inner struggles of young graduates. This project also taught me a vital lesson about crew coordination and teamwork. Filmmaking is not just individual creativity; proper production management and smooth team workflow are essential to create a better final work.',
+      zh: '《金鱼房间》是我大学阶段拍摄的第一部正式剧情短片，也是一次从构思到落地的完整影视创作实践。虽然项目预算有限、制作周期紧张，但团队始终保持高效协作，最终顺利完成拍摄与制作。\n\n本片让我开始系统思考影像表达的意义。相比复杂的技术实现，我更关注镜头是否能够准确传达人物情绪与主题表达。猫眼、金鱼与西装男等视觉符号的设计，也让我逐步理解视觉叙事与隐喻表达的重要性。\n\n通过本次项目，我积累了导演、现场统筹、剪辑制作等方面经验，也更加深刻认识到团队协作在影视项目中的价值。一次优秀的创作不仅需要个人能力，更需要整体协调与执行力共同支撑。',
+      en: 'The Goldfish Chamber is my first formal narrative short film from my university years—a complete filmmaking practice from concept to delivery. Despite limited budget and tight schedule, the team maintained efficient collaboration and successfully completed the project.\n\nThis film made me start systematically thinking about the meaning of visual expression. Rather than complex technical implementation, I focused more on whether the shots could accurately convey character emotions and thematic expression. The design of visual symbols like the peephole, goldfish, and suited man also helped me gradually understand the importance of visual storytelling and metaphorical expression.\n\nThrough this project, I gained experience in directing, on-site coordination, and post-production editing, and came to deeply understand the value of team collaboration in filmmaking. Excellent creation requires not only individual ability but also overall coordination and collective execution.',
     },
   },
   {
