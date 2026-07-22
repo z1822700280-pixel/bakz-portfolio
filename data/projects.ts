@@ -891,7 +891,7 @@ export const projects: Project[] = [
       en: 'A university group project short film. I was responsible for generating and producing部分 shot素材, as well as script development and refinement. The related creative process images are separately displayed; the final film is a collaborative team effort.\n\nThe story follows a modern girl who stumbles into an ancient temple deep in the mountains, accidentally traveling back to the Tang Dynasty where she meets and forms a bond with the protagonist. The painted face (脸谱) serves as the core token throughout the film. She ultimately returns to the present, but this extraordinary encounter immerses her in the unique charm of traditional clay sculpture (泥塑) intangible cultural heritage, inspiring her to dedicate herself to the craft.\n\nThe film aims to promote the intangible cultural heritage of clay sculpture, created within the constraints of a classroom assignment with multiple creative limitations. The entire story and visual方案 were collaboratively developed by the team.',
     },
     category: 'ai-visual',
-    tags: ['AIGC', '短片', '全流程'],
+    tags: ['AIGC', '非遗', '短片', '团队协作', 'AI辅助'],
     year: 2025,
     thumbnail: '/images/concept-design-1/thumbnail.jpg',
     images: [
@@ -919,9 +919,129 @@ export const projects: Project[] = [
     ],
     tools: ['ChatGPT', 'OiiOii'],
     role: { zh: '编剧 / 素材生成', en: 'Writer /素材 Generation' },
+    snapshot: [
+      { label: '项目类型', value: '非遗文化主题短片' },
+      { label: '项目模式', value: '团队协作项目' },
+      { label: '个人职责', value: '剧本创作 / 脚本完善 / 素材生成' },
+      { label: '核心主题', value: '泥塑非遗 / 传统文化 / 盛唐奇遇' },
+      { label: '核心工具', value: 'ChatGPT / OiiOii' },
+      { label: '核心能力', value: '团队协作 / 内容策划 / AI创作' },
+    ],
+    pipeline: [
+      {
+        title: '命题分析',
+        target: '根据课程要求与创作规则，确定项目方向与主题',
+        work: '根据课程要求与创作规则，确定项目方向与主题',
+      },
+      {
+        title: '故事构思',
+        target: '围绕非遗泥塑文化，建立整体故事框架',
+        work: '围绕非遗泥塑文化，建立整体故事框架',
+      },
+      {
+        title: '剧本创作',
+        target: '优化叙事结构',
+        work: '参与剧本编写与内容完善，优化叙事结构',
+      },
+      {
+        title: '视觉方案设计',
+        target: '确定角色、场景与画面风格',
+        work: '团队共同确定角色、场景与画面风格',
+      },
+      {
+        title: 'AIGC素材制作',
+        target: '完成部分镜头素材生成，支持项目视觉表达',
+        work: '完成部分镜头素材生成，支持项目视觉表达',
+      },
+      {
+        title: '团队整合制作',
+        target: '推进整体制作流程',
+        work: '整合素材、完善内容、推进整体制作流程',
+      },
+      {
+        title: '后期制作',
+        target: '完成剪辑与成片输出',
+        work: '完成剪辑与成片输出',
+      },
+    ],
+    challenges: [
+      {
+        question: '如何在命题限制下完成创作？',
+        solutions: [
+          '围绕非遗文化主题展开设计',
+          '在规则框架内提升故事表现力',
+          '充分利用团队构思优势',
+        ],
+      },
+      {
+        question: '如何保持团队协作效率？',
+        solutions: [
+          '建立统一文件命名规则',
+          '规范素材管理流程',
+          '建立高效沟通机制',
+        ],
+      },
+      {
+        question: '如何统一视觉表达？',
+        solutions: [
+          '团队共同制定风格方向',
+          '保证素材与剧情表达一致',
+          '统一视觉输出标准',
+        ],
+      },
+    ],
+    overviewSections: [
+      {
+        title: '项目背景',
+        content: '《绘面盛唐，赓续宗邦》是大学课堂团队合作项目，以推广中国传统泥塑非遗文化为核心目标。在课程命题与创作规则约束下，团队共同完成故事策划、视觉设计与内容制作。',
+      },
+      {
+        title: '剧情与主题表达',
+        content: '故事讲述现代少女误入古寺，意外穿越至盛唐，与男主相识相知。脸谱作为贯穿全片的重要信物，连接过去与现实。当女主返回现代后，被传统泥塑艺术深深吸引，并最终投身相关行业。影片通过奇幻叙事形式展现传统文化魅力与非遗传承价值。',
+      },
+      {
+        title: '个人参与内容',
+        content: '我主要负责剧本创作、脚本完善以及部分镜头素材生成工作。参与故事结构设计与内容优化，并结合AIGC工具完成部分视觉素材制作，为项目整体表达提供支持。',
+      },
+    ],
+    mediaItems: [
+      { src: '/images/concept-design-1/full-film.mov', type: 'video', title: '绘面盛唐，赓续宗邦｜完整短片', description: '非遗文化主题短片完整展示' },
+      { src: '/images/concept-design-1/clip-0.mp4', type: 'video', title: '故事开场', description: '现代少女误入深山古寺' },
+      { src: '/images/concept-design-1/clip-1.mp4', type: 'video', title: '古寺奇遇', description: '穿越之旅的起点' },
+      { src: '/images/concept-design-1/clip-2.mp4', type: 'video', title: '盛唐初见', description: '穿越至盛唐与男主相遇结缘' },
+      { src: '/images/concept-design-1/clip-3.mp4', type: 'video', title: '文化探索', description: '感受盛唐文化魅力' },
+      { src: '/images/concept-design-1/clip-4.mp4', type: 'video', title: '情节发展', description: '脸谱作为核心信物推动剧情' },
+      { src: '/images/concept-design-1/clip-5.mp4', type: 'video', title: '主题升华', description: '女主沉醉于泥塑非遗独特魅力' },
+      { src: '/images/concept-design-1/clip-6.mp4', type: 'video', title: '结尾片段', description: '回归现代投身传统泥塑行业' },
+      { src: '/images/concept-design-1/content-0.jpg', type: 'image', title: '项目概念设计', description: '探索项目整体视觉方向' },
+      { src: '/images/concept-design-1/content-1.png', type: 'image', title: '角色设计方案', description: '建立主要角色视觉形象' },
+      { src: '/images/concept-design-1/content-2.jpg', type: 'image', title: '场景概念图', description: '确定故事发生环境氛围' },
+      { src: '/images/concept-design-1/content-3.jpg', type: 'image', title: '盛唐视觉探索', description: '研究唐代文化视觉特征' },
+      { src: '/images/concept-design-1/content-4.jpg', type: 'image', title: '人物氛围测试', description: '强化角色气质与表达' },
+      { src: '/images/concept-design-1/content-5.jpg', type: 'image', title: '泥塑文化元素', description: '展示非遗文化相关内容' },
+      { src: '/images/concept-design-1/content-6.png', type: 'image', title: '镜头设计参考', description: '探索叙事镜头表现方式' },
+      { src: '/images/concept-design-1/content-7.jpg', type: 'image', title: '场景构图研究', description: '优化画面空间关系' },
+      { src: '/images/concept-design-1/content-8.jpg', type: 'image', title: '视觉风格测试', description: '统一整体美术方向' },
+      { src: '/images/concept-design-1/content-9.jpg', type: 'image', title: '角色互动设计', description: '展示人物关系与剧情发展' },
+      { src: '/images/concept-design-1/content-10.jpg', type: 'image', title: '文化表达探索', description: '强化传统文化传播效果' },
+      { src: '/images/concept-design-1/content-11.jpg', type: 'image', title: '方案迭代过程', description: '展示设计优化与调整过程' },
+      { src: '/images/concept-design-1/content-12.jpg', type: 'image', title: '最终视觉成果', description: '呈现项目阶段性设计成果' },
+    ],
+    aiWorkflow: [
+      {
+        stage: '剧本辅助与内容优化',
+        ai: '提供创意参考，辅助文本整理',
+        human: '剧情设计，脚本完善，内容定稿',
+      },
+      {
+        stage: '视觉素材生成',
+        ai: '生成部分镜头素材',
+        human: '提示词设计，素材筛选，质量把控',
+      },
+    ],
     reflection: {
-      zh: '本次多人团队项目，让我深刻体会到规范化协作是高效产出的关键。相比技术制作，统一的团队工作准则，才是保障项目顺畅推进的核心。\n\n统一文件命名、规范存储格式、及时同步沟通，能有效避免文件混乱、版本出错、信息滞后等问题，杜绝无效耗时。这次经历让我养成了先定团队工作规范再推进创作的习惯，大幅提升整体制作效率。',
-      en: 'This multi-person team project taught me that standardized collaboration is the key to efficient output. More than technical production, unified team working guidelines are the core of smooth project progress.\n\nConsistent file naming, standardized storage formats, and timely communication effectively prevent file chaos, version errors, and information lag—eliminating wasted time. This experience instilled in me the habit of establishing team norms before diving into creative work, greatly improving overall production efficiency.',
+      zh: '本项目让我进一步理解团队协作在内容创作中的重要性。相比单人项目，团队项目更依赖明确的分工、统一的规范以及高效的信息同步机制。\n\n制作过程中，我参与剧本创作、脚本优化与视觉素材制作，也切身体会到规范化协作对于项目推进的重要价值。统一命名规则、规范文件管理与及时沟通，可以有效减少重复劳动与版本混乱问题。\n\n这次经历让我逐渐养成了先建立工作规范、再推进创作的工作习惯，也让我更加重视团队协作能力在实际项目中的作用。',
+      en: 'This project deepened my understanding of the importance of team collaboration in content creation. Compared to solo projects, team projects rely more on clear分工, unified norms, and efficient information synchronization.\n\nDuring production, I participated in scriptwriting, storyboard refinement, and visual素材 generation, and personally experienced the value of standardized collaboration for project progress. Consistent naming rules,规范 file management, and timely communication can effectively reduce redundant work and version confusion.\n\nThis experience gradually cultivated my habit of establishing work norms before diving into creation, and made me value team collaboration skills even more in real projects.',
     },
   },
   // ── ③ 影视后期与视觉设计 ──
