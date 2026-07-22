@@ -266,6 +266,8 @@ export const projects: Project[] = [
     tags: ['UE5', '场景搭建', '写实', '材质制作', '全流程'],
     year: 2025,
     thumbnail: '/images/ue-scene-2/thumbnail.jpg',
+    role: { zh: '独立开发 / 全流程', en: 'Solo Developer / Full Pipeline' },
+    tools: ['Unreal Engine 5', 'Premiere Pro'],
     images: [
       '/images/ue-scene-2/full-film.mov',
       '/images/ue-scene-2/clip-0.mp4',
@@ -273,11 +275,110 @@ export const projects: Project[] = [
       '/images/ue-scene-2/clip-2.mp4',
       '/images/ue-scene-2/clip-3.mp4',
     ],
-    tools: ['Unreal Engine 5', 'Premiere Pro'],
-    role: { zh: '独立开发 / 全流程', en: 'Solo Developer / Full Pipeline' },
+    snapshot: [
+      { label: '项目类型', value: 'UE5写实场景实训项目' },
+      { label: '项目定位', value: '虚幻引擎入门与场景制作训练' },
+      { label: '我的职责', value: '独立完成场景搭建与后期输出' },
+      { label: '核心工具', value: 'Unreal Engine 5 / Premiere Pro' },
+      { label: '项目重点', value: '资产整合 / 材质制作 / 氛围塑造' },
+      { label: '核心能力', value: '快速学习 / 场景审美 / 流程落地' },
+    ],
+    pipeline: [
+      {
+        title: '项目规划',
+        target: '确定河滨小镇主题方向，规划整体场景结构与视觉风格',
+        work: '确定河滨小镇主题方向，规划整体场景结构与视觉风格',
+      },
+      {
+        title: '资产筛选',
+        target: '筛选并整理高质量公开资产，研究行业标准',
+        work: '筛选并整理高质量公开资产，研究行业主流模型精度、风格标准与资源组织方式',
+      },
+      {
+        title: '场景搭建',
+        target: '建立整体空间关系',
+        work: '完成道路、建筑、植被与环境资产布局，建立整体空间关系',
+      },
+      {
+        title: '材质制作',
+        target: '提升真实感表现',
+        work: '独立制作河流水体材质，调试材质参数，提升真实感表现',
+      },
+      {
+        title: '氛围优化',
+        target: '调整色彩关系，统一整体氛围',
+        work: '调整整体色彩关系、优化场景光影与视觉层次，统一整体氛围',
+      },
+      {
+        title: '镜头设计',
+        target: '突出空间关系与环境细节',
+        work: '规划场景展示镜头，突出空间关系与环境细节',
+      },
+      {
+        title: '渲染输出',
+        target: '完成UE场景渲染输出',
+        work: '完成UE场景渲染输出',
+      },
+      {
+        title: '后期剪辑',
+        target: '完成剪辑、调色与成片整合',
+        work: '在Premiere中完成剪辑、调色与成片整合',
+      },
+    ],
+    challenges: [
+      {
+        question: '如何快速熟悉UE场景制作工作流？',
+        solutions: [
+          '通过完整搭建小镇场景实践资产导入、场景组织、材质调校与渲染输出',
+          '建立完整工作流认知',
+          '为后续项目积累实战经验',
+        ],
+      },
+      {
+        question: '如何统一不同来源资产的视觉风格？',
+        solutions: [
+          '筛选风格一致的模型资源',
+          '通过光影、色调与环境设计统一整体表现',
+          '用个人审美把控视觉一致性',
+        ],
+      },
+      {
+        question: '如何提升场景真实感？',
+        solutions: [
+          '自主制作河流水体材质',
+          '持续调试材质参数与反射效果',
+          '增强环境表现力与沉浸感',
+        ],
+      },
+    ],
+    overviewSections: [
+      {
+        title: '项目背景',
+        content: '《河滨小镇》是我在《西部世界》之前完成的UE初学实训项目，主要用于熟悉虚幻引擎的基础场景制作流程。项目全程独立完成，通过搭建完整小镇场景，系统学习了UE环境制作与资源整合的基本方法。',
+      },
+      {
+        title: '资产整合与场景制作',
+        content: '项目过程中，我大量筛选与整理公开模型资源，对市面主流资产的精度标准、风格类型与制作规范进行了深入了解。通过合理组织与搭配不同资源，逐步完成河滨小镇整体场景搭建。',
+      },
+      {
+        title: '材质与氛围塑造',
+        content: '制作中独立完成河流水体材质制作，并持续调整材质参数与场景光影关系。结合个人审美进行构图设计、色调控制与氛围统一，构建出完整且舒适的写实场景体验。',
+      },
+      {
+        title: '渲染输出与项目收获',
+        content: '项目完成后，我独立完成引擎渲染输出，并在Premiere中完成剪辑、调色与最终成片整合。完整经历了UE场景搭建、材质制作、渲染输出与后期包装流程，为后续更复杂项目制作积累了重要经验。',
+      },
+    ],
+    mediaItems: [
+      { src: '/images/ue-scene-2/full-film.mov', type: 'video', title: '河滨小镇｜完整展示影片', description: 'UE5写实场景搭建项目完整展示' },
+      { src: '/images/ue-scene-2/clip-0.mp4', type: 'video', title: '场景整体漫游', description: '展示河滨小镇整体空间布局与视觉风格' },
+      { src: '/images/ue-scene-2/clip-1.mp4', type: 'video', title: '建筑区域展示', description: '展示建筑风格与材质表现效果' },
+      { src: '/images/ue-scene-2/clip-2.mp4', type: 'video', title: '环境细节展示', description: '展示自然环境与水体材质效果' },
+      { src: '/images/ue-scene-2/clip-3.mp4', type: 'video', title: '镜头运动展示', description: '展示场景漫游镜头设计与空间关系' },
+    ],
     reflection: {
-      zh: '《河滨小镇》是我入门虚幻引擎的实训项目。我通过筛选整合市面各类模型资产，熟悉了行业主流模型精度与风格标准。制作中跳出模板套用，自主调试水体材质、优化场景光影构图，凭借个人审美统一整体氛围，在短时间内高效完成全流程落地。\n\n本次项目充分锻炼了我的快速学习能力与场景把控能力，扎实掌握了 UE 场景搭建、材质调校与后期输出的完整工作流，为后续复杂引擎项目制作积累了充足实战经验。',
-      en: 'Riverside Town was my introductory Unreal Engine training project. By筛选 and integrating various commercial model assets, I familiarized myself with industry-standard model precision and style norms. Moving beyond template-based approaches, I independently debugged water materials, optimized scene lighting and composition, and unified the overall atmosphere through personal aesthetics—efficiently completing the full pipeline in a short time.\n\nThis project thoroughly exercised my rapid learning ability and scene control skills, solidifying my grasp of the complete UE scene building, material tuning, and post-production workflow, accumulating ample practical experience for subsequent complex engine projects.',
+      zh: '《河滨小镇》是我入门虚幻引擎的重要实训项目。通过筛选整合市面各类模型资产，我逐步熟悉了行业主流模型资源的精度标准与制作规范，并建立了对场景搭建流程的整体认知。\n\n制作过程中，我尝试跳出简单的资源堆叠，自主完成河流水体材质调试、光影优化与整体氛围塑造，通过审美判断统一场景视觉风格，在有限时间内高效完成项目落地。\n\n本项目充分锻炼了我的快速学习能力、场景审美能力与流程执行能力，也让我扎实掌握了UE场景搭建、材质调校与后期输出的完整工作流，为后续大型项目制作积累了重要经验。',
+      en: 'Riverside Town was an important training project for my entry into Unreal Engine. Through筛选 and integrating various commercial model assets, I gradually familiarized myself with industry-standard model precision and production norms, and established an overall understanding of the scene building workflow.\n\nDuring production, I went beyond simple asset stacking—independently debugging river water materials, optimizing lighting and atmosphere, and unifying the visual style through aesthetic judgment—efficiently completing the project within a limited time.\n\nThis project thoroughly exercised my rapid learning ability, scene aesthetics, and process execution skills, and solidly established my mastery of the complete UE scene building, material tuning, and post-production workflow, accumulating important experience for subsequent large-scale projects.',
     },
   },
   {
