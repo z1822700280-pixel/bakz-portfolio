@@ -9,7 +9,7 @@ export interface GallerySeries {
   images: string[]
 }
 
-const base = '/images/gallery'
+const base = 'https://6261-bakz-portfolio-d4g00x16257e34cf7-1457429902.cos.ap-shanghai.myqcloud.com/bakz-portfolio/media/gallery'
 
 export const gallerySeries: GallerySeries[] = [
   {

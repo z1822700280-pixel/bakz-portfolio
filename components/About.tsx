@@ -39,7 +39,7 @@ export default function About() {
             }}
           >
             <Image
-              src="/images/about-me.jpg"
+              src="https://6261-bakz-portfolio-d4g00x16257e34cf7-1457429902.cos.ap-shanghai.myqcloud.com/bakz-portfolio/media/about-me.jpg"
               alt="张洎彬"
               fill
               className="object-cover"
