@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server'
 import { projects as staticProjects } from '@/data/projects'
 
+export const dynamic = 'force-static'
+
 export async function GET() {
   try {
     // Try to fetch from TinaCMS if configured
