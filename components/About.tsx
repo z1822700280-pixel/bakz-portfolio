@@ -54,8 +54,8 @@ export default function About() {
             </h2>
             <p className="text-[var(--text-secondary)] text-lg mb-8 leading-relaxed">
               {lang === 'zh'
-                ? '我热爱视觉表达，擅长从创意中提炼品牌感，与时俱进，擅长接收新鲜技术，熟练与AI的沟通与创作，具备新媒体内容创作与设计执行的双重能力。'
-                : 'Creative and detail-driven designer with a passion for storytelling.'}
+                ? '自小对视觉表达、游戏策划与游戏研究怀有浓厚兴趣。在AI浪潮下，我相信新技术会赋予爱探索的我更快的成长速度和空间。'
+                : 'Passionate about visual expression, game design, and game research since childhood. In the wave of AI, I believe new technology will empower my curiosity and accelerate my growth.'}
             </p>
 
             <div className="space-y-4">
