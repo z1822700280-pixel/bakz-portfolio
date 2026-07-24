@@ -14,7 +14,6 @@ const FILTERS = [
   { key: 'aigc' as const },
   { key: '3d' as const },
   { key: 'ui' as const },
-  { key: 'illustration' as const },
   { key: 'photography' as const },
 ] as const
 
@@ -23,7 +22,6 @@ const FILTER_LABELS_ZH: Record<string, string> = {
   aigc: 'AIGC 海报',
   '3d': '3D 建模',
   ui: 'UI 设计',
-  illustration: '插画作品',
   photography: '摄影',
 }
 
@@ -32,7 +30,6 @@ const FILTER_LABELS_EN: Record<string, string> = {
   aigc: 'AIGC Posters',
   '3d': '3D Modeling',
   ui: 'UI Design',
-  illustration: 'Illustrations',
   photography: 'Photography',
 }
 
@@ -83,8 +80,8 @@ export default function Archive() {
           </h2>
           <p className="text-secondary mb-8 tracking-wide">
             {lang === 'zh'
-              ? '海报、3D 建模、UI 设计、插画、摄影——创作笔记'
-              : 'Posters, 3D modeling, UI design, illustrations, photography — a creative notebook.'}
+              ? '海报、3D 建模、UI 设计、摄影——创作笔记'
+              : 'Posters, 3D modeling, UI design, photography — a creative notebook.'}
           </p>
 
           {/* Filter bar */}

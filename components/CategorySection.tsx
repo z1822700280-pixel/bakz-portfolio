@@ -24,7 +24,7 @@ export default function CategorySection({ config }: { config: CategoryConfig }) 
   const rest = config.featured ? categoryProjects.slice(1) : categoryProjects
 
   return (
-    <section id={config.key === 'ui-design' ? 'ui-design' : config.key} ref={ref} className="relative py-20 px-6 overflow-hidden">
+    <section id={config.key} ref={ref} className="relative py-20 px-6 overflow-hidden">
       <motion.div
         className="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--text-primary)]/[0.02] to-transparent pointer-events-none"
         initial={{ opacity: 0 }}

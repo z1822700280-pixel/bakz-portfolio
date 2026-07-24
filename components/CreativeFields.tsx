@@ -17,9 +17,19 @@ const fields = [
     ),
   },
   {
-    id: 'ai-visual',
+    id: 'opencv',
     gradient: 'from-secondary/10 via-transparent to-transparent',
     borderGlow: 'group-hover:border-secondary/30',
+    icon: (
+      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.2}>
+        <path d="M4 7l8 5-8 5V7z" /><path d="M13 7h7v10h-7z" />
+      </svg>
+    ),
+  },
+  {
+    id: 'ai-visual',
+    gradient: 'from-primary/10 via-transparent to-transparent',
+    borderGlow: 'group-hover:border-primary/30',
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.2}>
         <path d="M12 3v4m0 10v4m-9-9h4m10 0h4" />
@@ -30,23 +40,11 @@ const fields = [
   },
   {
     id: 'film',
-    gradient: 'from-primary/10 via-transparent to-transparent',
-    borderGlow: 'group-hover:border-primary/30',
-    icon: (
-      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.2}>
-        <rect x="2" y="6" width="20" height="12" rx="2" /><polygon points="10,9 16,12 10,15" fill="currentColor" />
-      </svg>
-    ),
-  },
-  {
-    id: 'ui-design',
     gradient: 'from-secondary/10 via-transparent to-transparent',
     borderGlow: 'group-hover:border-secondary/30',
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.2}>
-        <path d="M12 5l2 2-2 2" /><path d="M12 19l2-2-2-2" />
-        <path d="M5 12l2 2 2-2" /><path d="M19 12l-2 2-2-2" />
-        <circle cx="12" cy="12" r="10" />
+        <rect x="2" y="6" width="20" height="12" rx="2" /><polygon points="10,9 16,12 10,15" fill="currentColor" />
       </svg>
     ),
   },
@@ -55,15 +53,15 @@ const fields = [
 const content = {
   zh: [
     { title: '游戏与交互设计', desc: 'UE5 · Unity · 技术美术 · 交互开发', count: '3 个项目' },
+    { title: 'OpenCV 代码开发', desc: '计算机视觉 · 图像处理 · Python', count: '3 个项目' },
     { title: 'AI 视觉与数字艺术', desc: 'AI 短片 · 概念设计 · 视觉实验', count: '4 个项目' },
     { title: '影视制作', desc: '短片 · 纪录片 · 翻拍 · 剪辑', count: '3 个项目' },
-    { title: '视觉设计', desc: 'UI 设计 · 平面 · 品牌视觉', count: '1 个项目' },
   ],
   en: [
     { title: 'Game Development', desc: 'UE5 · Unity · Technical Art · Interaction', count: '3 Projects' },
+    { title: 'OpenCV Development', desc: 'Computer Vision · Image Processing · Python', count: '3 Projects' },
     { title: 'AI Art', desc: 'AI Films · Concept Design · Visual Experiments', count: '4 Projects' },
     { title: 'Film Production', desc: 'Short Films · Documentary · Remake', count: '3 Projects' },
-    { title: 'Visual Design', desc: 'UI Design · Graphic · Brand Identity', count: '1 Project' },
   ],
 }
 

@@ -7,7 +7,7 @@ const links = [
   { id: 'game', label: 'GAME DEVELOPMENT' },
   { id: 'ai-visual', label: 'AI ART' },
   { id: 'film', label: 'FILM PRODUCTION' },
-  { id: 'ui-design', label: 'VISUAL DESIGN' },
+  { id: 'opencv', label: 'OPENCV' },
   { id: 'about', label: 'ABOUT' },
 ]
 

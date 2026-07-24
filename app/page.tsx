@@ -18,6 +18,16 @@ const gameConfig = {
   featured: true,
 }
 
+const opencvConfig = {
+  key: 'opencv',
+  title: { zh: 'OpenCV 代码开发', en: 'OpenCV Development' },
+  desc: {
+    zh: '计算机视觉与图像处理项目，涵盖目标检测、人脸识别、特征匹配等算法实践与 Python 实现。',
+    en: 'Computer vision and image processing projects covering object detection, face recognition, feature matching, and algorithm implementation in Python.',
+  },
+  tags: ['OpenCV', '计算机视觉', 'Python', '图像处理'],
+}
+
 const aiArtConfig = {
   key: 'ai-visual',
   title: { zh: 'AI 视觉与数字艺术', en: 'AI Art' },
@@ -38,16 +48,6 @@ const filmConfig = {
   tags: ['短片', '纪录片', '剪辑', '导演'],
 }
 
-const uiConfig = {
-  key: 'ui-design',
-  title: { zh: '视觉设计', en: 'Visual Design' },
-  desc: {
-    zh: 'UI 设计、平面设计、品牌视觉与综合视觉表达。',
-    en: 'UI design, graphic design, brand identity, and comprehensive visual expression.',
-  },
-  tags: ['UI设计', 'Figma', '平面', '品牌'],
-}
-
 export default function Home() {
   return (
     <main>
@@ -57,9 +57,9 @@ export default function Home() {
       </div>
       <CreativeFields />
       <CategorySection config={gameConfig} />
+      <CategorySection config={opencvConfig} />
       <CategorySection config={aiArtConfig} />
       <CategorySection config={filmConfig} />
-      <CategorySection config={uiConfig} />
       <About />
       <Archive />
       <FinalStatement />

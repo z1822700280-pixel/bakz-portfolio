@@ -97,8 +97,8 @@ export default function ProjectDetailClient({ id }: { id: string }) {
                   ? lang === 'zh' ? 'AI视觉与数字艺术' : 'AI Visual Art'
                   : project.category === 'film'
                   ? lang === 'zh' ? '影视制作' : 'Film Production'
-                  : project.category === 'ui-design'
-                  ? lang === 'zh' ? 'UI 设计' : 'UI Design'
+                  : project.category === 'opencv'
+                  ? lang === 'zh' ? 'OpenCV 开发' : 'OpenCV Dev'
                   : lang === 'zh' ? '影视后期' : 'Post-production'}
               </span>
               <span className="text-[10px] tracking-[0.2em] text-secondary/70 border border-secondary/20 px-3 py-1 rounded-full">

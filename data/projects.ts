@@ -48,7 +48,7 @@ export interface Project {
   id: string
   title: { zh: string; en: string }
   description: { zh: string; en: string }
-  category: 'game' | 'ai-visual' | 'post-production' | 'film' | 'ui-design'
+  category: 'game' | 'ai-visual' | 'post-production' | 'film' | 'ui-design' | 'opencv'
   tags: string[]
   year: number
   thumbnail: string
@@ -1663,5 +1663,54 @@ export const projects: Project[] = [
       zh: '本项目是我对移动端 UI 设计与交互原型设计的一次系统实践。从产品结构规划到视觉设计，再到原型交互搭建，全部工作均由我独立完成。\n\n在设计过程中，我重点学习并实践了 Figma 的组件化设计思维，通过建立统一组件系统提升页面一致性与后期维护效率。同时自主完成插画、海报与交互动效设计，使整体视觉风格更加完整统一。\n\n通过本次项目，我不仅掌握了标准化 UI 设计流程，也进一步理解了界面设计不仅仅是视觉美观，更需要兼顾信息传达效率、交互逻辑与用户体验。对于未来涉及产品设计、游戏 UI 或交互设计相关工作，这次实践为我积累了扎实的基础经验。',
       en: 'This project was a systematic practice in mobile UI design and interactive prototyping. From product structure planning to visual design to prototype interaction, all work was completed independently.\n\nDuring the design process, I focused on learning and practicing Figma\'s component-based design thinking, establishing a unified component system to improve page consistency and maintenance efficiency. I also independently completed illustrations, posters, and interaction motion designs, making the overall visual style more complete and unified.\n\nThrough this project, I not only mastered standardized UI design processes but also deepened my understanding that interface design is not just about visual aesthetics—it also requires efficient information delivery, clear interaction logic, and good user experience. This practice has laid a solid foundation for future work in product design, game UI, or interaction design.',
     },
+  },
+  // ── ⑤ OpenCV 代码开发（待补充）──
+  {
+    id: 'opencv-project-1',
+    title: { zh: '项目一', en: 'Project 1' },
+    description: { zh: '内容待补充', en: 'Content pending' },
+    category: 'opencv',
+    tags: ['OpenCV', '计算机视觉', 'Python'],
+    year: 2026,
+    thumbnail: 'https://6261-bakz-portfolio-d4g00x16257e34cf7-1457429902.cos.ap-shanghai.myqcloud.com/bakz-portfolio/media/placeholder.svg',
+    images: ['https://6261-bakz-portfolio-d4g00x16257e34cf7-1457429902.cos.ap-shanghai.myqcloud.com/bakz-portfolio/media/placeholder.svg'],
+    tools: [],
+    snapshot: [],
+    pipeline: [],
+    challenges: [],
+    overviewSections: [],
+    mediaItems: [],
+  },
+  {
+    id: 'opencv-project-2',
+    title: { zh: '项目二', en: 'Project 2' },
+    description: { zh: '内容待补充', en: 'Content pending' },
+    category: 'opencv',
+    tags: ['OpenCV', '图像处理', 'Python'],
+    year: 2026,
+    thumbnail: 'https://6261-bakz-portfolio-d4g00x16257e34cf7-1457429902.cos.ap-shanghai.myqcloud.com/bakz-portfolio/media/placeholder.svg',
+    images: ['https://6261-bakz-portfolio-d4g00x16257e34cf7-1457429902.cos.ap-shanghai.myqcloud.com/bakz-portfolio/media/placeholder.svg'],
+    tools: [],
+    snapshot: [],
+    pipeline: [],
+    challenges: [],
+    overviewSections: [],
+    mediaItems: [],
+  },
+  {
+    id: 'opencv-project-3',
+    title: { zh: '项目三', en: 'Project 3' },
+    description: { zh: '内容待补充', en: 'Content pending' },
+    category: 'opencv',
+    tags: ['OpenCV', '深度学习', 'Python'],
+    year: 2026,
+    thumbnail: 'https://6261-bakz-portfolio-d4g00x16257e34cf7-1457429902.cos.ap-shanghai.myqcloud.com/bakz-portfolio/media/placeholder.svg',
+    images: ['https://6261-bakz-portfolio-d4g00x16257e34cf7-1457429902.cos.ap-shanghai.myqcloud.com/bakz-portfolio/media/placeholder.svg'],
+    tools: [],
+    snapshot: [],
+    pipeline: [],
+    challenges: [],
+    overviewSections: [],
+    mediaItems: [],
   },
 ]
