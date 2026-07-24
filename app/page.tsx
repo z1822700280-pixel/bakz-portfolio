@@ -1,18 +1,68 @@
 import Hero from '@/components/Hero'
-import Works from '@/components/Works'
-import Gallery from '@/components/Gallery'
+import HeroNav from '@/components/HeroNav'
+import CreativeFields from '@/components/CreativeFields'
+import CategorySection from '@/components/CategorySection'
 import About from '@/components/About'
-import Slogan from '@/components/Slogan'
+import Archive from '@/components/Gallery'
+import FinalStatement from '@/components/FinalStatement'
 import Footer from '@/components/Footer'
+
+const gameConfig = {
+  key: 'game',
+  title: { zh: '游戏与交互设计', en: 'Game Development' },
+  desc: {
+    zh: '展示基于 Unity、UE 等工具完成的游戏开发、关卡设计、场景搭建、交互体验及原型创作作品。',
+    en: 'Game development, level design, scene building, and interactive experiences built with Unity, Unreal Engine, and other tools.',
+  },
+  tags: ['UE5', 'Unity', '场景搭建', '交互设计'],
+  featured: true,
+}
+
+const aiArtConfig = {
+  key: 'ai-visual',
+  title: { zh: 'AI 视觉与数字艺术', en: 'AI Art' },
+  desc: {
+    zh: '基于 AIGC 技术完成的视觉创作，包括 AI 短片、概念设计、角色设计及数字艺术探索。',
+    en: 'AI-generated visual creations including AI short films, concept design, character design, and digital art exploration.',
+  },
+  tags: ['AI短片', '概念设计', '视觉实验', 'Midjourney', 'ComfyUI'],
+}
+
+const filmConfig = {
+  key: 'film',
+  title: { zh: '影视制作', en: 'Film Production' },
+  desc: {
+    zh: '短片、纪录片、翻拍等影视后期制作作品，涵盖导演、剪辑、后期全流程。',
+    en: 'Short films, documentaries, and remakes covering the full post-production pipeline from directing to editing.',
+  },
+  tags: ['短片', '纪录片', '剪辑', '导演'],
+}
+
+const uiConfig = {
+  key: 'ui-design',
+  title: { zh: '视觉设计', en: 'Visual Design' },
+  desc: {
+    zh: 'UI 设计、平面设计、品牌视觉与综合视觉表达。',
+    en: 'UI design, graphic design, brand identity, and comprehensive visual expression.',
+  },
+  tags: ['UI设计', 'Figma', '平面', '品牌'],
+}
 
 export default function Home() {
   return (
     <main>
-      <Hero />
-      <Works />
-      <Gallery />
+      <div className="relative">
+        <Hero />
+        <HeroNav />
+      </div>
+      <CreativeFields />
+      <CategorySection config={gameConfig} />
+      <CategorySection config={aiArtConfig} />
+      <CategorySection config={filmConfig} />
+      <CategorySection config={uiConfig} />
       <About />
-      <Slogan />
+      <Archive />
+      <FinalStatement />
       <Footer />
     </main>
   )

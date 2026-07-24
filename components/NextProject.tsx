@@ -45,7 +45,11 @@ export default function NextProject({ currentId }: { currentId: string }) {
                     ? lang === 'zh' ? '游戏与交互设计' : 'Game & Interactive'
                     : next.category === 'ai-visual'
                     ? lang === 'zh' ? 'AI视觉与数字艺术' : 'AI Visual Art'
-                    : lang === 'zh' ? '影视后期与视觉设计' : 'Post-production'}
+                    : next.category === 'film'
+                    ? lang === 'zh' ? '影视制作' : 'Film Production'
+                    : next.category === 'ui-design'
+                    ? lang === 'zh' ? 'UI 设计' : 'UI Design'
+                    : lang === 'zh' ? '影视后期' : 'Post-production'}
                 </span>
                 <h3 className="text-xl md:text-3xl font-bold text-white mt-2 group-hover:text-white/90 transition-colors">
                   {next.title[lang]}

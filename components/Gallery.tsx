@@ -15,6 +15,7 @@ const FILTERS = [
   { key: '3d' as const },
   { key: 'ui' as const },
   { key: 'illustration' as const },
+  { key: 'photography' as const },
 ] as const
 
 const FILTER_LABELS_ZH: Record<string, string> = {
@@ -23,6 +24,7 @@ const FILTER_LABELS_ZH: Record<string, string> = {
   '3d': '3D 建模',
   ui: 'UI 设计',
   illustration: '插画作品',
+  photography: '摄影',
 }
 
 const FILTER_LABELS_EN: Record<string, string> = {
@@ -31,9 +33,10 @@ const FILTER_LABELS_EN: Record<string, string> = {
   '3d': '3D Modeling',
   ui: 'UI Design',
   illustration: 'Illustrations',
+  photography: 'Photography',
 }
 
-export default function Gallery() {
+export default function Archive() {
   const [filter, setFilter] = useState<string>('all')
   const [selectedSeries, setSelectedSeries] = useState<GallerySeriesType | null>(null)
   const [selectedImageIndex, setSelectedImageIndex] = useState(0)
@@ -61,7 +64,7 @@ export default function Gallery() {
   const labels = lang === 'zh' ? FILTER_LABELS_ZH : FILTER_LABELS_EN
 
   return (
-    <section id="gallery" ref={sectionRef} className="relative py-20 px-6 overflow-hidden">
+    <section id="archive" ref={sectionRef} className="relative py-20 px-6 overflow-hidden">
       <motion.div
         className="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--text-primary)]/[0.01] to-transparent pointer-events-none"
         initial={{ opacity: 0 }}
@@ -76,12 +79,12 @@ export default function Gallery() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary dark:text-primary">
-            {lang === 'zh' ? '视觉画廊' : 'Visual Gallery'}
+            {lang === 'zh' ? '创意存档' : 'Creative Archive'}
           </h2>
           <p className="text-secondary mb-8 tracking-wide">
             {lang === 'zh'
-              ? 'AIGC 海报 · 3D 建模 · UI 设计 · 插画作品'
-              : 'AIGC Posters · 3D Modeling · UI Design · Illustrations'}
+              ? '海报、3D 建模、UI 设计、插画、摄影——创作笔记'
+              : 'Posters, 3D modeling, UI design, illustrations, photography — a creative notebook.'}
           </p>
 
           {/* Filter bar */}

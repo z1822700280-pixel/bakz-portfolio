@@ -48,7 +48,7 @@ export interface Project {
   id: string
   title: { zh: string; en: string }
   description: { zh: string; en: string }
-  category: 'game' | 'ai-visual' | 'post-production'
+  category: 'game' | 'ai-visual' | 'post-production' | 'film' | 'ui-design'
   tags: string[]
   year: number
   thumbnail: string
@@ -1153,7 +1153,7 @@ export const projects: Project[] = [
       zh: '《金鱼房间》是一部聚焦当代青年毕业困境的短片，讲述了刚毕业的主人公阿藤在出租屋内通过五通电话串联起的内心挣扎。影片以面试失败为起点，经历母亲的担忧、经济拮据的窘迫、恋情的结束，最终迎来复试机会，传递出"人生如巧克力"的哲思。\n\n本片在视觉语言上强调隐喻与象征：四个猫眼镜头窥探外界，映射阿藤对社会生活的不适应与逃避心理；金鱼作为情绪载体，象征阿藤被束缚的自我；西装男作为幻想人格出现，代表内心成长与直面困境的勇气。全片采用特写镜头传递人物情绪，以克制的影像风格营造沉浸感。\n\n创作过程中，团队历时四天三夜完成拍摄，面临停电、多次NG等挑战，最终通过集体协作完成作品。我们希望借由阿藤的故事，引发对青年群体生存状态的关注与思考。',
       en: 'The Goldfish Room is a short film centering on the predicaments faced by contemporary young graduates. It follows the protagonist Atou, a fresh graduate, and his inner turmoil woven together by five phone calls made inside his rental apartment. Opening with a failed job interview, the story unfolds to depict his mother\'s anxious concern, the strain of financial hardship, and the end of his romantic relationship—before he finally receives an offer for a second-round interview. The film conveys a philosophical reflection that "life is like a box of chocolates."\n\nVisually, the short leans heavily on metaphor and symbolism. Four peephole shots that peer out at the outside world mirror Atou\'s discomfort with social life and his urge to retreat. The goldfish act as a vessel for his emotions, embodying his confined self. A man in a suit appears as his imagined alter ego, representing inner growth and the courage to confront hardships head-on. Tight close-ups are used throughout to convey the character\'s emotions, and a restrained visual style draws viewers into an immersive viewing experience.\n\nThe crew shot the entire film over four days and three nights, overcoming hurdles including power outages and countless retakes. The finished work came to fruition through full teamwork. Through Atou\'s story, we hope to spark greater attention and reflection on the living conditions of young people today.',
     },
-    category: 'post-production',
+    category: 'film',
     tags: ['短片', '剧情', '纪实', '团队协作', '导演'],
     year: 2024,
     thumbnail: 'https://6261-bakz-portfolio-d4g00x16257e34cf7-1457429902.cos.ap-shanghai.myqcloud.com/bakz-portfolio/media/goldfish-chamber/thumbnail.jpg',
@@ -1299,7 +1299,7 @@ export const projects: Project[] = [
       zh: '这部纪实短片创作于大二春节寒假，全程在老家独立完成，仅用一周时间完成全部拍摄与后期剪辑。影片创作灵感源自纪实作品《人生十年》，镜头聚焦身边普通大众，以平实质朴的纪实视角，捕捉不同年龄人群的生活状态与内心思考。\n\n影片选取四位身处不同人生阶段的普通人作为受访对象，采用统一访谈问题开展一对一录制。访谈内容聚焦金钱观念、婚恋择偶、家庭生活、人生感悟等贴近日常的生活化话题，真实还原不同受访者差异化的观点与内心心声。\n\n通过横向对比不同年龄层的回答，影片直观展现出人生阅历对个人价值观、生活态度的塑造与影响。整体风格朴素真实，深度探寻不同人生阶段的心境变化与生活真谛，以平凡人的真实感悟，勾勒出鲜活治愈的人间烟火与百态人生。',
       en: 'This documentary short film was independently produced during the winter Spring Festival vacation in my sophomore year. Completed in my hometown within just one week, it covers all the shooting and post-editing work. Inspired by the documentary Ten Years of Life, the work focuses on ordinary people around us and adopts a plain and authentic documentary perspective to record the living conditions and inner thoughts of people of different ages.\n\nThe film features four interviewees at distinct life stages, who are asked the same set of one-on-one interview questions. Centering on daily and down-to-earth topics including views on money, marriage and partners, family life, and life perceptions, the documentary truly presents the diverse perspectives and inner voices of the four respondents.\n\nBy comparing answers from different age groups horizontally, the film intuitively reflects how life experience shapes personal values and attitudes toward life. With a simple and realistic style, it explores the emotional changes and true meanings of life at different stages, and depicts the vivid warmth and diverse facets of ordinary life through real insights from everyday people.',
     },
-    category: 'post-production',
+    category: 'film',
     tags: ['纪录片', '人物', '纪实', '独立制作'],
     year: 2024,
     thumbnail: 'https://6261-bakz-portfolio-d4g00x16257e34cf7-1457429902.cos.ap-shanghai.myqcloud.com/bakz-portfolio/media/same-life-different-paths/thumbnail.png',
@@ -1419,7 +1419,7 @@ export const projects: Project[] = [
       zh: '本短片为大学选修课小组作业，由我与好友共同完成。项目从零筹备，历经场地踩点、器材租赁、道具筹备与分工规划，受场地、灯光、拍摄设备多重条件限制，我们通宵至凌晨四点完成取景拍摄。\n\n我在项目中兼任导演、画面指导与后期剪辑，整体筹备两天、拍摄一晚、剪辑一日，最终成片完成度可观。\n\n本片翻拍《杀死比尔》经典段落，该片段镜头语言层次丰富，以此翻拍实践，深化对镜头调度与影像叙事的理解。',
       en: 'A university elective course group project completed with a friend. The project was prepared from scratch—scouting locations, renting equipment, sourcing props, and planning分工. Constrained by limited场地, lighting, and filming equipment, we shot through the night until 4 AM.\n\nI served as director, visual director, and editor. With two days of prep, one night of shooting, and one day of editing, the final result achieved a respectable level of completion.\n\nThe film recreates a classic sequence from Kill Bill, whose layered cinematography made this remake a valuable practice in deepening my understanding of shot composition and visual narrative.',
     },
-    category: 'post-production',
+    category: 'film',
     tags: ['翻拍', '短片', '镜头研究', '团队协作'],
     year: 2025,
     thumbnail: 'https://6261-bakz-portfolio-d4g00x16257e34cf7-1457429902.cos.ap-shanghai.myqcloud.com/bakz-portfolio/media/kill-bill-remake/thumbnail.jpg',
@@ -1551,7 +1551,7 @@ export const projects: Project[] = [
       zh: '2024 年独立完成购物软件整套 UI 界面设计，全程使用 Figma 搭建。项目搭建完整组件规范，界面海报、页面交互动效均为纯原创制作，未使用 AI 辅助。附带 Figma 在线链接，可直接打开预览完整交互原型，直观体现界面设计功底与工具实操能力。',
       en: 'Independently completed the full UI interface design for a shopping app in 2024, built entirely with Figma. The project includes a complete component specification system. All interface posters and page interaction animations are original creations without AI assistance. A Figma online link is attached for direct preview of the complete interactive prototype, showcasing interface design skills and tool proficiency.',
     },
-    category: 'post-production',
+    category: 'ui-design',
     tags: ['UI设计', 'Figma', '移动端', '交互原型', '独立设计'],
     year: 2024,
     thumbnail: 'https://6261-bakz-portfolio-d4g00x16257e34cf7-1457429902.cos.ap-shanghai.myqcloud.com/bakz-portfolio/media/ui-design-project/thumbnail.jpg',
